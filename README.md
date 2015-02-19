@@ -1,2 +1,9 @@
 # foreign
-3rd-party libraries
+3rd-party libraries:
+
+SQLite
+Jansson
+MPIR
+
+
+
