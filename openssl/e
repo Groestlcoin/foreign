@@ -1,0 +1,6 @@
+Microsoft (R) COFF/PE Dumper Version 12.00.20827.3
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file openssl.dll
+LINK : fatal error LNK1181: cannot open input file 'openssl.dll'
