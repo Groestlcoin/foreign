@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="or">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{1eed573e-7eca-4b73-8b64-33d921e37563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{131fe3ce-de19-4974-ac29-c32f3ecf686d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{68ca8865-9e69-436d-ae79-31d00a025b4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\H">
+      <UniqueIdentifier>{9ec83625-ec3f-42ac-9f5e-a35332cf8295}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="or\H">
+      <UniqueIdentifier>{9c00d2d9-a59b-468e-9470-77eb37c3e43c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext">
+      <UniqueIdentifier>{691cdd08-7937-4f30-8304-daa9fd089ab9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ext\H">
+      <UniqueIdentifier>{7d578913-acf0-47b5-8394-f5ff26dde378}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tor-pch.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\compat_libevent.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="or\ntmain.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\microdesc.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\config_codedigest.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\util_codedigest.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\procmon.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="or\transports.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\nodelist.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\status.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\entrynodes.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\circpathbias.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\circuitstats.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\confparse.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\routerset.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\channel.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\circuitmux_ewma.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\circuitmux.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\statefile.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\addressmap.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\channeltls.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\sandbox.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\crypto_curve25519.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="or\onion_fast.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\onion_ntor.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\fp_pair.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\replaycache.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\curve25519-donna.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="or\ext_orport.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\onion_tap.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\crypto_format.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\backtrace.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\di_ops.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\buffers.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\circuitbuild.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\circuitlist.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\circuituse.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\command.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\config.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\connection.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\connection_edge.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\connection_or.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\control.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\cpuworker.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\directory.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\dirserv.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\dirvote.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\dns.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\dnsserv.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\eventdns.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\geoip.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\hibernate.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\main.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\networkstatus.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\onion.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\policies.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\reasons.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\relay.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\rendclient.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\rendcommon.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\rendmid.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\rendservice.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\rephist.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\router.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\routerlist.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\routerparse.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="or\tor_main.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\address.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\aes.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\compat.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\crypto.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\log.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\memarea.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\mempool.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\torgzip.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\tortls.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\util.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\container.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="ext\csiphash.c">
+      <Filter>ext</Filter>
+    </ClCompile>
+    <ClCompile Include="or\scheduler.c">
+      <Filter>or</Filter>
+    </ClCompile>
+    <ClCompile Include="common\crypto_s2k.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\workqueue.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\compat_threads.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\compat_winthreads.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\el\inet\tor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="tor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tor_config.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="file_config.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common\address.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\aes.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\backtrace.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\compat.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\compat_libevent.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\compat_threads.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\container.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\crypto.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\crypto_curve25519.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\di_ops.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\memarea.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\mempool.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\procmon.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\sandbox.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\test.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\testsupport.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\torgzip.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\torint.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\torlog.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\tortls.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\tortls_states.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\util.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\addressmap.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\buffers.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\channel.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\channeltls.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\circpathbias.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\circuitbuild.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\circuitlist.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\circuitmux.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\circuitmux_ewma.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\circuitstats.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\circuituse.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\command.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\config.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\confparse.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\connection.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\connection_edge.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\connection_or.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\control.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\cpuworker.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\directory.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\dirserv.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\dirvote.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\dns.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\dnsserv.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\entrynodes.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\eventdns.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\eventdns_tor.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\ext_orport.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\fp_pair.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\geoip.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\hibernate.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\main.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\microdesc.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\networkstatus.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\nodelist.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\ntmain.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\onion.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\onion_fast.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\onion_ntor.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\onion_tap.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\or.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\orconfig.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\policies.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\reasons.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\relay.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\rendclient.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\rendcommon.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\rendmid.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\rendservice.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\rephist.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\replaycache.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\router.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\routerlist.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\routerparse.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\routerset.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\statefile.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\status.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\tor_queue.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="or\transports.h">
+      <Filter>or\H</Filter>
+    </ClInclude>
+    <ClInclude Include="common\util_process.h">
+      <Filter>common\H</Filter>
+    </ClInclude>
+    <ClInclude Include="ext\siphash.h">
+      <Filter>ext\H</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tor.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

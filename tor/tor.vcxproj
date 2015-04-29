@@ -1,0 +1,628 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="D_St|Win32">
+      <Configuration>D_St</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="D_St|x64">
+      <Configuration>D_St</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="R_St|Win32">
+      <Configuration>R_St</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="R_St|x64">
+      <Configuration>R_St</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9A6FD577-13D0-4BA1-A562-9FB18B900BC5}</ProjectGuid>
+    <RootNamespace>tor</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="..\..\src\cfg\vs\vs-ver.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R_St|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D_St|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="..\..\src\cfg\vs\vs-inc.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='R_St|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='D_St|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>common;or;ext;/foreign/libevent;/foreign/libevent/WIN32-Code;$(OutDir)/inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalOptions> /J</AdditionalOptions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>tor_config.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>tor_config.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessorDefinitions>_LIBTOR;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir)lib;</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/PDB/$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(TargetDir)\lib\$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>common;or;ext;/foreign/libevent;/foreign/libevent/WIN32-Code;$(OutDir)/inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalOptions> /J</AdditionalOptions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>tor_config.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>tor_config.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessorDefinitions>_LIBTOR;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir)lib;</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/PDB/$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(TargetDir)\lib\$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>common;or;ext;/foreign/libevent;/foreign/libevent/WIN32-Code;$(OutDir)/inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalOptions> /J</AdditionalOptions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>tor_config.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>tor_config.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessorDefinitions>_LIBTOR;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir)lib;</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/PDB/$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(TargetDir)\lib\$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>common;or;ext;/foreign/libevent;/foreign/libevent/WIN32-Code;$(OutDir)/inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <AdditionalOptions> /J</AdditionalOptions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>tor_config.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>tor_config.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessorDefinitions>_LIBTOR;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir)lib;</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/PDB/$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(TargetDir)\lib\$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>common;or;ext;/foreign/libevent;/foreign/libevent/WIN32-Code;$(OutDir)/inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <AdditionalOptions> /J</AdditionalOptions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>tor_config.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>tor_config.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessorDefinitions>_LIBTOR;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir)lib;</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/PDB/$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(TargetDir)\lib\$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>common;or;ext;/foreign/libevent;/foreign/libevent/WIN32-Code;$(OutDir)/inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <AdditionalOptions> /J</AdditionalOptions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>tor_config.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>tor_config.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessorDefinitions>_LIBTOR;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir)lib;</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/PDB/$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(TargetDir)\lib\$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>common;or;ext;/foreign/libevent;/foreign/libevent/WIN32-Code;$(OutDir)/inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <AdditionalOptions> /J</AdditionalOptions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>tor_config.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>tor_config.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessorDefinitions>_LIBTOR;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir)lib;</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/PDB/$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(TargetDir)\lib\$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>common;or;ext;/foreign/libevent;/foreign/libevent/WIN32-Code;$(OutDir)/inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <AdditionalOptions> /J</AdditionalOptions>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>tor_config.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>tor_config.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PreprocessorDefinitions>_LIBTOR;_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalLibraryDirectories>$(OutDir)lib;</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)/PDB/$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(TargetDir)\lib\$(TargetName).lib</ImportLibrary>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="common\backtrace.c" />
+    <ClCompile Include="common\compat_libevent.c" />
+    <ClCompile Include="common\compat_threads.c" />
+    <ClCompile Include="common\compat_winthreads.c" />
+    <ClCompile Include="common\crypto_s2k.c" />
+    <ClCompile Include="common\di_ops.c" />
+    <ClCompile Include="common\crypto_curve25519.c" />
+    <ClCompile Include="common\crypto_format.c" />
+    <ClCompile Include="common\curve25519-donna.c" />
+    <ClCompile Include="common\procmon.c" />
+    <ClCompile Include="common\sandbox.c" />
+    <ClCompile Include="common\util_codedigest.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="common\workqueue.c" />
+    <ClCompile Include="ext\csiphash.c" />
+    <ClCompile Include="or\addressmap.c" />
+    <ClCompile Include="or\channel.c" />
+    <ClCompile Include="or\channeltls.c" />
+    <ClCompile Include="or\circpathbias.c" />
+    <ClCompile Include="or\circuitmux.c" />
+    <ClCompile Include="or\circuitmux_ewma.c" />
+    <ClCompile Include="or\circuitstats.c" />
+    <ClCompile Include="or\config_codedigest.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="or\confparse.c" />
+    <ClCompile Include="or\entrynodes.c" />
+    <ClCompile Include="or\ext_orport.c" />
+    <ClCompile Include="or\fp_pair.c" />
+    <ClCompile Include="or\microdesc.c" />
+    <ClCompile Include="or\nodelist.c" />
+    <ClCompile Include="or\ntmain.c" />
+    <ClCompile Include="or\onion_fast.c" />
+    <ClCompile Include="or\onion_ntor.c" />
+    <ClCompile Include="or\onion_tap.c" />
+    <ClCompile Include="or\replaycache.c" />
+    <ClCompile Include="or\routerset.c" />
+    <ClCompile Include="or\scheduler.c" />
+    <ClCompile Include="or\statefile.c" />
+    <ClCompile Include="or\status.c" />
+    <ClCompile Include="or\transports.c" />
+    <ClCompile Include="..\..\src\el\inet\tor.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_AFXDLL;_LIBTOR;_WINDLL;%(PreprocessorDefinitions);_UNICODE;UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">_AFXDLL;_LIBTOR;_WINDLL;%(PreprocessorDefinitions);_UNICODE;UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_AFXDLL;_LIBTOR;_WINDLL;%(PreprocessorDefinitions);_UNICODE;UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">_AFXDLL;_LIBTOR;_WINDLL;%(PreprocessorDefinitions);_UNICODE;UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">_AFXDLL;_LIBTOR;_WINDLL;%(PreprocessorDefinitions);_UNICODE;UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">_AFXDLL;_LIBTOR;_WINDLL;%(PreprocessorDefinitions);_UNICODE;UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">_AFXDLL;_LIBTOR;_WINDLL;%(PreprocessorDefinitions);_UNICODE;UNICODE</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">_AFXDLL;_LIBTOR;_WINDLL;%(PreprocessorDefinitions);_UNICODE;UNICODE</PreprocessorDefinitions>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="or\buffers.c" />
+    <ClCompile Include="or\circuitbuild.c" />
+    <ClCompile Include="or\circuitlist.c" />
+    <ClCompile Include="or\circuituse.c" />
+    <ClCompile Include="or\command.c" />
+    <ClCompile Include="or\config.c" />
+    <ClCompile Include="or\connection.c" />
+    <ClCompile Include="or\connection_edge.c" />
+    <ClCompile Include="or\connection_or.c" />
+    <ClCompile Include="or\control.c" />
+    <ClCompile Include="or\cpuworker.c" />
+    <ClCompile Include="or\directory.c" />
+    <ClCompile Include="or\dirserv.c" />
+    <ClCompile Include="or\dirvote.c" />
+    <ClCompile Include="or\dns.c" />
+    <ClCompile Include="or\dnsserv.c" />
+    <ClCompile Include="or\eventdns.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="or\geoip.c" />
+    <ClCompile Include="or\hibernate.c" />
+    <ClCompile Include="or\main.c" />
+    <ClCompile Include="or\networkstatus.c" />
+    <ClCompile Include="or\onion.c" />
+    <ClCompile Include="or\policies.c" />
+    <ClCompile Include="or\reasons.c" />
+    <ClCompile Include="or\relay.c" />
+    <ClCompile Include="or\rendclient.c" />
+    <ClCompile Include="or\rendcommon.c" />
+    <ClCompile Include="or\rendmid.c" />
+    <ClCompile Include="or\rendservice.c" />
+    <ClCompile Include="or\rephist.c" />
+    <ClCompile Include="or\router.c" />
+    <ClCompile Include="or\routerlist.c" />
+    <ClCompile Include="or\routerparse.c" />
+    <ClCompile Include="or\tor_main.c" />
+    <ClCompile Include="common\address.c" />
+    <ClCompile Include="common\aes.c" />
+    <ClCompile Include="common\compat.c" />
+    <ClCompile Include="common\container.c" />
+    <ClCompile Include="common\crypto.c" />
+    <ClCompile Include="common\log.c" />
+    <ClCompile Include="common\memarea.c" />
+    <ClCompile Include="common\mempool.c" />
+    <ClCompile Include="common\torgzip.c" />
+    <ClCompile Include="common\tortls.c" />
+    <ClCompile Include="common\util.c" />
+    <ClCompile Include="tor-pch.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\address.h" />
+    <ClInclude Include="common\aes.h" />
+    <ClInclude Include="common\backtrace.h" />
+    <ClInclude Include="common\compat.h" />
+    <ClInclude Include="common\compat_libevent.h" />
+    <ClInclude Include="common\compat_threads.h" />
+    <ClInclude Include="common\container.h" />
+    <ClInclude Include="common\crypto.h" />
+    <ClInclude Include="common\crypto_curve25519.h" />
+    <ClInclude Include="common\di_ops.h" />
+    <ClInclude Include="common\memarea.h" />
+    <ClInclude Include="common\mempool.h" />
+    <ClInclude Include="common\procmon.h" />
+    <ClInclude Include="common\sandbox.h" />
+    <ClInclude Include="common\test.h" />
+    <ClInclude Include="common\testsupport.h" />
+    <ClInclude Include="common\torgzip.h" />
+    <ClInclude Include="common\torint.h" />
+    <ClInclude Include="common\torlog.h" />
+    <ClInclude Include="common\tortls.h" />
+    <ClInclude Include="common\tortls_states.h" />
+    <ClInclude Include="common\util.h" />
+    <ClInclude Include="common\util_process.h" />
+    <ClInclude Include="ext\siphash.h" />
+    <ClInclude Include="file_config.h" />
+    <ClInclude Include="or\addressmap.h" />
+    <ClInclude Include="or\buffers.h" />
+    <ClInclude Include="or\channel.h" />
+    <ClInclude Include="or\channeltls.h" />
+    <ClInclude Include="or\circpathbias.h" />
+    <ClInclude Include="or\circuitbuild.h" />
+    <ClInclude Include="or\circuitlist.h" />
+    <ClInclude Include="or\circuitmux.h" />
+    <ClInclude Include="or\circuitmux_ewma.h" />
+    <ClInclude Include="or\circuitstats.h" />
+    <ClInclude Include="or\circuituse.h" />
+    <ClInclude Include="or\command.h" />
+    <ClInclude Include="or\config.h" />
+    <ClInclude Include="or\confparse.h" />
+    <ClInclude Include="or\connection.h" />
+    <ClInclude Include="or\connection_edge.h" />
+    <ClInclude Include="or\connection_or.h" />
+    <ClInclude Include="or\control.h" />
+    <ClInclude Include="or\cpuworker.h" />
+    <ClInclude Include="or\directory.h" />
+    <ClInclude Include="or\dirserv.h" />
+    <ClInclude Include="or\dirvote.h" />
+    <ClInclude Include="or\dns.h" />
+    <ClInclude Include="or\dnsserv.h" />
+    <ClInclude Include="or\entrynodes.h" />
+    <ClInclude Include="or\eventdns.h" />
+    <ClInclude Include="or\eventdns_tor.h" />
+    <ClInclude Include="or\ext_orport.h" />
+    <ClInclude Include="or\fp_pair.h" />
+    <ClInclude Include="or\geoip.h" />
+    <ClInclude Include="or\hibernate.h" />
+    <ClInclude Include="or\main.h" />
+    <ClInclude Include="or\microdesc.h" />
+    <ClInclude Include="or\networkstatus.h" />
+    <ClInclude Include="or\nodelist.h" />
+    <ClInclude Include="or\ntmain.h" />
+    <ClInclude Include="or\onion.h" />
+    <ClInclude Include="or\onion_fast.h" />
+    <ClInclude Include="or\onion_ntor.h" />
+    <ClInclude Include="or\onion_tap.h" />
+    <ClInclude Include="or\or.h" />
+    <ClInclude Include="or\orconfig.h" />
+    <ClInclude Include="or\policies.h" />
+    <ClInclude Include="or\reasons.h" />
+    <ClInclude Include="or\relay.h" />
+    <ClInclude Include="or\rendclient.h" />
+    <ClInclude Include="or\rendcommon.h" />
+    <ClInclude Include="or\rendmid.h" />
+    <ClInclude Include="or\rendservice.h" />
+    <ClInclude Include="or\rephist.h" />
+    <ClInclude Include="or\replaycache.h" />
+    <ClInclude Include="or\router.h" />
+    <ClInclude Include="or\routerlist.h" />
+    <ClInclude Include="or\routerparse.h" />
+    <ClInclude Include="or\routerset.h" />
+    <ClInclude Include="or\statefile.h" />
+    <ClInclude Include="or\status.h" />
+    <ClInclude Include="or\tor_queue.h" />
+    <ClInclude Include="or\transports.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="tor.h" />
+    <ClInclude Include="tor_config.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tor.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
