@@ -416,14 +416,14 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\FOREIGN\libevent\event_iocp.c" />
-    <ClCompile Include="..\..\..\FOREIGN\libevent\evmap.c" />
-    <ClCompile Include="..\..\..\FOREIGN\libevent\evthread.c" />
-    <ClCompile Include="..\..\..\FOREIGN\libevent\evutil_rand.c" />
-    <ClCompile Include="..\..\..\FOREIGN\libevent\win32select.c" />
-    <ClCompile Include="\foreign\libevent\buffer.c" />
-    <ClCompile Include="\foreign\libevent\evdns.c" />
-    <ClCompile Include="\foreign\libevent\event.c">
+    <ClCompile Include="event_iocp.c" />
+    <ClCompile Include="evmap.c" />
+    <ClCompile Include="evthread.c" />
+    <ClCompile Include="evutil_rand.c" />
+    <ClCompile Include="win32select.c" />
+    <ClCompile Include="buffer.c" />
+    <ClCompile Include="evdns.c" />
+    <ClCompile Include="event.c">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -441,11 +441,11 @@
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-    <ClCompile Include="\foreign\libevent\event_tagging.c" />
-    <ClCompile Include="\foreign\libevent\evrpc.c" />
-    <ClCompile Include="\foreign\libevent\evutil.c" />
-    <ClCompile Include="\foreign\libevent\http.c" />
-    <ClCompile Include="\foreign\libevent\log.c">
+    <ClCompile Include="event_tagging.c" />
+    <ClCompile Include="evrpc.c" />
+    <ClCompile Include="evutil.c" />
+    <ClCompile Include="http.c" />
+    <ClCompile Include="log.c">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -463,8 +463,8 @@
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
-    <ClCompile Include="\foreign\libevent\signal.c" />
-    <ClCompile Include="\foreign\libevent\WIN32-Code\win32.c">
+    <ClCompile Include="signal.c" />
+    <ClCompile Include="WIN32-Code\win32.c">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -492,19 +492,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="\foreign\libevent\WIN32-Code\config.h" />
-    <ClInclude Include="\foreign\libevent\evdns.h" />
-    <ClInclude Include="\foreign\libevent\WIN32-Code\event-config.h" />
-    <ClInclude Include="\foreign\libevent\event-internal.h" />
-    <ClInclude Include="\foreign\libevent\event.h" />
-    <ClInclude Include="\foreign\libevent\evhttp.h" />
-    <ClInclude Include="\foreign\libevent\evrpc-internal.h" />
-    <ClInclude Include="\foreign\libevent\evrpc.h" />
-    <ClInclude Include="\foreign\libevent\evsignal.h" />
-    <ClInclude Include="\foreign\libevent\evutil.h" />
-    <ClInclude Include="\foreign\libevent\http-internal.h" />
-    <ClInclude Include="\foreign\libevent\min_heap.h" />
-    <ClInclude Include="\foreign\libevent\strlcpy-internal.h" />
+    <ClInclude Include="WIN32-Code\config.h" />
+    <ClInclude Include="evdns.h" />
+    <ClInclude Include="WIN32-Code\event-config.h" />
+    <ClInclude Include="event-internal.h" />
+    <ClInclude Include="event.h" />
+    <ClInclude Include="evhttp.h" />
+    <ClInclude Include="evrpc-internal.h" />
+    <ClInclude Include="evrpc.h" />
+    <ClInclude Include="evsignal.h" />
+    <ClInclude Include="evutil.h" />
+    <ClInclude Include="http-internal.h" />
+    <ClInclude Include="min_heap.h" />
+    <ClInclude Include="strlcpy-internal.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

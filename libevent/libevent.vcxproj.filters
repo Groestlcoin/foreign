@@ -11,90 +11,90 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="\foreign\libevent\buffer.c">
+    <ClCompile Include="event_iocp.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="\foreign\libevent\evdns.c">
+    <ClCompile Include="evmap.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="\foreign\libevent\event.c">
+    <ClCompile Include="evthread.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="\foreign\libevent\event_tagging.c">
+    <ClCompile Include="evutil_rand.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="\foreign\libevent\evrpc.c">
+    <ClCompile Include="win32select.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="\foreign\libevent\evutil.c">
+    <ClCompile Include="WIN32-Code\win32.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="\foreign\libevent\http.c">
+    <ClCompile Include="signal.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="\foreign\libevent\log.c">
+    <ClCompile Include="log.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="\foreign\libevent\signal.c">
+    <ClCompile Include="http.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="\foreign\libevent\WIN32-Code\win32.c">
+    <ClCompile Include="event.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\FOREIGN\libevent\event_iocp.c">
+    <ClCompile Include="buffer.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\FOREIGN\libevent\evmap.c">
+    <ClCompile Include="evdns.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\FOREIGN\libevent\evthread.c">
+    <ClCompile Include="evrpc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\FOREIGN\libevent\evutil_rand.c">
+    <ClCompile Include="evutil.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\FOREIGN\libevent\win32select.c">
+    <ClCompile Include="event_tagging.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="\foreign\libevent\WIN32-Code\config.h">
+    <ClInclude Include="WIN32-Code\config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\foreign\libevent\evdns.h">
+    <ClInclude Include="evdns.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\foreign\libevent\WIN32-Code\event-config.h">
+    <ClInclude Include="WIN32-Code\event-config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\foreign\libevent\event-internal.h">
+    <ClInclude Include="event-internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\foreign\libevent\event.h">
+    <ClInclude Include="evhttp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\foreign\libevent\evhttp.h">
+    <ClInclude Include="strlcpy-internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\foreign\libevent\evrpc-internal.h">
+    <ClInclude Include="min_heap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\foreign\libevent\evrpc.h">
+    <ClInclude Include="http-internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\foreign\libevent\evsignal.h">
+    <ClInclude Include="evutil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\foreign\libevent\evutil.h">
+    <ClInclude Include="evsignal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\foreign\libevent\http-internal.h">
+    <ClInclude Include="evrpc-internal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\foreign\libevent\min_heap.h">
+    <ClInclude Include="evrpc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="\foreign\libevent\strlcpy-internal.h">
+    <ClInclude Include="event.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
