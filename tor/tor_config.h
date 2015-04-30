@@ -71,7 +71,7 @@
 //#define HAVE_EVENT2_DNS_H 1
 
 #if UCFG_CRT!='U'
-#	define open API_open
+//!!!? #	define open API_open
 #endif
 
 #define HAVE_EXTERN_ENVIRON_DECLARED
