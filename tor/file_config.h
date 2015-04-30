@@ -5,4 +5,10 @@
 #define VER_PRODUCTVERSION 2,6,3,0
 #define VER_PRODUCTVERSION_STR "2.6.3-alpha"
 
-#define _USRDLL
+#ifdef _AFXDLL
+#	define _USRDLL
+#endif
+
+
+
+

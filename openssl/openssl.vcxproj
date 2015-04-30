@@ -916,22 +916,16 @@
     <ClCompile Include="ssl\ssl_algs.c" />
     <ClCompile Include="ssl\ssl_asn1.c" />
     <ClCompile Include="ssl\ssl_cert.c" />
-    <ClCompile Include="ssl\ssl_ciph.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="ssl\ssl_ciph.c" />
     <ClCompile Include="ssl\ssl_err.c" />
     <ClCompile Include="ssl\ssl_err2.c" />
     <ClCompile Include="ssl\ssl_lib.c" />
     <ClCompile Include="ssl\ssl_rsa.c" />
-    <ClCompile Include="ssl\ssl_sess.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="ssl\ssl_sess.c" />
     <ClCompile Include="ssl\ssl_stat.c" />
     <ClCompile Include="ssl\t1_clnt.c" />
     <ClCompile Include="ssl\t1_enc.c" />
-    <ClCompile Include="ssl\t1_lib.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="ssl\t1_lib.c" />
     <ClCompile Include="ssl\t1_meth.c" />
     <ClCompile Include="ssl\t1_reneg.c" />
     <ClCompile Include="ssl\t1_srvr.c" />

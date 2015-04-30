@@ -76,3 +76,8 @@
 
 #define HAVE_EXTERN_ENVIRON_DECLARED
 
+#ifndef _AFXDLL
+#	define open _open
+#endif
+
+
