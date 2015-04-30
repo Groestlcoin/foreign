@@ -5,4 +5,8 @@
 #define VER_PRODUCTVERSION 1,0,1,0
 #define VER_PRODUCTVERSION_STR "1.0.1e"
 
-#define _USRDLL
+#ifdef _DLL
+#	define _AFXDLL
+#	define _USRDLL
+#endif
+

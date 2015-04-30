@@ -94,3 +94,6 @@ int My_bn_mul_mont(BN_ULONG *rp, const BN_ULONG *ap, const BN_ULONG *bp, const B
 #endif
 
 
+//#pragma comment(lib, "ws2_32")
+//#pragma comment(lib, "advapi32")
+
