@@ -157,7 +157,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <AdditionalIncludeDirectories>$(OutDir)/inc;$(FOREIGNDIR)/bdb;$(FOREIGNDIR)/bdb/dbinc;.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OutDir)/inc;dbinc;.</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile>bdb-config.h</PrecompiledHeaderFile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -191,7 +191,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <AdditionalIncludeDirectories>$(OutDir)/inc;$(FOREIGNDIR)/bdb;$(FOREIGNDIR)/bdb/dbinc;.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OutDir)/inc;dbinc;.</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile>bdb-config.h</PrecompiledHeaderFile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -228,7 +228,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <AdditionalIncludeDirectories>$(OutDir)/inc;$(FOREIGNDIR)/bdb;$(FOREIGNDIR)/bdb/dbinc;.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OutDir)/inc;dbinc;.</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile>bdb-config.h</PrecompiledHeaderFile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -262,7 +262,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <AdditionalIncludeDirectories>$(OutDir)/inc;$(FOREIGNDIR)/bdb;$(FOREIGNDIR)/bdb/dbinc;.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OutDir)/inc;dbinc;.</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile>bdb-config.h</PrecompiledHeaderFile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -298,7 +298,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <AdditionalIncludeDirectories>$(OutDir)/inc;$(FOREIGNDIR)/bdb;$(FOREIGNDIR)/bdb/dbinc;.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OutDir)/inc;dbinc;.</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile>bdb-config.h</PrecompiledHeaderFile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
@@ -336,7 +336,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <AdditionalIncludeDirectories>$(OutDir)/inc;$(FOREIGNDIR)/bdb;$(FOREIGNDIR)/bdb/dbinc;.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OutDir)/inc;dbinc;.</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile>bdb-config.h</PrecompiledHeaderFile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
@@ -377,7 +377,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <AdditionalIncludeDirectories>$(OutDir)/inc;$(FOREIGNDIR)/bdb;$(FOREIGNDIR)/bdb/dbinc;.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OutDir)/inc;dbinc;.</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile>bdb-config.h</PrecompiledHeaderFile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
@@ -415,7 +415,7 @@
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <RuntimeTypeInfo>false</RuntimeTypeInfo>
-      <AdditionalIncludeDirectories>$(OutDir)/inc;$(FOREIGNDIR)/bdb;$(FOREIGNDIR)/bdb/dbinc;.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(OutDir)/inc;dbinc;.</AdditionalIncludeDirectories>
       <PrecompiledHeaderFile>bdb-config.h</PrecompiledHeaderFile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
