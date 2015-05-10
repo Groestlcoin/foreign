@@ -2,7 +2,13 @@
 
 #pragma warning(disable: 4242 4244)
 
-#define SPH_SMALL_FOOTPRINT 1
+#ifndef UCFG_SPH_SMALL_FOOTPRINT
+#	define UCFG_SPH_SMALL_FOOTPRINT 0
+#endif
+
+#define SPH_SMALL_FOOTPRINT UCFG_SPH_SMALL_FOOTPRINT
+
+
 #define SPH_NO_64 0
 #define SPH_BIG_ENDIAN (!UCFG_LITLE_ENDIAN)
 
