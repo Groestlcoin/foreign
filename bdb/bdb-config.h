@@ -1,3 +1,5 @@
+#define WIN32
+#define _WINDOWS
 #define UCFG_WIN_HEADERS 1
 #include <el/libext.h>
 

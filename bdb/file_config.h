@@ -4,3 +4,6 @@
 #define VER_ORIGINALFILENAME_STR "bdb.dll"
 #define VER_PRODUCTVERSION 5,3,21,0
 #define VER_PRODUCTVERSION_STR "5.3.21"
+
+
+
