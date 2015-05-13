@@ -13,3 +13,6 @@
 #undef getpid
 #define getpid() ((int)GetCurrentProcessId())
 
+#ifndef _DLL
+#	define _LIB
+#endif
