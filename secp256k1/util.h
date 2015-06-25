@@ -61,11 +61,23 @@
 #define VERIFY_CHECK(cond) do { (void)(cond); } while(0)
 #endif
 
+#define SECP256K1_INLINE inline //!!!P
+
 static SECP256K1_INLINE void *checked_malloc(size_t size) {
     void *ret = malloc(size);
     CHECK(ret != NULL);
     return ret;
 }
+
+//!!!P
+# if !defined(SECP256K1_GNUC_PREREQ)
+#  if defined(__GNUC__)&&defined(__GNUC_MINOR__)
+#   define SECP256K1_GNUC_PREREQ(_maj,_min) \
+ ((__GNUC__<<16)+__GNUC_MINOR__>=((_maj)<<16)+(_min))
+#  else
+#   define SECP256K1_GNUC_PREREQ(_maj,_min) 0
+#  endif
+# endif
 
 /* Macro for restrict, when available and not in a VERIFY build. */
 #if defined(SECP256K1_BUILD) && defined(VERIFY)

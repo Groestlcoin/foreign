@@ -22,6 +22,8 @@
 #include "libsecp256k1-config.h"
 #endif
 
+#include "util.h" //!!!P
+
 #if defined(USE_FIELD_10X26)
 #include "field_10x26.h"
 #elif defined(USE_FIELD_5X52)
@@ -81,8 +83,7 @@ static void secp256k1_fe_add(secp256k1_fe_t *r, const secp256k1_fe_t *a);
 
 /** Sets a field element to be the product of two others. Requires the inputs' magnitudes to be at most 8.
  *  The output magnitude is 1 (but not guaranteed to be normalized). */
-//!!!P static void secp256k1_fe_mul(secp256k1_fe_t *r, const secp256k1_fe_t *a, const secp256k1_fe_t * SECP256K1_RESTRICT b);
-static void secp256k1_fe_mul(secp256k1_fe_t *r, const secp256k1_fe_t *a, const secp256k1_fe_t * b);
+static void secp256k1_fe_mul(secp256k1_fe_t *r, const secp256k1_fe_t *a, const secp256k1_fe_t * SECP256K1_RESTRICT b);
 
 /** Sets a field element to be the square of another. Requires the input's magnitude to be at most 8.
  *  The output magnitude is 1 (but not guaranteed to be normalized). */
@@ -113,5 +114,8 @@ static void secp256k1_fe_from_storage(secp256k1_fe_t *r, const secp256k1_fe_stor
 
 /** If flag is true, set *r equal to *a; otherwise leave it. Constant-time. */
 static void secp256k1_fe_storage_cmov(secp256k1_fe_storage_t *r, const secp256k1_fe_storage_t *a, int flag);
+
+/** If flag is true, set *r equal to *a; otherwise leave it. Constant-time. */
+static void secp256k1_fe_cmov(secp256k1_fe_t *r, const secp256k1_fe_t *a, int flag);
 
 #endif
