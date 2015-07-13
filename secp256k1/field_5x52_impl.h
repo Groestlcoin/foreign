@@ -17,7 +17,21 @@
 #include "field.h"
 
 #if defined(USE_ASM_X86_64)
-#include "field_5x52_asm_impl.h"
+#	ifdef _MSC_VER
+
+#		ifdef __cplusplus
+      extern "C" {
+#		endif
+
+		void secp256k1_fe_mul_inner(uint64_t *r, const uint64_t *a, const uint64_t * SECP256K1_RESTRICT b);
+		void secp256k1_fe_sqr_inner(uint64_t *r, const uint64_t *a);
+
+#		ifdef __cplusplus
+      }
+#		endif
+#	else
+#		include "field_5x52_asm_impl.h"
+#	endif
 #else
 #include "field_5x52_int128_impl.h"
 #endif
