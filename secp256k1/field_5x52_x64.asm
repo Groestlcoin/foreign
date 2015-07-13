@@ -1,87 +1,77 @@
-	;; Added by Diederik Huys, March 2013
-	;; Adapted to Win32 calling conventions by Sergey Pavlov mailto:dev@ufasoft.com  2015
-	;;
-	;; Provided public procedures:
-	;; 	secp256k1_fe_mul_inner
-	;; 	secp256k1_fe_sqr_inner
+;/*######   Copyright (c) 2015 Ufasoft  http://ufasoft.com  mailto:support@ufasoft.com,  Sergey Pavlov  mailto:dev@ufasoft.com      ####
+;#                                                                                                                                     #
+;# 		See LICENSE for licensing information                                                                                          #
+;#####################################################################################################################################*/
+
+;; 	secp256k1_fe_mul_inner
+;; 	secp256k1_fe_sqr_inner
 
 INCLUDE el/x86x64.inc
 
-secp256k1_fe_common PROC
-	mov		rdi, 01000003D10h	; load constant
-
-	mov		rax, r15		; get t5
+fma_52_add MACRO	d, s, m
+	mov		rax, s
 	mul		rdi
-	add		rax, r10    		; +t0
+	add		rax, d
 	adc		rdx, 0
-	mov		r10, 0FFFFFFFFFFFFFh ; modulus. Sadly, we ran out of registers!
-	mov		r8, rax		; +c
-	and		r10, rax
+	add		r8, rax
+	adc		rdx, 0
+	mov		d, r8
+	and		d, rbp
 	shrd	r8, rdx, 52
-	xor		r9, r9
+ENDM
 
-	mov		rax, rbx		; get t6
-	mul		rdi
-	add		rax, r11		; +t1
-	adc		rdx, 0
-	mov		r11, 0FFFFFFFFFFFFFh ; modulus
-	add		r8, rax		; +c
-	adc		r9, rdx
-	and		r11, r8
-	shrd	r8, r9, 52
-	xor		r9, r9
 
-	mov		rax, rcx    		; get t7
-	mul		rdi
-	add		rax, r12		; +t2
+secp256k1_fe_common PROC
+	mul		rsi
+	add		rax, r8
 	adc		rdx, 0
-	mov		rbx, [esp+8]			; retrieve pointer to this.n	
-	mov		r12, 0FFFFFFFFFFFFFh ; modulus
-	add		r8, rax		; +c
-	adc		r9, rdx
-	and		r12, r8
-	mov		[rbx+2*8], r12	; mov into this.n[2]
-	shrd	r8, r9, 52
-	xor		r9, r9
-	
-	mov		rax, rbp    		; get t8
+	mov		r9, rax
+	and		r9, rbp
+	shrd	rax, rdx, 52
+	mov		rsi, rax
+
+	mov		rdi, 01000003D10h	; load constant
+	xor		r8, r8
+
+	fma_52_add	r10, r15		; t5  +t0
+	fma_52_add	r11, rbx		; t6  +t1
+	fma_52_add	r12, rcx		; t7  +t2
+	fma_52_add	r13, r9			; t8  +t3
+
+	mov		rax, rsi			; t9  +t4
 	mul		rdi
-	add		rax, r13    		; +t3
+	add		rax, r14
 	adc		rdx, 0
-	mov		r13, 0FFFFFFFFFFFFFh ; modulus
-	add		r8, rax		; +c
-	adc		r9, rdx
-	and		r13, r8
-	mov		[rbx+3*8], r13	; -> this.n[3]
-	shrd	r8, r9, 52
-	xor		r9, r9
-	
-	mov		rax, rsi    		; get t9
+	add		rax, r8
+	adc		rdx, 0
+	mov		r14, 0FFFFFFFFFFFFh	;!!! 48 bits
+	and		r14, rax	
+	shrd	rax, rdx, 48			;!!!
+
+	shr		rdi, 4
 	mul		rdi
-	add		rax, r14    		; +t4
-	adc		rdx, 0
-	mov		r14, 0FFFFFFFFFFFFh	; !!!
-	add		r8, rax		; +c
-	adc		r9, rdx
-	and		r14, r8
-	mov		[rbx+4*8], r14	; -> this.n[4]
-	shrd	r8, r9, 48		; !!!
-	xor		r9, r9
-	
-	mov		rax, 01000003D1h
-	mul		r8		
 	add		rax, r10
 	adc		rdx, 0
-	mov		r10, 0FFFFFFFFFFFFFh ; modulus
-	mov		r8, rax
-	and		rax, r10
-	shrd	r8, rdx, 52
-	mov		[rbx+0*8], rax	; -> this.n[0]
-	add		r8, r11
-	mov		[rbx+1*8], r8	; -> this.n[1]
+	and		rbp, rax
+	shrd	rax, rdx, 52
+	add		rax, r11
+
+	mov		rbx, [esp+8]			; r
+	mov		[rbx+0*8], rbp
+	mov		[rbx+1*8], rax
+	mov		[rbx+2*8], r12
+	mov		[rbx+3*8], r13
+	mov		[rbx+4*8], r14
 
 	ret
 secp256k1_fe_common ENDP
+
+fma_f8_f9 MACRO	s, m
+	mov		rax, s
+	mul		m
+	add		r8, rax
+	adc		r9, rdx
+ENDM
 
 
 
@@ -125,177 +115,79 @@ ENDIF
 	mov		r10, rbp		; load modulus into target register for t0
 	mov		r8, rax
 	and		r10, rax		; only need lower qword of c
-	shrd	r8, rdx,52
-	xor		r9, r9		; c < 2^64, so we ditch the HO part 
+	shrd	r8, rdx, 52
 
 	;; c+=a.n[0] * b.n[1] + a.n[1] * b.n[0]
-	mov		rax, [rdi+0*8]
-	mul		r15			
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+1*8]
-	mul		r14			
+	xor		r9, r9	
+	fma_f8_f9	[rdi+0*8], r15
+	fma_f8_f9	[rdi+1*8], r14
 	mov		r11, rbp
-	mov		rbx, [rsi+2*8]
-	add		r8, rax
-	adc		r9, rdx
 	and		r11, r8
 	shrd	r8, r9, 52
-	xor		r9, r9
-	
+
+	mov		rbx, [rsi+2*8]
 	;; c+=a.n[0 1 2] * b.n[2 1 0]
-	mov		rax, [rdi+0*8]
-	mul		rbx			
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+1*8]
-	mul		r15			
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+2*8]
-	mul		r14
+	xor		r9, r9	
+	fma_f8_f9	[rdi+0*8], rbx
+	fma_f8_f9	[rdi+1*8], r15
+	fma_f8_f9	[rdi+2*8], r14
 	mov		r12, rbp		
-	mov		rcx, [rsi+3*8]
-	add		r8,	rax
-	adc		r9, rdx
 	and		r12, r8		
 	shrd	r8, r9, 52
-	xor		r9, r9		
 
+	mov		rcx, [rsi+3*8]
 	;; c+=a.n[0 1 2 3] * b.n[3 2 1 0]
-	mov		rax, [rdi+0*8]
-	mul		rcx			
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+1*8]
-	mul		rbx			
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+2*8]
-	mul		r15			
-	add		r8, rax
-	adc		r9, rdx
-	
-	mov		rax, [rdi+3*8]
-	mul		r14			
+	xor		r9, r9	
+	fma_f8_f9	[rdi+0*8], rcx
+	fma_f8_f9	[rdi+1*8], rbx
+	fma_f8_f9	[rdi+2*8], r15
+	fma_f8_f9	[rdi+3*8], r14
 	mov		r13, rbp             
-	mov		rsi, [rsi+4*8]	; load b.n[4] and destroy pointer
-	add		r8, rax
-	adc		r9, rdx
 	and		r13, r8
-
 	shrd	r8, r9, 52
-	xor		r9, r9		
 
+	mov		rsi, [rsi+4*8]	; load b.n[4] and destroy pointer
 	;; c+=a.n[0 1 2 3 4] * b.n[4 3 2 1 0]
-	mov		rax, [rdi+0*8]
-	mul		rsi
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+1*8]
-	mul		rcx
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+2*8]
-	mul		rbx			
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+3*8]
-	mul		r15			
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+4*8]
-	mul		r14			
+	xor		r9, r9	
+	fma_f8_f9	[rdi+0*8], rsi
+	fma_f8_f9	[rdi+1*8], rcx
+	fma_f8_f9	[rdi+2*8], rbx
+	fma_f8_f9	[rdi+3*8], r15
+	fma_f8_f9	[rdi+4*8], r14
 	mov		r14, rbp             ; load modulus into t4 and destroy a.n[0]
-	add		r8, rax
-	adc		r9, rdx
 	and		r14, r8
 	shrd	r8, r9, 52
-	xor		r9, r9		
 
 	;; c+=a.n[1 2 3 4] * b.n[4 3 2 1]
-	mov		rax, [rdi+1*8]
-	mul		rsi
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+2*8]
-	mul		rcx
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+3*8]
-	mul		rbx
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+4*8]
-	mul		r15
+	xor		r9, r9	
+	fma_f8_f9	[rdi+1*8], rsi
+	fma_f8_f9	[rdi+2*8], rcx
+	fma_f8_f9	[rdi+3*8], rbx
+	fma_f8_f9	[rdi+4*8], r15
 	mov		r15, rbp		
-	add		r8, rax
-	adc		r9, rdx
-
 	and		r15, r8
 	shrd	r8, r9, 52
-	xor		r9, r9		
 
 	;; c+=a.n[2 3 4] * b.n[4 3 2]
-	mov		rax, [rdi+2*8]
-	mul		rsi
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+3*8]
-	mul		rcx
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+4*8]
-	mul		rbx
+	xor		r9, r9	
+	fma_f8_f9	[rdi+2*8], rsi
+	fma_f8_f9	[rdi+3*8], rcx
+	fma_f8_f9	[rdi+4*8], rbx
 	mov		rbx, rbp		
-	add		r8, rax
-	adc		r9, rdx
-
 	and		rbx, r8		
 	shrd	r8, r9, 52
-	xor		r9, r9		
 
 	;; c+=a.n[3 4] * b.n[4 3]
-	mov		rax, [rdi+3*8]
-	mul		rsi
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, [rdi+4*8]
-	mul		rcx
+	xor		r9, r9	
+	fma_f8_f9	[rdi+3*8], rsi
+	fma_f8_f9	[rdi+4*8], rcx
 	mov		rcx, rbp		
-	add		r8, rax
-	adc		r9, rdx
 	and		rcx, r8		
 	shrd	r8, r9, 52
-	xor		r9, r9		
 
-		;; c+=a.n[4] * b.n[4]
-	mov		rax, [rdi+4*8]
-	mul		rsi
-		;; mov rbp,rbp		; modulus already there!
-	add		r8, rax
-	adc		r9, rdx
-	and		rbp, r8 
-	shrd	r8, r9, 52
-	xor		r9, r9		
-
-	mov		rsi, r8		; load c into t9 and destroy b.n[4]
+	mov		rax, [rdi+4*8]		;; c+=a.n[4] * b.n[4]
 	call	secp256k1_fe_common
+
 	pop		rax
 	pop		rbp
 	ret
@@ -331,14 +223,13 @@ ENDIF
 		;; c=a.n[0] * a.n[0]
    	mov		r14, [rdi+0*8]	; r14=a.n[0]
 	mov		r10, rbp		; modulus 
-	mov		rax,r14
+	mov		rax, r14
 	mul		rax
 	mov		r15, [rdi+1*8]	; a.n[1]
 	add		r14, r14		; r14=2*a.n[0]
 	mov		r8, rax
 	and		r10, rax		; only need lower qword
 	shrd	r8, rdx, 52
-	xor		r9, r9
 
 		;; c+=2*a.n[0] * a.n[1]
 	mov		rax, r14		; r14=2*a.n[0]
@@ -346,118 +237,66 @@ ENDIF
 	mov		rbx, [rdi+2*8]	; rbx=a.n[2]
 	mov		r11, rbp 		; modulus
 	add		r8, rax
-	adc		r9, rdx
+	adc		rdx, 0
 	and		r11, r8
-	shrd	r8, r9, 52
-	xor		r9, r9
+	shrd	r8, rdx, 52
 	
 	;; c+=2*a.n[0]*a.n[2]+a.n[1]*a.n[1]
-	mov		rax, r14
-	mul		rbx
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, r15
-	mov		r12, rbp		; modulus
-	mul		rax
-	mov		rcx, [rdi+3*8]	; rcx=a.n[3]
-	add		r15, r15		; r15=a.n[1]*2
-	add		r8, rax
-	adc		r9, rdx
-	and		r12, r8		; only need lower dword
+	xor		r9, r9	
+	fma_f8_f9	r14, rbx
+	fma_f8_f9	r15, r15
+	mov		r12, rbp
+	and		r12, r8
 	shrd	r8, r9, 52
-	xor		r9, r9		
 
+	add		r15, r15		; r15=a.n[1]*2
+	mov		rcx, [rdi+3*8]	; rcx=a.n[3]
 	;; c+=2*a.n[0]*a.n[3]+2*a.n[1]*a.n[2]
-	mov		rax, r14
-	mul		rcx
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, r15		; rax=2*a.n[1]
+	xor		r9, r9	
+	fma_f8_f9	r14, rcx
+	fma_f8_f9	r15, rbx
 	mov		r13, rbp		; modulus
-	mul		rbx
-	mov		rsi, [rdi+4*8]	; rsi=a.n[4]
-	add		r8, rax
-	adc		r9, rdx
 	and		r13, r8
 	shrd	r8, r9, 52
-	xor		r9, r9		
 
+	mov		rsi, [rdi+4*8]	; rsi=a.n[4]
 	;; c+=2*a.n[0]*a.n[4]+2*a.n[1]*a.n[3]+a.n[2]*a.n[2]
-	mov		rax, r14		; last time we need 2*a.n[0]
-	mul		rsi
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, r15
-	mul		rcx
-	mov		r14, rbp		; modulus
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, rbx
-	mul		rax
-	add		rbx, rbx		; rcx=2*a.n[2]
-	add		r8, rax
-	adc		r9, rdx
+	xor		r9, r9	
+	fma_f8_f9	r14, rsi
+	fma_f8_f9	r15, rcx
+	fma_f8_f9	rbx, rbx
+	mov		r14, rbp
 	and		r14, r8
 	shrd	r8, r9, 52
-	xor		r9, r9		
 
+	add		rbx, rbx		; rcx=2*a.n[2]
 	;; c+=2*a.n[1]*a.n[4]+2*a.n[2]*a.n[3]
-	mov		rax, r15		; last time we need 2*a.n[1]
-	mul		rsi
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, rbx
-	mul		rcx
+	xor		r9, r9	
+	fma_f8_f9	r15, rsi
+	fma_f8_f9	rbx, rcx
 	mov		r15, rbp		; modulus
-	add		r8, rax
-	adc		r9, rdx
 	and		r15, r8
 	shrd	r8, r9, 52
-	xor		r9, r9		
 
 	;; c+=2*a.n[2]*a.n[4]+a.n[3]*a.n[3]
-	mov		rax, rbx		; last time we need 2*a.n[2]
-	mul		rsi
-	add		r8, rax
-	adc		r9, rdx
-
-	mov		rax, rcx		; a.n[3]
-	mul		rax
+	xor		r9, r9	
+	fma_f8_f9	rbx, rsi
+	fma_f8_f9	rcx, rcx
 	mov		rbx, rbp		; modulus
-	add		r8, rax
-	adc		r9, rdx
 	and		rbx, r8		; only need lower dword
-	lea		rax, [2*rcx]
 	shrd	r8, r9, 52
-	xor		r9, r9		
 
-		;; c+=2*a.n[3]*a.n[4]
+	lea		rax, [2*rcx]			; c+=2*a.n[3]*a.n[4]
 	mul		rsi
-	mov		rcx, rbp		; modulus
 	add		r8, rax
-	adc		r9, rdx
-	and		rcx, r8		; only need lower dword
-	shrd	r8, r9, 52
-	xor		r9, r9		
+	adc		rdx, 0
+	mov		rcx, r8
+	and		rcx, rbp
+	shrd	r8, rdx, 52
 
-		;; c+=a.n[4]*a.n[4]
-	mov		rax, rsi
-	mul		rax
-		;; mov rbp,rbp		; modulus is already there!
-	add		r8, rax
-	adc		r9, rdx
-	and		rbp, r8 
-	shrd	r8, r9, 52
-	xor		r9, r9		
-
-	mov		rsi, r8
-
+	mov		rax, rsi		;; c+=a.n[4]*a.n[4]
 	call	secp256k1_fe_common
+
 	pop		rax
 	pop		rbp
 	ret
