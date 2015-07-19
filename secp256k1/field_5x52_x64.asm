@@ -6,7 +6,11 @@
 ;; 	secp256k1_fe_mul_inner
 ;; 	secp256k1_fe_sqr_inner
 
-INCLUDE el/x86x64.inc
+IFDEF __JWASM__
+	OPTION LANGUAGE: C
+ENDIF
+
+.CODE
 
 fma_52_add MACRO	d, s, m
 	mov		rax, s
