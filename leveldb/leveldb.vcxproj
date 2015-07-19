@@ -440,7 +440,18 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="db\dbformat.cc" />
     <ClCompile Include="db\db_impl.cc" />
+    <ClCompile Include="db\log_reader.cc" />
+    <ClCompile Include="db\memtable.cc" />
+    <ClCompile Include="db\version_set.cc" />
+    <ClCompile Include="db\write_batch.cc" />
+    <ClCompile Include="port\port_win.cc" />
+    <ClCompile Include="table\table_builder.cc" />
+    <ClCompile Include="util\cache.cc" />
+    <ClCompile Include="util\coding.cc" />
+    <ClCompile Include="util\filter_policy.cc" />
+    <ClCompile Include="util\status.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="leveldb-config.h" />
