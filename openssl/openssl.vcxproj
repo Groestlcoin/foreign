@@ -416,12 +416,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="crypto\aes\aes_ctr.c" />
+    <ClCompile Include="crypto\asn1\asn_moid.c" />
     <ClCompile Include="crypto\asn1\d2i_pu.c" />
     <ClCompile Include="crypto\asn1\i2d_pu.c" />
     <ClCompile Include="crypto\bn\bn_mpi.c" />
     <ClCompile Include="crypto\cmac\cmac.c" />
     <ClCompile Include="crypto\cmac\cm_ameth.c" />
     <ClCompile Include="crypto\cmac\cm_pmeth.c" />
+    <ClCompile Include="crypto\conf\conf_mall.c" />
+    <ClCompile Include="crypto\conf\conf_sap.c" />
     <ClCompile Include="crypto\cpt_err.c" />
     <ClCompile Include="crypto\cryptlib.c" />
     <ClCompile Include="crypto\cversion.c" />
@@ -429,6 +432,8 @@
     <ClCompile Include="crypto\ec\ec2_oct.c" />
     <ClCompile Include="crypto\ec\ecp_oct.c" />
     <ClCompile Include="crypto\ec\ec_oct.c" />
+    <ClCompile Include="crypto\engine\eng_cnf.c" />
+    <ClCompile Include="crypto\evp\evp_cnf.c" />
     <ClCompile Include="crypto\evp\e_aes_cbc_hmac_sha1.c" />
     <ClCompile Include="crypto\evp\e_rc4_hmac_md5.c" />
     <ClCompile Include="crypto\evp\m_mdc2.c" />

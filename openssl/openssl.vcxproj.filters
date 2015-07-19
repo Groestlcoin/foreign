@@ -1655,6 +1655,21 @@
     <ClCompile Include="crypto\evp\e_aes_cbc_hmac_sha1.c">
       <Filter>crypto\evp</Filter>
     </ClCompile>
+    <ClCompile Include="crypto\conf\conf_sap.c">
+      <Filter>crypto\conf</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\conf\conf_mall.c">
+      <Filter>crypto\conf</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\asn1\asn_moid.c">
+      <Filter>crypto\asn1</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\engine\eng_cnf.c">
+      <Filter>crypto\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\evp_cnf.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="openssl.def" />
