@@ -1,6 +1,8 @@
 #pragma once
 
-#include <vc-inc.h>
+#ifdef _MSC_VER
+#	include <vc-inc.h>
+#endif
 
 #define LEVELDB_PLATFORM_WINDOWS
 

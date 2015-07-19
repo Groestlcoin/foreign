@@ -24,6 +24,12 @@
     <Filter Include="Source Files\table">
       <UniqueIdentifier>{4428929b-67dd-4dac-80b0-7d8bad4d3431}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\helpers">
+      <UniqueIdentifier>{4042af70-e55e-4be9-bc5a-6862f757b148}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\helpers\memenv">
+      <UniqueIdentifier>{cf731811-4c91-4611-8407-3b3323ea038f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="db\db_impl.cc">
@@ -121,6 +127,18 @@
     </ClCompile>
     <ClCompile Include="db\builder.cc">
       <Filter>Source Files\db</Filter>
+    </ClCompile>
+    <ClCompile Include="helpers\memenv\memenv.cc">
+      <Filter>Source Files\helpers\memenv</Filter>
+    </ClCompile>
+    <ClCompile Include="util\bloom.cc">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\options.cc">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\env_win.cc">
+      <Filter>Source Files\util</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
