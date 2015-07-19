@@ -158,10 +158,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R_St|x64'" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <Optimization>Disabled</Optimization>
+      <Optimization>MinSpace</Optimization>
       <AdditionalIncludeDirectories>.;$(OutDir)inc;crypto;crypto/asn1;crypto/evp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>openssl-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -188,9 +187,8 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">
     <ClCompile>
-      <Optimization>Disabled</Optimization>
+      <Optimization>MinSpace</Optimization>
       <AdditionalIncludeDirectories>.;$(OutDir)inc;crypto;crypto/asn1;crypto/evp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>openssl-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -224,7 +222,6 @@
       <Optimization>MinSpace</Optimization>
       <AdditionalIncludeDirectories>.;$(OutDir)inc;crypto;crypto/asn1;crypto/evp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>openssl-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -251,7 +248,6 @@
     <ClCompile>
       <Optimization>MinSpace</Optimization>
       <AdditionalIncludeDirectories>.;$(OutDir)inc;crypto;crypto/asn1;crypto/evp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>openssl-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -281,7 +277,6 @@
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;$(OutDir)inc;crypto;crypto/asn1;crypto/evp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>openssl-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -313,7 +308,6 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;$(OutDir)inc;crypto;crypto/asn1;crypto/evp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>openssl-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -351,7 +345,6 @@
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;$(OutDir)inc;crypto;crypto/asn1;crypto/evp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>openssl-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -381,7 +374,6 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;$(OutDir)inc;crypto;crypto/asn1;crypto/evp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>openssl-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>

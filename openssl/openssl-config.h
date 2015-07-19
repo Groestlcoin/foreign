@@ -1,6 +1,8 @@
 #define UCFG_WIN_HEADERS 1
 
-#include <el/libext.h>
+#ifdef _MSC_VER
+#	include <vc-inc.h>
+#endif
 
 #include <winsock2.h>
 
@@ -19,7 +21,7 @@
 #	define SIXTY_FOUR_BIT
 #endif
 
-#if defined(_M_IX86) || defined(_M_X64)
+#if defined(UCFG_LIBEXT) && (defined(_M_IX86) || defined(_M_X64))
 //	 #define OPENSSL_NO_ASM
 #	define OPENSSL_BN_ASM_MONT
 #	define UCFG_BN_ASM 1
