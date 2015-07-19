@@ -62,6 +62,66 @@
     <ClCompile Include="util\cache.cc">
       <Filter>Source Files\util</Filter>
     </ClCompile>
+    <ClCompile Include="table\two_level_iterator.cc">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="db\table_cache.cc">
+      <Filter>Source Files\db</Filter>
+    </ClCompile>
+    <ClCompile Include="util\arena.cc">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\crc32c.cc">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="table\format.cc">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="table\merger.cc">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="db\version_edit.cc">
+      <Filter>Source Files\db</Filter>
+    </ClCompile>
+    <ClCompile Include="db\filename.cc">
+      <Filter>Source Files\db</Filter>
+    </ClCompile>
+    <ClCompile Include="db\log_writer.cc">
+      <Filter>Source Files\db</Filter>
+    </ClCompile>
+    <ClCompile Include="util\comparator.cc">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="table\iterator.cc">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="util\env.cc">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="table\table.cc">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="table\block_builder.cc">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="util\hash.cc">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="util\logging.cc">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="table\block.cc">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="table\filter_block.cc">
+      <Filter>Source Files\table</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_iter.cc">
+      <Filter>Source Files\db</Filter>
+    </ClCompile>
+    <ClCompile Include="db\builder.cc">
+      <Filter>Source Files\db</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="leveldb-config.h">

@@ -196,6 +196,7 @@
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FunctionLevelLinking>false</FunctionLevelLinking>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -267,6 +268,7 @@
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FunctionLevelLinking>false</FunctionLevelLinking>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -440,17 +442,37 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="db\builder.cc" />
     <ClCompile Include="db\dbformat.cc" />
     <ClCompile Include="db\db_impl.cc" />
+    <ClCompile Include="db\db_iter.cc" />
+    <ClCompile Include="db\filename.cc" />
     <ClCompile Include="db\log_reader.cc" />
+    <ClCompile Include="db\log_writer.cc" />
     <ClCompile Include="db\memtable.cc" />
+    <ClCompile Include="db\table_cache.cc" />
+    <ClCompile Include="db\version_edit.cc" />
     <ClCompile Include="db\version_set.cc" />
     <ClCompile Include="db\write_batch.cc" />
     <ClCompile Include="port\port_win.cc" />
+    <ClCompile Include="table\block.cc" />
+    <ClCompile Include="table\block_builder.cc" />
+    <ClCompile Include="table\filter_block.cc" />
+    <ClCompile Include="table\format.cc" />
+    <ClCompile Include="table\iterator.cc" />
+    <ClCompile Include="table\merger.cc" />
+    <ClCompile Include="table\table.cc" />
     <ClCompile Include="table\table_builder.cc" />
+    <ClCompile Include="table\two_level_iterator.cc" />
+    <ClCompile Include="util\arena.cc" />
     <ClCompile Include="util\cache.cc" />
     <ClCompile Include="util\coding.cc" />
+    <ClCompile Include="util\comparator.cc" />
+    <ClCompile Include="util\crc32c.cc" />
+    <ClCompile Include="util\env.cc" />
     <ClCompile Include="util\filter_policy.cc" />
+    <ClCompile Include="util\hash.cc" />
+    <ClCompile Include="util\logging.cc" />
     <ClCompile Include="util\status.cc" />
   </ItemGroup>
   <ItemGroup>
