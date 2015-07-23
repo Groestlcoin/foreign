@@ -1670,6 +1670,9 @@
     <ClCompile Include="crypto\evp\evp_cnf.c">
       <Filter>crypto\evp</Filter>
     </ClCompile>
+    <ClCompile Include="crypto\pkcs12\p12_kiss.c">
+      <Filter>crypto\pkcs12</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="openssl.def" />

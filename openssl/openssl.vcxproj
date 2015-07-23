@@ -482,6 +482,7 @@
     <ClCompile Include="crypto\err\err.c" />
     <ClCompile Include="crypto\err\err_all.c" />
     <ClCompile Include="crypto\err\err_prn.c" />
+    <ClCompile Include="crypto\pkcs12\p12_kiss.c" />
     <ClCompile Include="crypto\ripemd\rmd_one.c" />
     <ClCompile Include="crypto\rsa\rsa_crpt.c" />
     <ClCompile Include="crypto\rsa\rsa_saos.c" />
