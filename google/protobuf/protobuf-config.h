@@ -6,5 +6,5 @@
 #define _CRT_NONSTDC_NO_DEPRECATE
 //#define _HAS_ITERATOR_DEBUGGING	0
 
-#pragma warning(disable: 4018 4244 4715 4800)
+#pragma warning(disable: 4018 4244 4267 4715 4800)
 
