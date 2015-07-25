@@ -21,13 +21,19 @@
 #	define SIXTY_FOUR_BIT
 #endif
 
-#if defined(UCFG_LIBEXT) && (defined(_M_IX86) || defined(_M_X64))
-//	 #define OPENSSL_NO_ASM
-#	define OPENSSL_BN_ASM_MONT
+#if defined(_MSC_VER) && (defined(_M_IX86) || defined(_M_X64)) && UCFG_OPENSSL_ASM
 #	define UCFG_BN_ASM 1
-#	include <el/bignum.h>
-
-#	define bn_mul_add_words ImpMulAddBignums
+#	ifdef UCFG_LIBEXT
+//	 #define OPENSSL_NO_ASM
+#		define OPENSSL_BN_ASM_MONT
+#		include <el/bignum.h>
+#	else
+	__BEGIN_DECLS
+		typedef uintptr_t BASEWORD;
+		BASEWORD __cdecl ImpMulAddBignums(BASEWORD *r, const BASEWORD *a, size_t n, BASEWORD w);
+#		define bn_mul_add_words ImpMulAddBignums
+	__END_DECLS
+#	endif
 #else
 #	define UCFG_BN_ASM 0
 #endif
