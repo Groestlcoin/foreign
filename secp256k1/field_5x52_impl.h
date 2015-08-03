@@ -17,21 +17,7 @@
 #include "field.h"
 
 #if defined(USE_ASM_X86_64)
-#	ifdef _MSC_VER
-
-#		ifdef __cplusplus
-      extern "C" {
-#		endif
-
-		void secp256k1_fe_mul_inner(uint64_t *r, const uint64_t *a, const uint64_t * SECP256K1_RESTRICT b);
-		void secp256k1_fe_sqr_inner(uint64_t *r, const uint64_t *a);
-
-#		ifdef __cplusplus
-      }
-#		endif
-#	else
-#		include "field_5x52_asm_impl.h"
-#	endif
+#include "field_5x52_asm_impl.h"
 #else
 #include "field_5x52_int128_impl.h"
 #endif
@@ -428,8 +414,10 @@ static SECP256K1_INLINE void secp256k1_fe_cmov(secp256k1_fe_t *r, const secp256k
     r->n[3] = (r->n[3] & mask0) | (a->n[3] & mask1);
     r->n[4] = (r->n[4] & mask0) | (a->n[4] & mask1);
 #ifdef VERIFY
-    r->magnitude = (r->magnitude & mask0) | (a->magnitude & mask1);
-    r->normalized = (r->normalized & mask0) | (a->normalized & mask1);
+    if (a->magnitude > r->magnitude) {
+        r->magnitude = a->magnitude;
+    }
+    r->normalized &= a->normalized;
 #endif
 }
 

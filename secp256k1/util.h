@@ -15,6 +15,11 @@
 #include <stdint.h>
 #include <stdio.h>
 
+typedef struct {
+    void (*fn)(const char *text, void* data);
+    void* data;
+} callback_t;
+
 #ifdef DETERMINISTIC
 #define TEST_FAILURE(msg) do { \
     fprintf(stderr, "%s\n", msg); \
@@ -47,25 +52,35 @@
 } while(0)
 #endif
 
-/* Like assert(), but safe to use on expressions with side effects. */
-#ifndef NDEBUG
-#define DEBUG_CHECK CHECK
-#else
-#define DEBUG_CHECK(cond) do { (void)(cond); } while(0)
-#endif
-
-/* Like DEBUG_CHECK(), but when VERIFY is defined instead of NDEBUG not defined. */
+/* Like assert(), but when VERIFY is defined, and side-effect safe. */
 #ifdef VERIFY
 #define VERIFY_CHECK CHECK
+#define VERIFY_SETUP(stmt) do { stmt; } while(0)
 #else
 #define VERIFY_CHECK(cond) do { (void)(cond); } while(0)
+#define VERIFY_SETUP(stmt)
 #endif
 
 //#define SECP256K1_INLINE inline //!!!P
 
-static SECP256K1_INLINE void *checked_malloc(size_t size) {
+# if (!defined(__STDC_VERSION__) || (__STDC_VERSION__ < 199901L) )
+#  if SECP256K1_GNUC_PREREQ(2,7)
+#   define SECP256K1_INLINE __inline__
+#  elif (defined(_MSC_VER))
+#   define SECP256K1_INLINE __inline
+#  else
+#   define SECP256K1_INLINE
+#  endif
+# else
+#  define SECP256K1_INLINE inline
+# endif
+//!!!P
+
+static SECP256K1_INLINE void *checked_malloc(const callback_t* cb, size_t size) {
     void *ret = malloc(size);
-    CHECK(ret != NULL);
+    if (ret == NULL) {
+        cb->fn("Out of memory", cb->data);
+    }
     return ret;
 }
 
