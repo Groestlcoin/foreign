@@ -1,9 +1,12 @@
 # foreign
 3rd-party libraries:
 
-SQLite
 Jansson
 MPIR
+OpenSSL
+qrencode
+SQLite
+ZQM
 
 
 
