@@ -1766,6 +1766,9 @@
     <ClCompile Include="crypto\modes\wrap128.c">
       <Filter>crypto\modes</Filter>
     </ClCompile>
+    <ClCompile Include="crypto\ecdh\ech_kdf.c">
+      <Filter>crypto\ecdh</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="openssl.def" />

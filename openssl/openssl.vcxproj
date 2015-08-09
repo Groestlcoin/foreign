@@ -433,6 +433,7 @@
     <ClCompile Include="crypto\dh\dh_depr.c" />
     <ClCompile Include="crypto\dh\dh_kdf.c" />
     <ClCompile Include="crypto\dh\dh_rfc5114.c" />
+    <ClCompile Include="crypto\ecdh\ech_kdf.c" />
     <ClCompile Include="crypto\ec\ec2_oct.c" />
     <ClCompile Include="crypto\ec\ecp_oct.c" />
     <ClCompile Include="crypto\ec\ec_oct.c" />
