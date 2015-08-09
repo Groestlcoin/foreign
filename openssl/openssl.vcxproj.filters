@@ -172,6 +172,9 @@
     <Filter Include="crypto\pqueue">
       <UniqueIdentifier>{f65e8cab-8499-4b32-bc47-3af86ef80b96}</UniqueIdentifier>
     </Filter>
+    <Filter Include="crypto\txt_db">
+      <UniqueIdentifier>{2fb78aae-cfe7-4888-bb05-174677dabada}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="crypto\cpt_err.c">
@@ -1721,6 +1724,48 @@
     <ClCompile Include="crypto\pqueue\pqueue.c">
       <Filter>crypto\pqueue</Filter>
     </ClCompile>
+    <ClCompile Include="ssl\d1_clnt.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509v3\v3_scts.c">
+      <Filter>crypto\x509v3</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\d1_pkt.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\d1_lib.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\d1_meth.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ocsp\ocsp_ht.c">
+      <Filter>crypto\ocsp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\srp\srp_vfy.c">
+      <Filter>crypto\srp</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\d1_srvr.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\dh\dh_rfc5114.c">
+      <Filter>crypto\dh</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\txt_db\txt_db.c">
+      <Filter>crypto\txt_db</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\cms\cms_pwri.c">
+      <Filter>crypto\cms</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\dh\dh_kdf.c">
+      <Filter>crypto\dh</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\cms\cms_kari.c">
+      <Filter>crypto\cms</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\modes\wrap128.c">
+      <Filter>crypto\modes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="openssl.def" />
@@ -1976,6 +2021,9 @@
     </ClInclude>
     <ClInclude Include="crypto\srp\srp_lcl.h">
       <Filter>crypto\srp</Filter>
+    </ClInclude>
+    <ClInclude Include="txt_db.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

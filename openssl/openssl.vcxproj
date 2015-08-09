@@ -423,12 +423,16 @@
     <ClCompile Include="crypto\cmac\cmac.c" />
     <ClCompile Include="crypto\cmac\cm_ameth.c" />
     <ClCompile Include="crypto\cmac\cm_pmeth.c" />
+    <ClCompile Include="crypto\cms\cms_kari.c" />
+    <ClCompile Include="crypto\cms\cms_pwri.c" />
     <ClCompile Include="crypto\conf\conf_mall.c" />
     <ClCompile Include="crypto\conf\conf_sap.c" />
     <ClCompile Include="crypto\cpt_err.c" />
     <ClCompile Include="crypto\cryptlib.c" />
     <ClCompile Include="crypto\cversion.c" />
     <ClCompile Include="crypto\dh\dh_depr.c" />
+    <ClCompile Include="crypto\dh\dh_kdf.c" />
+    <ClCompile Include="crypto\dh\dh_rfc5114.c" />
     <ClCompile Include="crypto\ec\ec2_oct.c" />
     <ClCompile Include="crypto\ec\ecp_oct.c" />
     <ClCompile Include="crypto\ec\ec_oct.c" />
@@ -457,7 +461,9 @@
     <ClCompile Include="crypto\modes\ccm128.c" />
     <ClCompile Include="crypto\modes\ctr128.c" />
     <ClCompile Include="crypto\modes\gcm128.c" />
+    <ClCompile Include="crypto\modes\wrap128.c" />
     <ClCompile Include="crypto\modes\xts128.c" />
+    <ClCompile Include="crypto\ocsp\ocsp_ht.c" />
     <ClCompile Include="crypto\o_dir.c" />
     <ClCompile Include="crypto\o_init.c" />
     <ClCompile Include="crypto\o_time.c" />
@@ -522,6 +528,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="crypto\srp\srp_lib.c" />
+    <ClCompile Include="crypto\srp\srp_vfy.c" />
     <ClCompile Include="crypto\stack\stack.c" />
     <ClCompile Include="crypto\lhash\lhash.c" />
     <ClCompile Include="crypto\bio\b_dump.c" />
@@ -746,6 +753,8 @@
     <ClCompile Include="crypto\cms\cms_io.c" />
     <ClCompile Include="crypto\cms\cms_lib.c" />
     <ClCompile Include="crypto\cms\cms_sd.c" />
+    <ClCompile Include="crypto\txt_db\txt_db.c" />
+    <ClCompile Include="crypto\x509v3\v3_scts.c" />
     <ClCompile Include="crypto\x509\by_dir.c" />
     <ClCompile Include="crypto\x509\by_file.c" />
     <ClCompile Include="crypto\x509\x509cset.c" />
@@ -902,7 +911,12 @@
     <ClCompile Include="crypto\modes\cfb128.c" />
     <ClCompile Include="crypto\modes\ofb128.c" />
     <ClCompile Include="ssl\d1_both.c" />
+    <ClCompile Include="ssl\d1_clnt.c" />
+    <ClCompile Include="ssl\d1_lib.c" />
+    <ClCompile Include="ssl\d1_meth.c" />
+    <ClCompile Include="ssl\d1_pkt.c" />
     <ClCompile Include="ssl\d1_srtp.c" />
+    <ClCompile Include="ssl\d1_srvr.c" />
     <ClCompile Include="ssl\s23_clnt.c" />
     <ClCompile Include="ssl\s23_lib.c" />
     <ClCompile Include="ssl\s23_meth.c" />
@@ -1104,6 +1118,7 @@
     <ClInclude Include="symhacks.h" />
     <ClInclude Include="tls1.h" />
     <ClInclude Include="ts.h" />
+    <ClInclude Include="txt_db.h" />
     <ClInclude Include="ui.h" />
     <ClInclude Include="ui_compat.h" />
     <ClInclude Include="whrlpool.h" />
