@@ -12,4 +12,4 @@
 #define _SCL_SECURE_NO_WARNINGS
 
 
-#pragma warning(disable: 4267)
+#pragma warning(disable: 4244 4267)
