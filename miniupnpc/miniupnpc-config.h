@@ -10,5 +10,5 @@
 #	define MINIUPNP_STATICLIB
 #endif
 
-#pragma warning(disable: 4242)
+#pragma warning(disable: 4242 4244)
 
