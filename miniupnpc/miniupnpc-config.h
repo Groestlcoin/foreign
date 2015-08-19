@@ -9,3 +9,6 @@
 #ifndef _DLL
 #	define MINIUPNP_STATICLIB
 #endif
+
+#pragma warning(disable: 4242)
+
