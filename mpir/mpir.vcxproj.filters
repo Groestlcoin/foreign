@@ -546,9 +546,6 @@
     <ClCompile Include="mpn\generic\mulmid_n.c">
       <Filter>mpn</Filter>
     </ClCompile>
-    <ClCompile Include="mpn\generic\dc_divappr_q_n.c">
-      <Filter>mpn</Filter>
-    </ClCompile>
     <ClCompile Include="mpn\generic\sb_div_q.c">
       <Filter>mpn</Filter>
     </ClCompile>
@@ -593,6 +590,24 @@
     </ClCompile>
     <ClCompile Include="mpn\generic\mul_basecase.c">
       <Filter>mpn\excluded</Filter>
+    </ClCompile>
+    <ClCompile Include="mpn\generic\hgcd_matrix.c">
+      <Filter>mpn</Filter>
+    </ClCompile>
+    <ClCompile Include="mpn\generic\hgcd_reduce.c">
+      <Filter>mpn</Filter>
+    </ClCompile>
+    <ClCompile Include="mpn\generic\hgcd_appr.c">
+      <Filter>mpn</Filter>
+    </ClCompile>
+    <ClCompile Include="mpn\generic\matrix22_mul1_inverse_vector.c">
+      <Filter>mpn</Filter>
+    </ClCompile>
+    <ClCompile Include="mpn\generic\hgcd_step.c">
+      <Filter>mpn</Filter>
+    </ClCompile>
+    <ClCompile Include="mpn\generic\mulmod_2expm1.c">
+      <Filter>mpn</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

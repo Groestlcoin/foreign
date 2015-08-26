@@ -169,7 +169,6 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>.;../../src;$(OutDir)\inc;..;../..;mpn/x86w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -178,7 +177,7 @@
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
@@ -209,20 +208,18 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <Optimization>MinSpace</Optimization>
+      <Optimization>Disabled</Optimization>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>.;../../src;$(OutDir)\inc;..;../..;mpn/x86_64w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>mpir-config.h</ForcedIncludeFiles>
-      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
@@ -250,7 +247,6 @@
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;../../src;$(OutDir)\inc;..;../..;mpn/x86w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -258,7 +254,7 @@
       <ForcedIncludeFiles>mpir-config.h</ForcedIncludeFiles>
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
@@ -288,7 +284,6 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;../../src;..;../..;mpn/x86w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -296,7 +291,7 @@
       <ForcedIncludeFiles>mpir-config.h</ForcedIncludeFiles>
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
@@ -326,7 +321,6 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;../../src;..;../..;mpn/x86w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -334,7 +328,7 @@
       <ForcedIncludeFiles>mpir-config.h</ForcedIncludeFiles>
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
@@ -365,14 +359,13 @@
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;../../src;$(OutDir)\inc;..;../..;mpn/x86_64w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>mpir-config.h</ForcedIncludeFiles>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
@@ -401,14 +394,13 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;../../src;..;../..;mpn/x86_64w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>mpir-config.h</ForcedIncludeFiles>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
@@ -437,14 +429,13 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;../../src;..;../..;mpn/x86_64w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>mpir-config.h</ForcedIncludeFiles>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
@@ -557,7 +548,6 @@
     <ClCompile Include="mpn\generic\dc_bdiv_qr_n.c" />
     <ClCompile Include="mpn\generic\dc_bdiv_q_n.c" />
     <ClCompile Include="mpn\generic\dc_divappr_q.c" />
-    <ClCompile Include="mpn\generic\dc_divappr_q_n.c" />
     <ClCompile Include="mpn\generic\dc_div_q.c" />
     <ClCompile Include="mpn\generic\dc_div_qr.c" />
     <ClCompile Include="mpn\generic\dc_div_qr_n.c" />
@@ -577,6 +567,10 @@
     <ClCompile Include="mpn\generic\get_str.c" />
     <ClCompile Include="mpn\generic\hgcd.c" />
     <ClCompile Include="mpn\generic\hgcd2.c" />
+    <ClCompile Include="mpn\generic\hgcd_appr.c" />
+    <ClCompile Include="mpn\generic\hgcd_matrix.c" />
+    <ClCompile Include="mpn\generic\hgcd_reduce.c" />
+    <ClCompile Include="mpn\generic\hgcd_step.c" />
     <ClCompile Include="mpn\generic\invert.c" />
     <ClCompile Include="mpn\generic\inv_divappr_q.c" />
     <ClCompile Include="mpn\generic\inv_divappr_q_n.c" />
@@ -585,6 +579,7 @@
     <ClCompile Include="mpn\generic\inv_div_qr_n.c" />
     <ClCompile Include="mpn\generic\lshift.c" />
     <ClCompile Include="mpn\generic\matrix22_mul.c" />
+    <ClCompile Include="mpn\generic\matrix22_mul1_inverse_vector.c" />
     <ClCompile Include="mpn\generic\modexact_1c_odd.c" />
     <ClCompile Include="mpn\generic\mod_1.c" />
     <ClCompile Include="mpn\generic\mod_1_1.c" />
@@ -595,6 +590,7 @@
     <ClCompile Include="mpn\generic\mulmid.c" />
     <ClCompile Include="mpn\generic\mulmid_basecase.c" />
     <ClCompile Include="mpn\generic\mulmid_n.c" />
+    <ClCompile Include="mpn\generic\mulmod_2expm1.c" />
     <ClCompile Include="mpn\generic\mulmod_2expp1_basecase.c" />
     <ClCompile Include="mpn\generic\mulmod_bexpp1.c" />
     <ClCompile Include="mpn\generic\mul_1.c">
