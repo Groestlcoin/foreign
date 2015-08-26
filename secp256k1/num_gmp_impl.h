@@ -9,7 +9,7 @@
 
 #include <string.h>
 #include <stdlib.h>
-#include <gmp.h>
+#include EXT_GMP_HEADER //!!!P
 
 #include "util.h"
 #include "num.h"

@@ -4,12 +4,12 @@
 #	include <vc-inc.h>
 #endif
 
-#ifndef _MSC_VER
-#	define EXT_GMP_HEADER <gmp.h>
-#	define EXT_GMP_LIB "gmp"
-#else
+#ifdef _MSC_VER
 #	define EXT_GMP_HEADER <mpir.h>
 #	define EXT_GMP_LIB "mpir"
+#else
+#	define EXT_GMP_HEADER <gmp.h>
+#	define EXT_GMP_LIB "gmp"
 #endif
 
 #define USE_NUM_GMP
