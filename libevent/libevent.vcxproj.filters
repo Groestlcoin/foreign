@@ -56,6 +56,33 @@
     <ClCompile Include="event_tagging.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="bufferevent.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="listener.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bufferevent_sock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bufferevent_ratelim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="evutil_time.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bufferevent_async.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="buffer_iocp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strlcpy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="evthread_win32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="WIN32-Code\config.h">
