@@ -358,7 +358,7 @@
 /* #undef HAVE_O_DIRECT */
 
 /* Define to 1 if building partitioned database support. */
-//!!!P #define HAVE_PARTITION 1
+#define HAVE_PARTITION 1
 
 /* Define to 1 to enable some kind of performance event monitoring. */
 /* #undef HAVE_PERFMON */
@@ -586,16 +586,16 @@
 #define PACKAGE_NAME "Berkeley DB"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Berkeley DB 5.3.21"
+#define PACKAGE_STRING "Berkeley DB 5.3.28"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "db-5.3.21"
+#define PACKAGE_TARNAME "db-5.3.28"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL "http://www.oracle.com/technology/software/products/berkeley-db/index.html"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "5.3.21"
+#define PACKAGE_VERSION "5.3.28"
 
 /* The size of a `char', as computed by sizeof. */
 /* #undef SIZEOF_CHAR */

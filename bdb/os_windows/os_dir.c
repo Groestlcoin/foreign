@@ -1,7 +1,7 @@
 /*-
  * See the file LICENSE for redistribution information.
  *
- * Copyright (c) 1997, 2012 Oracle and/or its affiliates.  All rights reserved.
+ * Copyright (c) 1997, 2013 Oracle and/or its affiliates.  All rights reserved.
  *
  * $Id$
  */
@@ -36,7 +36,7 @@ __os_dirlist(env, dir, returndir, namesp, cntp)
 		return (ret);
 
 	(void)_sntprintf(tfilespec, DB_MAXPATHLEN,
-	    _T("%Ts%hc*"), tdir, PATH_SEPARATOR[0]); //!!!P
+	    _T("%s%hc*"), tdir, PATH_SEPARATOR[0]);
 
 	/*
 	 * On WinCE, FindFirstFile will return INVALID_HANDLE_VALUE when

@@ -1,7 +1,7 @@
 /*-
  * See the file LICENSE for redistribution information.
  *
- * Copyright (c) 1997, 2012 Oracle and/or its affiliates.  All rights reserved.
+ * Copyright (c) 1997, 2013 Oracle and/or its affiliates.  All rights reserved.
  *
  * $Id$
  */
@@ -1215,8 +1215,8 @@ int DbEnv::txn_begin(DbTxn *pid, DbTxn **tid, u_int32_t flags)
 DBENV_METHOD(txn_checkpoint, (u_int32_t kbyte, u_int32_t min, u_int32_t flags),
     (dbenv, kbyte, min, flags))
 
-int DbEnv::txn_recover(DbPreplist *preplist, u_int32_t count,
-    u_int32_t *retp, u_int32_t flags)	//!!!P
+int DbEnv::txn_recover(DbPreplist *preplist, long count,
+    long *retp, u_int32_t flags)
 {
 	DB_ENV *dbenv = unwrap(this);
 	DB_PREPLIST *c_preplist;
@@ -1240,7 +1240,7 @@ int DbEnv::txn_recover(DbPreplist *preplist, u_int32_t count,
 	}
 
 	if ((ret =
-	    dbenv->txn_recover(dbenv, c_preplist, count, (long*)retp, flags)) != 0) { //!!!P
+	    dbenv->txn_recover(dbenv, c_preplist, count, retp, flags)) != 0) {
 		__os_free(dbenv->env, c_preplist);
 		DB_ERROR(this, "DbEnv::txn_recover", ret, error_policy());
 		return (ret);
