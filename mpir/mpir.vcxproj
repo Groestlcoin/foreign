@@ -764,6 +764,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)\%(Filename).obj</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">$(IntDir)\%(Filename).obj</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)\%(Filename).obj</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)\%(Filename).obj</ObjectFile>
     </YASM>
     <YASM Include="mpn\x86w\mul_1.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -794,36 +798,60 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ObjectFile>
     </YASM>
     <YASM Include="mpn\x86_64w\sandybridge\add_n.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ObjectFile>
     </YASM>
     <YASM Include="mpn\x86_64w\sandybridge\mul_1.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ObjectFile>
     </YASM>
     <YASM Include="mpn\x86_64w\sandybridge\mul_basecase.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ObjectFile>
     </YASM>
     <YASM Include="mpn\x86_64w\sandybridge\redc_1.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ObjectFile>
     </YASM>
     <YASM Include="mpn\x86_64w\sandybridge\sqr_basecase.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ObjectFile>
     </YASM>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
