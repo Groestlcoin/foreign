@@ -38,7 +38,6 @@
     <ProjectGuid>{1F98C6E1-2DAE-78C4-9710-FD145353CEDC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>miniupnpc</RootNamespace>
-    <TargetPlatformVersion>8.1</TargetPlatformVersion>
   </PropertyGroup>
   <Import Project="..\..\src\cfg\vs\vs-ver.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
