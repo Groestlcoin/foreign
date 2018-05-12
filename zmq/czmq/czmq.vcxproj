@@ -38,7 +38,6 @@
     <ProjectGuid>{1298C6EE-439E-48C4-9710-FD145353CEDC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>czmq</RootNamespace>
-    <TargetPlatformVersion>8.1</TargetPlatformVersion>
   </PropertyGroup>
   <Import Project="..\..\..\src\cfg\vs\vs-ver.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
