@@ -2,10 +2,65 @@
 /* WARNING: Generated automatically from opensslconf.h.in by Configure. */
 
 /* OpenSSL was configured with the following options: */
+
+#include <openssl/opensslv.h>
+
 #ifndef OPENSSL_DOING_MAKEDEPEND
 
 #define OPENSSL_THREADS 1
 #define OPENSSL_cleanse Empty_OPENSSL_cleanse		//!!!P
+
+# define DECLARE_DEPRECATED(f)   f;
+
+#ifndef OPENSSL_FILE
+# ifdef OPENSSL_NO_FILENAMES
+#  define OPENSSL_FILE ""
+#  define OPENSSL_LINE 0
+# else
+#  define OPENSSL_FILE __FILE__
+#  define OPENSSL_LINE __LINE__
+# endif
+#endif
+
+#ifndef OPENSSL_MIN_API
+# define OPENSSL_MIN_API 0
+#endif
+
+#if !defined(OPENSSL_API_COMPAT) || OPENSSL_API_COMPAT < OPENSSL_MIN_API
+# undef OPENSSL_API_COMPAT
+# define OPENSSL_API_COMPAT OPENSSL_MIN_API
+#endif
+
+
+/*
+ * Do not deprecate things to be deprecated in version 1.2.0 before the
+ * OpenSSL version number matches.
+ */
+#if OPENSSL_VERSION_NUMBER < 0x10200000L
+# define DEPRECATEDIN_1_2_0(f)   f;
+#elif OPENSSL_API_COMPAT < 0x10200000L
+# define DEPRECATEDIN_1_2_0(f)   DECLARE_DEPRECATED(f)
+#else
+# define DEPRECATEDIN_1_2_0(f)
+#endif
+
+#if OPENSSL_API_COMPAT < 0x10100000L
+# define DEPRECATEDIN_1_1_0(f)   DECLARE_DEPRECATED(f)
+#else
+# define DEPRECATEDIN_1_1_0(f)
+#endif
+
+#if OPENSSL_API_COMPAT < 0x10000000L
+# define DEPRECATEDIN_1_0_0(f)   DECLARE_DEPRECATED(f)
+#else
+# define DEPRECATEDIN_1_0_0(f)
+#endif
+
+#if OPENSSL_API_COMPAT < 0x00908000L
+# define DEPRECATEDIN_0_9_8(f)   DECLARE_DEPRECATED(f)
+#else
+# define DEPRECATEDIN_0_9_8(f)
+#endif
 
 
 #ifndef OPENSSL_NO_EC_NISTP_64_GCC_128
@@ -93,10 +148,6 @@
 
 #undef OPENSSL_EXPORT_VAR_AS_FUNCTION
 
-#if defined(HEADER_IDEA_H) && !defined(IDEA_INT)
-#define IDEA_INT unsigned int
-#endif
-
 #if defined(HEADER_MD2_H) && !defined(MD2_INT)
 #define MD2_INT unsigned int
 #endif
@@ -126,13 +177,6 @@
 #endif
 #endif
 
-#if (defined(HEADER_NEW_DES_H) || defined(HEADER_DES_H)) && !defined(DES_LONG)
-/* If this is set to 'unsigned int' on a DEC Alpha, this gives about a
- * %20 speed up (longs are 8 bytes, int's are 4). */
-#ifndef DES_LONG
-#define DES_LONG unsigned long
-#endif
-#endif
 
 #if defined(HEADER_BN_H) && !defined(CONFIG_HEADER_BN_H)
 #define CONFIG_HEADER_BN_H
@@ -197,7 +241,7 @@ YOU SHOULD NOT HAVE BOTH DES_RISC1 AND DES_RISC2 DEFINED!!!!!
    even newer MIPS CPU's, but at the moment one size fits all for
    optimization options.  Older Sparc's work better with only UNROLL, but
    there's no way to tell at compile time what it is you're running on */
- 
+
 #if defined( sun )		/* Newer Sparc's */
 #  define DES_PTR
 #  define DES_RISC1
@@ -226,6 +270,15 @@ YOU SHOULD NOT HAVE BOTH DES_RISC1 AND DES_RISC2 DEFINED!!!!!
 #  define DES_RISC1
 #  define DES_UNROLL
 #endif /* Systems-specific speed defines */
+
+
+#if defined(OPENSSL_SYS_WINDOWS) && defined(OPENSSL_OPT_WINDLL)
+# define OPENSSL_GLOBAL __declspec(dllexport)
+#else
+# define OPENSSL_GLOBAL
+#endif
+
+
 #endif
 
 #endif /* DES_DEFAULT_OPTIONS */
