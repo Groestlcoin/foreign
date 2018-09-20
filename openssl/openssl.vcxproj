@@ -43,28 +43,24 @@
   <Import Project="..\..\src\cfg\vs\vs-ver.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
     <CLRSupport>false</CLRSupport>
     <WholeProgramOptimization>false</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
     <CLRSupport>false</CLRSupport>
     <WholeProgramOptimization>false</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
     <CLRSupport>false</CLRSupport>
     <WholeProgramOptimization>false</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R_St|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
     <CLRSupport>false</CLRSupport>
     <WholeProgramOptimization>false</WholeProgramOptimization>
@@ -83,14 +79,12 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
     <CLRSupport>false</CLRSupport>
     <WholeProgramOptimization>false</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D_St|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
     <CLRSupport>false</CLRSupport>
     <WholeProgramOptimization>false</WholeProgramOptimization>
@@ -168,7 +162,7 @@
       <ForcedIncludeFiles>openssl-config.h</ForcedIncludeFiles>
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UCFG_OPENSSL_ASM=1</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
@@ -228,7 +222,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>openssl-config.h</ForcedIncludeFiles>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UCFG_OPENSSL_ASM=1</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4197,4254 %(AdditionalOptions)</AdditionalOptions>
@@ -283,7 +277,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>openssl-config.h</ForcedIncludeFiles>
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UCFG_OPENSSL_ASM=1</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
@@ -350,7 +344,7 @@
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>openssl-config.h</ForcedIncludeFiles>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);UCFG_OPENSSL_ASM=1</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254  /IGNORE:4197 %(AdditionalOptions)</AdditionalOptions>
@@ -941,6 +935,7 @@
     <ClCompile Include="ssl\ssl_asn1.c" />
     <ClCompile Include="ssl\ssl_cert.c" />
     <ClCompile Include="ssl\ssl_ciph.c" />
+    <ClCompile Include="ssl\ssl_conf.c" />
     <ClCompile Include="ssl\ssl_err.c" />
     <ClCompile Include="ssl\ssl_err2.c" />
     <ClCompile Include="ssl\ssl_lib.c" />

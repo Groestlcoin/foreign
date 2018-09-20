@@ -1467,6 +1467,9 @@
     <ClCompile Include="ssl\ssl_ciph.c">
       <Filter>ssl</Filter>
     </ClCompile>
+    <ClCompile Include="ssl\ssl_conf.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
     <ClCompile Include="ssl\ssl_err.c">
       <Filter>ssl</Filter>
     </ClCompile>
