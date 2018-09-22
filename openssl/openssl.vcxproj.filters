@@ -208,6 +208,12 @@
     <Filter Include="crypto\ec\curve448\arch_32">
       <UniqueIdentifier>{d5fa113f-8596-436b-99a8-bf60a1100351}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ssl\record">
+      <UniqueIdentifier>{bb9e9c6a-cd23-4797-8045-0bce33b51e03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ssl\statem">
+      <UniqueIdentifier>{be4400e7-62e8-4097-a7ab-26c0106f9b18}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="crypto\cpt_err.c">
@@ -1903,6 +1909,81 @@
     </ClCompile>
     <ClCompile Include="crypto\ec\curve448\f_impl.c">
       <Filter>crypto\ec\curve448\arch_32</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\methods.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\ssl_init.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\bn\bn_srp.c">
+      <Filter>crypto\bn</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\record\rec_layer_s3.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\packet.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\bn\bn_const.c">
+      <Filter>crypto\bn</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\tls13_enc.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\statem.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\statem_srvr.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\record\rec_layer_d1.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\record\ssl3_buffer.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\statem_lib.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\pqueue.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\statem_clnt.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\record\ssl3_record.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\extensions.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\record\dtls1_bitmap.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\extensions_clnt.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\statem_dtls.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\extensions_cust.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\extensions_srvr.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\ssl_mcnf.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\s3_msg.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\record\ssl3_record_tls13.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\d1_msg.c">
+      <Filter>ssl</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

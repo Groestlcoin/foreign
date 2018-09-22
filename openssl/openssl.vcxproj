@@ -429,9 +429,11 @@
     <ClCompile Include="crypto\blake\blake2s.c" />
     <ClCompile Include="crypto\blake\m_blake2b.c" />
     <ClCompile Include="crypto\blake\m_blake2s.c" />
+    <ClCompile Include="crypto\bn\bn_const.c" />
     <ClCompile Include="crypto\bn\bn_dh.c" />
     <ClCompile Include="crypto\bn\bn_intern.c" />
     <ClCompile Include="crypto\bn\bn_mpi.c" />
+    <ClCompile Include="crypto\bn\bn_srp.c" />
     <ClCompile Include="crypto\chacha\chacha_enc.c" />
     <ClCompile Include="crypto\cmac\cmac.c" />
     <ClCompile Include="crypto\cmac\cm_ameth.c" />
@@ -1101,19 +1103,41 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ssl\d1_lib.c" />
+    <ClCompile Include="ssl\d1_msg.c" />
     <ClCompile Include="ssl\d1_srtp.c" />
+    <ClCompile Include="ssl\methods.c" />
+    <ClCompile Include="ssl\packet.c" />
+    <ClCompile Include="ssl\pqueue.c" />
+    <ClCompile Include="ssl\record\dtls1_bitmap.c" />
+    <ClCompile Include="ssl\record\rec_layer_d1.c" />
+    <ClCompile Include="ssl\record\rec_layer_s3.c" />
+    <ClCompile Include="ssl\record\ssl3_buffer.c" />
+    <ClCompile Include="ssl\record\ssl3_record.c" />
+    <ClCompile Include="ssl\record\ssl3_record_tls13.c" />
     <ClCompile Include="ssl\s3_cbc.c" />
     <ClCompile Include="ssl\s3_enc.c" />
     <ClCompile Include="ssl\s3_lib.c" />
+    <ClCompile Include="ssl\s3_msg.c" />
     <ClCompile Include="ssl\ssl_asn1.c" />
     <ClCompile Include="ssl\ssl_cert.c" />
     <ClCompile Include="ssl\ssl_ciph.c" />
     <ClCompile Include="ssl\ssl_conf.c" />
     <ClCompile Include="ssl\ssl_err.c" />
+    <ClCompile Include="ssl\ssl_init.c" />
     <ClCompile Include="ssl\ssl_lib.c" />
+    <ClCompile Include="ssl\ssl_mcnf.c" />
     <ClCompile Include="ssl\ssl_rsa.c" />
     <ClCompile Include="ssl\ssl_sess.c" />
     <ClCompile Include="ssl\ssl_stat.c" />
+    <ClCompile Include="ssl\statem\extensions.c" />
+    <ClCompile Include="ssl\statem\extensions_clnt.c" />
+    <ClCompile Include="ssl\statem\extensions_cust.c" />
+    <ClCompile Include="ssl\statem\extensions_srvr.c" />
+    <ClCompile Include="ssl\statem\statem.c" />
+    <ClCompile Include="ssl\statem\statem_clnt.c" />
+    <ClCompile Include="ssl\statem\statem_dtls.c" />
+    <ClCompile Include="ssl\statem\statem_lib.c" />
+    <ClCompile Include="ssl\statem\statem_srvr.c" />
     <ClCompile Include="ssl\t1_enc.c" />
     <ClCompile Include="ssl\t1_lib.c" />
     <ClCompile Include="engines\e_capi.c" />
@@ -1322,6 +1346,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ssl\tls13_enc.c" />
     <ClCompile Include="ssl\tls_srp.c" />
   </ItemGroup>
   <ItemGroup>
