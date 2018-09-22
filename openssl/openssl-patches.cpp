@@ -1,5 +1,8 @@
 #define UCFG_DETECT_MISMATCH 0
 
+#define _WIN32_WINNT_WIN10_TH2	0x0A01		//!!!? not defined in SDK
+#define _WIN32_WINNT_WIN10_RS1	0x0A02		//!!!? not defined in SDK
+
 #include "openssl-config.h"
 
 extern "C" {
