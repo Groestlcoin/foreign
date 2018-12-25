@@ -1985,6 +1985,9 @@
     <ClCompile Include="ssl\d1_msg.c">
       <Filter>ssl</Filter>
     </ClCompile>
+    <ClCompile Include="crypto\bn\rsaz_exp.c">
+      <Filter>crypto\bn</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="openssl.def" />
