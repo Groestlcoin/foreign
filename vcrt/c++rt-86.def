@@ -1,0 +1,564 @@
+LIBRARY
+
+EXPORTS
+
+abort                   @ 1 NONAME
+asctime                 @ 2 NONAME
+atof                    @ 3 NONAME
+atoi                    @ 4 NONAME
+atol                    @ 5 NONAME
+bsearch                 @ 10 NONAME
+
+
+ceil                    @ 21 NONAME
+clearerr                @ 22 NONAME
+exit                    @ 40 NONAME
+
+fclose                  @ 50 NONAME
+feof                    @ 51 NONAME
+ferror                  @ 52 NONAME
+fflush                  @ 53 NONAME
+fgetc                   @ 54 NONAME
+floor                   @ 55 NONAME
+fputc                   @ 56 NONAME
+fread                   @ 57 NONAME
+fseek                   @ 58 NONAME
+fgetpos                 @ 59 NONAME
+fgets                   @ 60 NONAME
+fopen                   @ 61 NONAME
+fprintf                 @ 62 NONAME
+fputs                   @ 63 NONAME
+fputwc                  @ 64 NONAME
+fputws                  @ 65 NONAME
+freopen                 @ 66 NONAME
+frexp                   @ 67 NONAME
+fsetpos                 @ 68 NONAME
+ftell                   @ 69 NONAME
+fwrite                  @ 70 NONAME
+
+feclearexcept           @ 71 NONAME
+fegetexceptflag         @ 72 NONAME
+fetestexcept            @ 73 NONAME
+
+getc                    @ 80 NONAME
+getenv                  @ 81 NONAME
+
+calloc                  @ 90 NONAME
+free                    @ 91 NONAME
+malloc                  @ 92 NONAME
+realloc                 @ 93 NONAME
+
+ispunct                 @ 100 NONAME
+isalnum                 @ 101 NONAME
+isalpha                 @ 102 NONAME
+isdigit                 @ 103 NONAME
+isgraph                 @ 104 NONAME
+islower                 @ 105 NONAME
+isprint                 @ 106 NONAME
+isspace                 @ 107 NONAME
+isupper                 @ 108 NONAME
+iswalnum                @ 109 NONAME
+iswctype                @ 110 NONAME
+iswlower                @ 111 NONAME
+iswspace                @ 112 NONAME
+iswupper                @ 113 NONAME
+isxdigit                @ 114 NONAME
+ldexp                   @ 120 NONAME
+lldiv                   @ 121 NONAME
+localeconv              @ 122 NONAME
+longjmp                 @ 123 NONAME
+
+
+memchr                  @ 131 NONAME
+memcmp                  @ 132 NONAME
+memcpy                  @ 133 NONAME
+memmove                 @ 134 NONAME
+memset                  @ 135 NONAME
+nan                     @ 140 NONAME
+nextafter               @ 141 NONAME
+perror                  @ 150 NONAME
+;printf                 @ 159 NONAME
+putc                    @ 160 NONAME
+putchar                 @ 161 NONAME
+puts                    @ 162 NONAME
+qsort                   @ 170 NONAME
+raise                   @ 181 NONAME
+
+rand                    @ 182 NONAME
+rand_s                  @ 183 NONAME
+
+rename                  @ 184 NONAME
+rewind                  @ 185 NONAME
+setlocale               @ 190 NONAME
+set_terminate           @ 191 NONAME
+setbuf                  @ 192 NONAME
+setvbuf                 @ 193 NONAME
+signal                  @ 194 NONAME
+sprintf                 @ 195 NONAME
+srand                   @ 196 NONAME
+;sscanf                 @ 197 NONAME
+strchr                  @ 200 NONAME
+strcmp                  @ 201 NONAME
+strcspn                 @ 202 NONAME
+strncat                 @ 203 NONAME
+strerror                @ 204 NONAME
+strftime                @ 205 NONAME
+strncmp                 @ 206 NONAME
+strncpy                 @ 207 NONAME
+strpbrk                 @ 208 NONAME
+strrchr                 @ 209 NONAME
+strspn                  @ 210 NONAME
+strstr                  @ 211 NONAME
+strtod                  @ 212 NONAME
+strtok                  @ 213 NONAME
+strtol                  @ 214 NONAME
+strtoul                 @ 215 NONAME
+strtoull                @ 216 NONAME
+system                  @ 217 NONAME
+tolower                 @ 220 NONAME
+toupper                 @ 221 NONAME
+towlower                @ 222 NONAME
+ungetc                  @ 223 NONAME
+iscntrl                 @ 224 NONAME
+strerror_s              @ 225 NONAME
+strtok_s                @ 226 NONAME
+
+;vsprintf
+wcschr                  @ 240 NONAME
+wcscmp                  @ 241 NONAME
+wcsncmp                 @ 242 NONAME
+wcsncpy                 @ 243 NONAME
+wcsrchr                 @ 244 NONAME
+wcsstr                  @ 245 NONAME
+wcstod                  @ 246 NONAME
+wcstol                  @ 247 NONAME
+wcstoul                 @ 248 NONAME
+wcslen                  @ 249 NONAME
+
+acos                    @ 276 NONAME
+asin                    @ 277 NONAME
+atan                    @ 278 NONAME
+atan2                   @ 279 NONAME
+cos                     @ 280 NONAME
+exp                     @ 281 NONAME
+fmod                    @ 282 NONAME
+log                     @ 283 NONAME
+log10                   @ 284 NONAME
+log2                    @ 285 NONAME
+pow                     @ 286 NONAME
+sin                     @ 287 NONAME
+sqrt                    @ 288 NONAME
+__setusermatherr        @ 290 NONAME
+
+
+_alloca_probe_16        @ 300 NONAME
+_allmul                 @ 301 NONAME
+_allshl                 @ 302 NONAME
+_allshr                 @ 303 NONAME
+_aulldiv                @ 304 NONAME
+_aullrem                @ 305 NONAME
+_aullshr                @ 306 NONAME
+_alldiv                 @ 307 NONAME
+_alldvrm                @ 308 NONAME
+_allrem                 @ 309 NONAME
+_aulldvrm               @ 310 NONAME
+
+
+_CIacos                 @ 320 NONAME
+_CIasin                 @ 321 NONAME
+_CIatan                 @ 322 NONAME
+_CIatan2                @ 323 NONAME
+_CIcos                  @ 324 NONAME
+_CIexp                  @ 325 NONAME
+_CIfmod                 @ 326 NONAME
+_CIlog                  @ 327 NONAME
+_CIlog10                @ 328 NONAME
+_CIpow                  @ 329 NONAME
+_CIsin                  @ 330 NONAME
+_CIsqrt                 @ 331 NONAME
+
+__RTtypeid              @ 349 NONAME
+__RTDynamicCast         @ 350 NONAME
+_EH_prolog              @ 351 NONAME
+_EH_prolog2             @ 352 NONAME
+
+_except_handler3_noexcept         @ 354 NONAME
+
+exp10                   @ 370 NONAME
+
+terminate               @ 380 NONAME
+unexpected              @ 381 NONAME
+__uncaught_exceptions   @ 382 NONAME
+__std_terminate         @ 383 NONAME
+
+??3@YAXPAXI@Z           @ 390 NONAME
+??_V@YAXPAXI@Z          @ 391 NONAME
+
+
+_beginthreadex          @ 400 NONAME
+_c_exit                 @ 401 NONAME
+_cexit                  @ 402 NONAME
+_chsize                 @ 403 NONAME
+_configure_narrow_argv  @ 404 NONAME
+_beginthread            @ 405 NONAME
+_chkstk                 @ 406 NONAME
+
+_close                  @ 408 NONAME
+_configthreadlocale     @ 409 NONAME
+_configure_wide_argv    @ 410 NONAME
+_copysign               @ 411 NONAME
+_ctime64                @ 412 NONAME
+_dclass                 @ 420 NONAME
+_dsign                  @ 421 NONAME
+_dtest                  @ 422 NONAME
+_endthread              @ 430 NONAME
+_endthreadex            @ 431 NONAME
+_errno                  @ 432 NONAME
+_execute_onexit_table   @ 433 NONAME
+_exit                   @ 434 NONAME
+__sys_nerr              @ 435 NONAME
+
+_CrtDbgReport           @ 436 NONAME
+_CrtDbgReportW          @ 437 NONAME
+
+
+_fdopen                 @ 438 NONAME
+_fileno                 @ 439 NONAME
+_findclose              @ 440 NONAME
+;_findfirst             @ 441 NONAME
+_findfirst64i32         @ 442 NONAME
+_findnext64i32          @ 443 NONAME
+_fseeki64               @ 444 NONAME
+_ftelli64               @ 445 NONAME
+__fpecode               @ 446 NONAME
+_fpclass                @ 447 NONAME
+_fstat64                @ 448 NONAME
+_fstat64i32             @ 449 NONAME
+_ftime64                @ 450 NONAME
+_ftol2                  @ 451 NONAME
+_ftol2_sse              @ 452 NONAME
+_fullpath               @ 453 NONAME
+_getcwd                 @ 460 NONAME
+_get_osfhandle          @ 461 NONAME
+_getch                  @ 462 NONAME
+_getpid                 @ 463 NONAME
+_get_startup_argv_mode  @ 464 NONAME
+_get_startup_commit_mode    @ 465 NONAME
+_get_startup_file_mode  @ 466 NONAME
+_get_startup_new_mode   @ 467 NONAME
+_get_startup_thread_locale_mode @ 468 NONAME
+_get_wide_winmain_command_line  @ 469 NONAME
+_gmtime64               @ 470 NONAME
+_gmtime64_s             @ 471 NONAME
+_initialize_default_precision           @ 490 NONAME
+_initialize_denormal_control            @ 491 NONAME
+_initialize_invalid_parameter_handler   @ 492 NONAME
+_initialize_onexit_table    @ 493 NONAME
+_initterm               @ 494 NONAME
+_initterm_e             @ 495 NONAME
+_invalid_parameter      @ 496 NONAME
+_isatty                 @ 497 NONAME
+_isctype                @ 498 NONAME
+_itow                   @ 499 NONAME
+_localtime64            @ 510 NONAME
+_locking                @ 511 NONAME
+_lseek                  @ 512 NONAME
+_ltoa                   @ 513 NONAME
+_matherr                @ 520 NONAME
+_mkdir                  @ 521 NONAME
+_mktime64               @ 522 NONAME
+_msize                  @ 523 NONAME
+_nextafter              @ 530 NONAME
+_open                   @ 540 NONAME
+_open_osfhandle         @ 541 NONAME
+_pclose                 @ 550 NONAME
+_pipe                   @ 551 NONAME
+_purecall               @ 552 NONAME
+_read                   @ 560 NONAME
+_register_onexit_function   @ 561 NONAME
+_set_app_type           @ 570 NONAME
+_seh_filter_exe         @ 571 NONAME
+_setmode                @ 572 NONAME
+_set_new_handler        @ 573 NONAME
+_set_new_mode           @ 574 NONAME
+_set_fmode              @ 575 NONAME
+_sleep                  @ 576 NONAME
+
+;_snprintf
+
+_stat64                 @ 577 NONAME
+_stat64i32              @ 578 NONAME
+_strnicmp               @ 579 NONAME
+_strdup                 @ 580 NONAME
+_stricmp                @ 581 NONAME
+_strtoi64               @ 582 NONAME
+_strtoui64              @ 583 NONAME
+_strcmpi=_stricmp               @ 584 NONAME
+_time64                 @ 590 NONAME
+_unlink                 @ 591 NONAME
+_utime64                @ 592 NONAME
+;_vsnprintf             @  NONAME
+;_vsnwprintf            @  NONAME
+_write                  @ 600 NONAME
+_wassert                @ 601 NONAME
+_wfopen                 @ 602 NONAME
+_wstat64                @ 603 NONAME
+_wstat64i32             @ 604 NONAME
+_wsetlocale             @ 605 NONAME
+_wsplitpath             @ 606 NONAME
+_wcsicmp                @ 607 NONAME
+
+
+__acrt_lowio_set_os_handle  @ 640 NONAME
+_free_osfhnd                @ 641 NONAME
+_get_current_locale         @ 642 NONAME
+
+
+_setmaxstdio                @ 649 NONAME
+__stdio_common_vfprintf     @ 650 NONAME
+__stdio_common_vsprintf     @ 651 NONAME
+__stdio_common_vsscanf      @ 652 NONAME
+__stdio_common_vswprintf    @ 653 NONAME
+__stdio_common_vfwprintf    @ 654 NONAME
+__stdio_common_vfscanf      @ 655 NONAME
+
+
+close = _close              @ 660 NONAME
+open = _open                @ 661 NONAME
+strdup = _strdup            @ 662 NONAME
+
+_popen                      @ 663 NONAME
+
+
+
+
+__acrt_iob_func                                     @ 671 NONAME
+
+__std_exception_copy                                @ 680 NONAME
+__std_exception_destroy                             @ 681 NONAME
+__std_type_info_name                                @ 682 NONAME
+
+__isa_available_init                                @ 685 NONAME
+_is_c_termination_complete                          @ 686 NONAME
+
+__initialize_lconv_for_unsigned_char                @ 690 NONAME
+__report_gsfailure                                  @ 692 NONAME
+__security_init_cookie                              @ 693 NONAME
+
+_crt_atexit                                         @ 697 NONAME
+_crt_at_quick_exit                                  @ 698 NONAME
+
+
+;__scrt_acquire_startup_lock
+;__scrt_dllmain_after_initialize_c
+;__scrt_dllmain_before_initialize_c
+;__scrt_dllmain_crt_thread_attach
+;__scrt_dllmain_crt_thread_detach
+;__scrt_dllmain_uninitialize_critical
+;__scrt_dllmain_exception_filter
+;__scrt_dllmain_uninitialize_c
+__scrt_fastfail                                     @ 700 NONAME
+__scrt_get_show_window_mode                         @ 701 NONAME
+;__scrt_initialize_crt
+;__scrt_initialize_onexit_table
+__scrt_initialize_winrt                             @ 702 NONAME
+__scrt_is_managed_app                               @ 703 NONAME
+__scrt_is_user_matherr_present                      @ 704 NONAME
+;__scrt_release_startup_lock
+__scrt_set_unhandled_exception_filter               @ 705 NONAME
+__scrt_get_dyn_tls_init_callback                    @ 706 NONAME
+__scrt_get_dyn_tls_dtor_callback                    @ 707 NONAME
+;__scrt_uninitialize_crt
+
+
+
+__CheckForDebuggerJustMyCode                        @ 709 NONAME
+;__vcrt_cleanup_type_info_names                     @ 710 NONAME
+__std_reverse_trivially_swappable_1                 @ 712 NONAME
+__std_reverse_trivially_swappable_2                 @ 713 NONAME
+__std_reverse_trivially_swappable_4                 @ 714 NONAME
+
+
+__dcrt_get_or_create_narrow_environment_nolock      @ 720 NONAME
+
+_register_thread_local_exe_atexit_callback          @ 729 NONAME
+_seh_filter_dll                                     @ 730 NONAME
+
+_SEH_prolog                                         @ 731 NONAME
+_SEH_epilog                                         @ 732 NONAME
+My_SEH_prolog                                       @ 733 NONAME
+My_SEH_epilog                                       @ 734 NONAME
+My_SEH_prolog4                                      @ 735 NONAME
+My_SEH_epilog4                                      @ 736 NONAME
+
+__telemetry_main_invoke_trigger                     @ 738 NONAME
+__telemetry_main_return_trigger                     @ 739 NONAME
+
+My_except_handler3                                  @ 740 NONAME
+My_except_handler4                                  @ 741 NONAME
+__CxxThrowException@8                               @ 742 NONAME
+_My_CxxThrowException@8                             @ 743 NONAME
+___CxxLongjmpUnwind@4                               @ 744 NONAME
+
+;!!! exported in the code _My__CxxSetUnhandledExceptionFilter@0             @ 746 NONAME
+
+
+
+_IMP_RtlUnwind@16                                   @ 750 NONAME
+
+;__acrt_uninitialize                                    @ 751 NONAME
+;__acrt_uninitialize_critical                       @ 752 NONAME
+;__acrt_thread_attach                               @ 753 NONAME
+;__acrt_thread_detach                               @ 754 NONAME
+;__acrt_initialize                                  @ 755 NONAME
+
+;__vcrt_uninitialize_critical                       @ 760 NONAME
+;__vcrt_initialize                                  @ 761 NONAME
+;__vcrt_uninitialize                                    @ 762 NONAME
+;__vcrt_thread_attach                               @ 763 NONAME
+;__vcrt_thread_detach                               @ 764 NONAME
+__vcrt_getptd                                       @ 765 NONAME
+
+_initialize_narrow_environment                      @ 770 NONAME
+__std_type_info_destroy_list                        @ 771 NONAME
+_initialize_wide_environment                        @ 772 NONAME
+_should_initialize_environment                      @ 773 NONAME
+__scrt_initialize_mta                               @ 774 NONAME
+
+
+;??0exception@ExtSTL@@QAE@XZ
+;??0exception@ExtSTL@@QAE@ABQBD@Z
+;??0exception@ExtSTL@@QAE@ABV01@@Z
+;??0exception@ExtSTL@@QAE@ABQBDH@Z
+;??1exception@ExtSTL@@UAE@XZ
+
+;?_set_new_handler@@YAP6AHI@ZP6AHI@Z@Z
+;?set_terminate@@YAP6AXXZP6AXXZ@Z
+?CurrentException@EH@Ext@@YG_NAAUEHExceptionRecord@@@Z      @ 780 NONAME
+?RethrowException@EH@Ext@@YGXABUEHExceptionRecord@@@Z       @ 781 NONAME
+?DestroyEHRecord@EH@Ext@@YGXAAUEHExceptionRecord@@@Z        @ 782 NONAME
+?SetExceptionHookHandler@Ext@@YAP6G_NPAX00@ZP6G_N000@Z@Z    @ 783 NONAME
+?what@exception@ExtSTL@@UBEPBDXZ                            @ 784 NONAME
+;?ProcessExceptionInCatch@Ext@@YGXXZ
+
+
+_get_initial_narrow_environment                         @ 795 NONAME
+
+
+??_L@YGXPAXIIP6EX0@Z1@Z                                 @ 800 NONAME
+??_M@YGXPAXIHP6EX0@Z@Z                                  @ 801 NONAME
+??_M@YGXPAXIIP6EX0@Z@Z                                  @ 802 NONAME
+;??_V@YAXPAX@Z                                          @ 803 NONAME
+??__C@YGXPAX0IHP6EX00@ZP6EX0@Z@Z                        @ 804 NONAME
+??__C@YGXPAX0IIP6EX00@ZP6EX0@Z@Z                        @ 805 NONAME
+_except_handler3                                        @ 806 NONAME
+_except_handler4                                        @ 807 NONAME
+_setjmp3                                                @ 808 NONAME
+
+_local_unwind2                                          @ 810 NONAME
+
+
+My_EH_prolog2                                           @ 820 NONAME
+
+??_V@YAXPAXIW4align_val_t@std@@@Z                       @ 850 NONAME
+??3@YAXPAXW4align_val_t@std@@@Z                         @ 851 NONAME
+??3@YAXPAXIW4align_val_t@std@@@Z                        @ 852 NONAME
+??_V@YAXPAXW4align_val_t@std@@@Z                        @ 853 NONAME
+
+?InitTls@Ext@@YG_NPAX@Z                                 @ 880 NONAME
+InitTcMalloc                                            @ 881 NONAME
+;?TCMalloc_on_tls_callback@@YGXPAXK0@Z
+
+?Malloc@CAlloc@Ext@@SGPAXI@Z                            @ 890 NONAME
+?Free@CAlloc@Ext@@SGXPAX@Z                              @ 891 NONAME
+?Realloc@CAlloc@Ext@@SGPAXPAXI@Z                        @ 892 NONAME
+?MSize@CAlloc@Ext@@SGIPAX@Z                             @ 893 NONAME
+?AlignedMalloc@CAlloc@Ext@@SGPAXII@Z                    @ 894 NONAME
+?AlignedFree@CAlloc@Ext@@SGXPAX@Z                       @ 895 NONAME
+
+??_U@YAPAXI@Z                                           @ 898 NONAME
+??_V@YAXPAX@Z                                           @ 899 NONAME
+
+??1CVector@ExtSTL@@UAE@XZ                               @ 900 NONAME
+??0CVector@ExtSTL@@IAE@XZ                               @ 901 NONAME
+?Deallocate@CVector@ExtSTL@@IAEXXZ                      @ 902 NONAME
+?AssignOp@CVector@ExtSTL@@IAEXABV12@P6GXPAXPBX@Z@Z      @ 903 NONAME
+?ReserveOp@CVector@ExtSTL@@IAEXIP6GXPAXPBX@Z@Z          @ 904 NONAME
+?PFill@CVector@ExtSTL@@IAEXPAW4byte@2@0PBXP6GXPAX1@Z@Z  @ 905 NONAME
+?clear@CVector@ExtSTL@@QAEXXZ                           @ 906 NONAME
+?pop_back@CVector@ExtSTL@@QAEXXZ                        @ 907 NONAME
+?PInsert@CVector@ExtSTL@@IAEXIPBXP6GXPAX0@Z2@Z          @ 908 NONAME
+?PResize@CVector@ExtSTL@@IAEXIPBXP6GXPAX0@Z2@Z          @ 909 NONAME
+?DestroyItems@CVector@ExtSTL@@IAEXXZ                    @ 910 NONAME
+
+??0CList@ExtSTL@@QAE@XZ                                 @ 920 NONAME
+??1CList@ExtSTL@@UAE@XZ                                 @ 921 NONAME
+?pop_back@CList@ExtSTL@@QAEXXZ                          @ 922 NONAME
+?swap@CList@ExtSTL@@IAEXAAV12@@Z                        @ 923 NONAME
+?PAssign@CList@ExtSTL@@IAEXABV12@P6GXPAXPBX@Z@Z         @ 924 NONAME
+?clear@CList@ExtSTL@@QAEXXZ                             @ 925 NONAME
+?erase@CList@ExtSTL@@QAE?AVCBaseIterator@12@V312@@Z     @ 926 NONAME
+?_Splice@CList@ExtSTL@@QAEXPAUCNode@12@AAV12@00I@Z      @ 927 NONAME
+?pop_front@CList@ExtSTL@@QAEXXZ                         @ 928 NONAME
+?Insert@CList@ExtSTL@@IAE?AVCBaseIterator@12@V312@PBXP6GXPAX1@Z@Z   @ 929 NONAME
+
+?Find@CBinaryTree@ExtSTL@@IBE?AVconst_iterator@12@PBX@Z     @ 940 NONAME
+?_Inc@const_iterator@CBinaryTree@ExtSTL@@QAEXXZ             @ 941 NONAME
+?insert@CBinaryTree@ExtSTL@@IAE?AViterator@12@V312@PBX@Z    @ 942 NONAME
+?clear@CBinaryTree@ExtSTL@@QAEXXZ                           @ 943 NONAME
+?_Lbound@CBinaryTree@ExtSTL@@IBEPAUCNode@12@PBX@Z           @ 944 NONAME
+?_Dec@const_iterator@CBinaryTree@ExtSTL@@QAEXXZ             @ 945 NONAME
+?PErase@CBinaryTree@ExtSTL@@IAEHPBX@Z                       @ 946 NONAME
+??4CBinaryTree@ExtSTL@@QAEAAV01@ABV01@@Z                    @ 947 NONAME
+?_Ubound@CBinaryTree@ExtSTL@@IBEPAUCNode@12@PBX@Z           @ 948 NONAME
+?PErase@CBinaryTree@ExtSTL@@IAEXViterator@12@@Z             @ 949 NONAME
+??1CBinaryTree@ExtSTL@@UAE@XZ                               @ 950 NONAME
+??0CBinaryTree@ExtSTL@@QAE@_N@Z                             @ 951 NONAME
+
+
+API_longjmp                                     @ 955 NONAME
+?_Init@CBinaryTree@ExtSTL@@IAEXXZ                           @ 956 NONAME
+?Insert@CBinaryTree@ExtSTL@@IAE?AU?$pair@Viterator@CBinaryTree@ExtSTL@@_N@2@PBX@Z       @ 957 NONAME
+?_Rng_abort@ExtSTL@@YAXPBD@Z                    @ 958 NONAME
+?_Random_device@ExtSTL@@YAIXZ                   @ 959 NONAME
+_Xtime_get_ticks                                @ 960 NONAME
+_Query_perf_counter                             @ 961 NONAME
+_Query_perf_frequency                           @ 962 NONAME
+?_Xinvalid_argument@ExtSTL@@YAXPBD@Z            @ 963 NONAME
+?SetThrowImp@Ext@@YAXP6GXJ@Z@Z                  @ 964 NONAME
+_UcrtGetIoInfo                                  @ 965 NONAME
+
+;__argc DATA
+;__argv DATA
+;__wargv DATA
+
+My__ehvec_copy_ctor                             @ 967 NONAME
+__CxxFrameHandler3                              @ 968 NONAME
+_My__CxxSetUnhandledExceptionFilter@0           @ 969 NONAME
+
+__p___argc                                      @ 970 NONAME DATA
+__p___wargv                                     @ 971 NONAME DATA
+__p___argv                                      @ 972 NONAME DATA
+__p__commode                                    @ 973 NONAME DATA
+__p__environ                                    @ 974 NONAME DATA
+
+__dcrt_initial_narrow_environment               @ 980 NONAME DATA
+__dyn_tls_init_callback                         @ 981 NONAME DATA
+
+;__scrt_current_native_startup_state    DATA
+
+;_onexit                                            @ 997 NONAME DATA
+;at_quick_exit                                  @ 999 NONAME DATA
+
+
+
+;!!!__iob_func
+
+;__pioinfo DATA
+
+;__acrt_pioinfo                                     @ 670 NONAME
+;__dcrt_initialize_narrow_environment_nolock            @ 721 NONAME
+;__dcrt_initialize_wide_environment_nolock          @ 722 NONAME
+
+
+

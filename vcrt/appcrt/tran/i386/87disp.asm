@@ -1,0 +1,13 @@
+INCLUDE el/x86x64.inc
+
+OPTION_LANGUAGE_C
+
+.CONST
+
+_minfinity	DT	0FFFF8000000000000000h
+_indefinite	DT	0FFFFC000000000000000h
+
+PUBLIC	_indefinite, _minfinity
+
+END
+
