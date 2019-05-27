@@ -1,3 +1,4 @@
+#error
 //
 // Declares internal C++ exception handling data structures.
 //
