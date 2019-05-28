@@ -4,8 +4,8 @@
  * file COPYING or http://www.opensource.org/licenses/mit-license.php.*
  **********************************************************************/
 
-#ifndef _SECP256K1_UTIL_H_
-#define _SECP256K1_UTIL_H_
+#ifndef SECP256K1_UTIL_H
+#define SECP256K1_UTIL_H
 
 #if defined HAVE_CONFIG_H
 #include "libsecp256k1-config.h"
@@ -17,8 +17,27 @@
 
 typedef struct {
     void (*fn)(const char *text, void* data);
-    void* data;
-} callback_t;
+    const void* data;
+} secp256k1_callback;
+
+//#define SECP256K1_INLINE inline //!!!P
+
+# if (!defined(__STDC_VERSION__) || (__STDC_VERSION__ < 199901L) )
+#  if SECP256K1_GNUC_PREREQ(2,7)
+#   define SECP256K1_INLINE __inline__
+#  elif (defined(_MSC_VER))
+#   define SECP256K1_INLINE __inline
+#  else
+#   define SECP256K1_INLINE
+#  endif
+# else
+#  define SECP256K1_INLINE inline
+# endif
+//!!!P
+
+static SECP256K1_INLINE void secp256k1_callback_call(const secp256k1_callback * const cb, const char * const text) {
+    cb->fn(text, (void*)cb->data);
+}
 
 #ifdef DETERMINISTIC
 #define TEST_FAILURE(msg) do { \
@@ -53,7 +72,10 @@ typedef struct {
 #endif
 
 /* Like assert(), but when VERIFY is defined, and side-effect safe. */
-#ifdef VERIFY
+#if defined(COVERAGE)
+#define VERIFY_CHECK(check)
+#define VERIFY_SETUP(stmt)
+#elif defined(VERIFY)
 #define VERIFY_CHECK CHECK
 #define VERIFY_SETUP(stmt) do { stmt; } while(0)
 #else
@@ -61,25 +83,10 @@ typedef struct {
 #define VERIFY_SETUP(stmt)
 #endif
 
-//#define SECP256K1_INLINE inline //!!!P
-
-# if (!defined(__STDC_VERSION__) || (__STDC_VERSION__ < 199901L) )
-#  if SECP256K1_GNUC_PREREQ(2,7)
-#   define SECP256K1_INLINE __inline__
-#  elif (defined(_MSC_VER))
-#   define SECP256K1_INLINE __inline
-#  else
-#   define SECP256K1_INLINE
-#  endif
-# else
-#  define SECP256K1_INLINE inline
-# endif
-//!!!P
-
-static SECP256K1_INLINE void *checked_malloc(const callback_t* cb, size_t size) {
+static SECP256K1_INLINE void *checked_malloc(const secp256k1_callback* cb, size_t size) {
     void *ret = malloc(size);
     if (ret == NULL) {
-        cb->fn("Out of memory", cb->data);
+        secp256k1_callback_call(cb, "Out of memory");
     }
     return ret;
 }
@@ -128,4 +135,4 @@ static SECP256K1_INLINE void *checked_malloc(const callback_t* cb, size_t size) 
 SECP256K1_GNUC_EXT typedef unsigned __int128 uint128_t;
 #endif
 
-#endif
+#endif /* SECP256K1_UTIL_H */
