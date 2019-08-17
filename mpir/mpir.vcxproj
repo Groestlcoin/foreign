@@ -559,7 +559,9 @@
     <ClCompile Include="mpn\generic\get_str.c" />
     <ClCompile Include="mpn\generic\hgcd.c" />
     <ClCompile Include="mpn\generic\hgcd2.c" />
+    <ClCompile Include="mpn\generic\hgcd2_jacobi.c" />
     <ClCompile Include="mpn\generic\hgcd_appr.c" />
+    <ClCompile Include="mpn\generic\hgcd_jacobi.c" />
     <ClCompile Include="mpn\generic\hgcd_matrix.c" />
     <ClCompile Include="mpn\generic\hgcd_reduce.c" />
     <ClCompile Include="mpn\generic\hgcd_step.c" />
@@ -569,6 +571,9 @@
     <ClCompile Include="mpn\generic\inv_div_q.c" />
     <ClCompile Include="mpn\generic\inv_div_qr.c" />
     <ClCompile Include="mpn\generic\inv_div_qr_n.c" />
+    <ClCompile Include="mpn\generic\jacobi.c" />
+    <ClCompile Include="mpn\generic\jacobi_2.c" />
+    <ClCompile Include="mpn\generic\jacobi_base.c" />
     <ClCompile Include="mpn\generic\lshift.c" />
     <ClCompile Include="mpn\generic\matrix22_mul.c" />
     <ClCompile Include="mpn\generic\matrix22_mul1_inverse_vector.c" />
@@ -661,6 +666,7 @@
     <ClCompile Include="mpz\aorsmul.c" />
     <ClCompile Include="mpz\aorsmul_i.c" />
     <ClCompile Include="mpz\clear.c" />
+    <ClCompile Include="mpz\clears.c" />
     <ClCompile Include="mpz\clrbit.c" />
     <ClCompile Include="mpz\cmp.c" />
     <ClCompile Include="mpz\cmpabs_ui.c" />
@@ -682,6 +688,7 @@
     <ClCompile Include="mpz\iset_si.c" />
     <ClCompile Include="mpz\iset_str.c" />
     <ClCompile Include="mpz\iset_ui.c" />
+    <ClCompile Include="mpz\jacobi.c" />
     <ClCompile Include="mpz\millerrabin.c" />
     <ClCompile Include="mpz\miller_rabin.c" />
     <ClCompile Include="mpz\mod.c" />

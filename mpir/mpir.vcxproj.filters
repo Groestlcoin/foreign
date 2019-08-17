@@ -609,6 +609,19 @@
     <ClCompile Include="mpn\generic\mulmod_2expm1.c">
       <Filter>mpn</Filter>
     </ClCompile>
+    <ClCompile Include="mpz\jacobi.c">
+      <Filter>mpz</Filter>
+    </ClCompile>
+    <ClCompile Include="mpn\generic\jacobi.c">
+      <Filter>mpn</Filter>
+    </ClCompile>
+    <ClCompile Include="mpn\generic\jacobi_base.c" />
+    <ClCompile Include="mpn\generic\jacobi_2.c" />
+    <ClCompile Include="mpn\generic\hgcd_jacobi.c" />
+    <ClCompile Include="mpn\generic\hgcd2_jacobi.c" />
+    <ClCompile Include="mpz\clears.c">
+      <Filter>mpz</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="file_config.h">
