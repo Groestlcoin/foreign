@@ -3,6 +3,10 @@
 
 /* OpenSSL was configured with the following options: */
 
+#ifndef HEADER_OPENSSLCONF_H
+# define HEADER_OPENSSLCONF_H
+
+
 #include <openssl/opensslv.h>
 
 #ifndef OPENSSL_DOING_MAKEDEPEND
@@ -136,12 +140,6 @@
 /* Generate 80386 code? */
 #undef I386_ONLY
 
-#if !(defined(VMS) || defined(__VMS)) /* VMS uses logical names instead */
-#if defined(HEADER_CRYPTLIB_H) && !defined(OPENSSLDIR)
-#define ENGINESDIR "/usr/local/ssl/lib/engines"
-#define OPENSSLDIR "/usr/local/ssl"
-#endif
-#endif
 
 #undef OPENSSL_UNISTD
 #define OPENSSL_UNISTD <unistd.h>
@@ -149,16 +147,6 @@
 #undef OPENSSL_EXPORT_VAR_AS_FUNCTION
 
 #if defined(HEADER_RC4_H)
-#if !defined(RC4_INT)
-/* using int types make the structure larger but make the code faster
- * on most boxes I have tested - up to %20 faster. */
-/*
- * I don't know what does "most" mean, but declaring "int" is a must on:
- * - Intel P6 because partial register stalls are very expensive;
- * - elder Alpha because it lacks byte load/store instructions;
- */
-#define RC4_INT unsigned int
-#endif
 #if !defined(RC4_CHUNK)
 /*
  * This enables code handling data aligned at natural CPU word
@@ -263,14 +251,27 @@ YOU SHOULD NOT HAVE BOTH DES_RISC1 AND DES_RISC2 DEFINED!!!!!
 #endif /* Systems-specific speed defines */
 
 
-#if defined(OPENSSL_SYS_WINDOWS) && defined(OPENSSL_OPT_WINDLL)
-# define OPENSSL_GLOBAL __declspec(dllexport)
-#else
-# define OPENSSL_GLOBAL
-#endif
 
 
 #endif
 
 #endif /* DES_DEFAULT_OPTIONS */
 #endif /* HEADER_DES_LOCL_H */
+
+
+# ifdef  __cplusplus
+extern "C" {
+# endif
+
+#define RC4_INT unsigned int
+#define ENGINESDIR "/usr/local/ssl/lib/engines"
+#define OPENSSLDIR "/OpenSSL"
+#define MODULESDIR "/OpenSSL"
+
+#include <openssl/macros.h>
+
+# ifdef  __cplusplus
+}
+# endif
+
+#endif                          /* HEADER_OPENSSLCONF_H */

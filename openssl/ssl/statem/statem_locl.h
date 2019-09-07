@@ -1,7 +1,7 @@
 /*
  * Copyright 2015-2018 The OpenSSL Project Authors. All Rights Reserved.
  *
- * Licensed under the OpenSSL license (the "License").  You may not use
+ * Licensed under the Apache License 2.0 (the "License").  You may not use
  * this file except in compliance with the License.  You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://www.openssl.org/source/license.html
@@ -28,9 +28,6 @@
 #define CCS_MAX_LENGTH                  1
 /* Max should actually be 36 but we are generous */
 #define FINISHED_MAX_LENGTH             64
-
-/* The maximum number of incoming KeyUpdate messages we will accept */
-#define MAX_KEY_UPDATE_MESSAGES     32
 
 /* Dummy message type */
 #define SSL3_MT_DUMMY   -1
@@ -61,7 +58,8 @@ int create_synthetic_message_hash(SSL *s, const unsigned char *hashval,
                                   size_t hashlen, const unsigned char *hrr,
                                   size_t hrrlen);
 int parse_ca_names(SSL *s, PACKET *pkt);
-int construct_ca_names(SSL *s, WPACKET *pkt);
+const STACK_OF(X509_NAME) *get_ca_names(SSL *s);
+int construct_ca_names(SSL *s, const STACK_OF(X509_NAME) *ca_sk, WPACKET *pkt);
 size_t construct_key_exchange_tbs(SSL *s, unsigned char **ptbs,
                                   const void *param, size_t paramlen);
 
@@ -201,9 +199,9 @@ int tls_parse_ctos_early_data(SSL *s, PACKET *pkt, unsigned int context,
 #ifndef OPENSSL_NO_EC
 int tls_parse_ctos_ec_pt_formats(SSL *s, PACKET *pkt, unsigned int context,
                                  X509 *x, size_t chainidx);
+#endif
 int tls_parse_ctos_supported_groups(SSL *s, PACKET *pkt, unsigned int context,
                                     X509 *x, size_t chainidxl);
-#endif
 int tls_parse_ctos_session_ticket(SSL *s, PACKET *pkt, unsigned int context,
                                   X509 *x, size_t chainidx);
 int tls_parse_ctos_sig_algs_cert(SSL *s, PACKET *pkt, unsigned int context,
@@ -316,10 +314,11 @@ EXT_RETURN tls_construct_ctos_srp(SSL *s, WPACKET *pkt, unsigned int context, X5
 EXT_RETURN tls_construct_ctos_ec_pt_formats(SSL *s, WPACKET *pkt,
                                             unsigned int context, X509 *x,
                                             size_t chainidx);
+#endif
 EXT_RETURN tls_construct_ctos_supported_groups(SSL *s, WPACKET *pkt,
                                                unsigned int context, X509 *x,
                                                size_t chainidx);
-#endif
+
 EXT_RETURN tls_construct_ctos_early_data(SSL *s, WPACKET *pkt,
                                          unsigned int context, X509 *x,
                                          size_t chainidx);

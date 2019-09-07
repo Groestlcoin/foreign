@@ -3,7 +3,7 @@
  * Copyright 2017 Ribose Inc. All Rights Reserved.
  * Ported from Ribose contributions from Botan.
  *
- * Licensed under the OpenSSL license (the "License").  You may not use
+ * Licensed under the Apache License 2.0 (the "License").  You may not use
  * this file except in compliance with the License.  You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://www.openssl.org/source/license.html
@@ -313,12 +313,12 @@ static int sm2_sig_verify(const EC_KEY *key, const ECDSA_SIG *sig,
 
     /*
      * B1: verify whether r' in [1,n-1], verification failed if not
-     * B2: vefify whether s' in [1,n-1], verification failed if not
+     * B2: verify whether s' in [1,n-1], verification failed if not
      * B3: set M'~=ZA || M'
      * B4: calculate e'=Hv(M'~)
      * B5: calculate t = (r' + s') modn, verification failed if t=0
      * B6: calculate the point (x1', y1')=[s']G + [t]PA
-     * B7: calculate R=(e'+x1') modn, verfication pass if yes, otherwise failed
+     * B7: calculate R=(e'+x1') modn, verification pass if yes, otherwise failed
      */
 
     ECDSA_SIG_get0(sig, &r, &s);

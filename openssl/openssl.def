@@ -2,582 +2,591 @@ LIBRARY         OPENSSL
 
 EXPORTS
 
-AES_ctr128_encrypt				@ 1 NONAME
-AES_encrypt						@ 2 NONAME
-AES_set_encrypt_key				@ 3 NONAME
+AES_encrypt                     @ 2 NONAME
+AES_set_encrypt_key             @ 3 NONAME
 
-ASN1_INTEGER_set				@ 4 NONAME
-ASN1_STRING_to_UTF8				@ 5 NONAME
-ASN1_TIME_print					@ 6 NONAME
+ASN1_INTEGER_set                @ 4 NONAME
+ASN1_STRING_to_UTF8             @ 5 NONAME
+ASN1_TIME_print                 @ 6 NONAME
 
-BIO_ctrl						@ 10 NONAME
-BIO_ctrl_pending				@ 11 NONAME
-BIO_f_base64					@ 12 NONAME
-BIO_f_buffer					@ 13 NONAME
-BIO_free						@ 14 NONAME
-BIO_free_all					@ 15 NONAME
-BIO_new							@ 16 NONAME
-BIO_new_mem_buf					@ 17 NONAME
-BIO_new_bio_pair				@ 18 NONAME
-BIO_new_socket					@ 19 NONAME
-BIO_next						@ 20 NONAME
-BIO_number_read					@ 21 NONAME
-BIO_number_written				@ 22 NONAME
-BIO_push						@ 23 NONAME
-BIO_read						@ 24 NONAME
-BIO_s_mem						@ 25 NONAME
-BIO_set_flags					@ 26 NONAME
-BIO_test_flags					@ 27 NONAME
-BIO_write						@ 28 NONAME
+BIO_ctrl                        @ 10 NONAME
+BIO_ctrl_pending                @ 11 NONAME
+BIO_f_base64                    @ 12 NONAME
+BIO_f_buffer                    @ 13 NONAME
+BIO_free                        @ 14 NONAME
+BIO_free_all                    @ 15 NONAME
+BIO_new                         @ 16 NONAME
+BIO_new_mem_buf                 @ 17 NONAME
+BIO_new_bio_pair                @ 18 NONAME
+BIO_new_socket                  @ 19 NONAME
+BIO_next                        @ 20 NONAME
+BIO_number_read                 @ 21 NONAME
+BIO_number_written              @ 22 NONAME
+BIO_push                        @ 23 NONAME
+BIO_read                        @ 24 NONAME
+BIO_s_mem                       @ 25 NONAME
+BIO_set_flags                   @ 26 NONAME
+BIO_test_flags                  @ 27 NONAME
+BIO_write                       @ 28 NONAME
 
-BN_add							@ 30 NONAME
-bn_add_words					@ 31 NONAME
-BN_bin2bn						@ 33 NONAME
-BN_bn2bin						@ 34 NONAME
-BN_bn2hex						@ 35 NONAME
-BN_bn2mpi						@ 36 NONAME
-BN_clear_free					@ 37 NONAME
-BN_cmp							@ 38 NONAME
-BN_copy							@ 39 NONAME
-BN_div							@ 40 NONAME
-bn_div_words					@ 41 NONAME
-BN_dup							@ 42 NONAME
-bn_expand2						@ 43 NONAME
-BN_free							@ 44 NONAME
-BN_get_word						@ 45 NONAME
-BN_hex2bn						@ 46 NONAME
-BN_init							@ 47 NONAME
-BN_lshift						@ 48 NONAME
-BN_mod_inverse					@ 49 NONAME
-BN_mod_mul						@ 50 NONAME
-BN_mod_sqrt						@ 51 NONAME
-BN_mod_sub						@ 52 NONAME
-BN_mpi2bn						@ 53 NONAME
-BN_mul							@ 54 NONAME
-BN_mul_word						@ 55 NONAME
-bn_mul_words					@ 56 NONAME
-BN_new							@ 57 NONAME
-BN_num_bits						@ 58 NONAME
-BN_rshift						@ 59 NONAME
-BN_set_negative					@ 60 NONAME
-BN_set_word						@ 61 NONAME
-BN_sub							@ 62 NONAME
-BN_sub_word						@ 63 NONAME
-bn_sub_words					@ 64 NONAME
-BN_to_ASN1_INTEGER				@ 65 NONAME
-BN_ucmp							@ 66 NONAME
-BN_usub							@ 67 NONAME
-BN_mod_exp						@ 68 NONAME
-BN_bn2dec 						@ 69 NONAME
+BN_add                          @ 30 NONAME
+bn_add_words                    @ 31 NONAME
+BN_bin2bn                       @ 33 NONAME
+BN_bn2bin                       @ 34 NONAME
+BN_bn2hex                       @ 35 NONAME
+BN_bn2mpi                       @ 36 NONAME
+BN_clear_free                   @ 37 NONAME
+BN_cmp                          @ 38 NONAME
+BN_copy                         @ 39 NONAME
+BN_div                          @ 40 NONAME
+bn_div_words                    @ 41 NONAME
+BN_dup                          @ 42 NONAME
+bn_expand2                      @ 43 NONAME
+BN_free                         @ 44 NONAME
+BN_get_word                     @ 45 NONAME
+BN_hex2bn                       @ 46 NONAME
+;BN_init                         @ 47 NONAME
+BN_lshift                       @ 48 NONAME
+BN_mod_inverse                  @ 49 NONAME
+BN_mod_mul                      @ 50 NONAME
+BN_mod_sqrt                     @ 51 NONAME
+BN_mod_sub                      @ 52 NONAME
+BN_mpi2bn                       @ 53 NONAME
+BN_mul                          @ 54 NONAME
+BN_mul_word                     @ 55 NONAME
+bn_mul_words                    @ 56 NONAME
+BN_new                          @ 57 NONAME
+BN_num_bits                     @ 58 NONAME
+BN_rshift                       @ 59 NONAME
+BN_set_negative                 @ 60 NONAME
+BN_set_word                     @ 61 NONAME
+BN_sub                          @ 62 NONAME
+BN_sub_word                     @ 63 NONAME
+bn_sub_words                    @ 64 NONAME
+BN_to_ASN1_INTEGER              @ 65 NONAME
+BN_ucmp                         @ 66 NONAME
+BN_usub                         @ 67 NONAME
+BN_mod_exp                      @ 68 NONAME
+BN_bn2dec                       @ 69 NONAME
 
-BN_CTX_end						@ 70 NONAME
-BN_CTX_free						@ 71 NONAME
-BN_CTX_get						@ 72 NONAME
-BN_CTX_new						@ 73 NONAME
-BN_CTX_start					@ 74 NONAME
+BN_CTX_end                      @ 70 NONAME
+BN_CTX_free                     @ 71 NONAME
+BN_CTX_get                      @ 72 NONAME
+BN_CTX_new                      @ 73 NONAME
+BN_CTX_start                    @ 74 NONAME
 
-BUF_MEM_free					@ 80 NONAME
+BUF_MEM_free                    @ 80 NONAME
 
-CONF_modules_unload				@ 81 NONAME
+CONF_modules_unload             @ 81 NONAME
 
-CRYPTO_set_mem_functions		@ 90 NONAME
-CRYPTO_add_lock					@ 91 NONAME
-CRYPTO_cleanup_all_ex_data		@ 92 NONAME
-CRYPTO_ctr128_encrypt			@ 93 NONAME
-CRYPTO_free						@ 94 NONAME
-CRYPTO_malloc					@ 95 NONAME
-CRYPTO_num_locks				@ 96 NONAME
-CRYPTO_set_dynlock_create_callback	@ 97 NONAME
-CRYPTO_set_dynlock_destroy_callback @ 98 NONAME
-CRYPTO_set_dynlock_lock_callback	@ 99 NONAME
-CRYPTO_set_id_callback			@ 100 NONAME
-CRYPTO_set_locking_callback		@ 101 NONAME
-CRYPTO_THREADID_set_callback	@ 102 NONAME
-CRYPTO_THREADID_set_numeric		@ 103 NONAME
+CRYPTO_set_mem_functions        @ 90 NONAME
+;CRYPTO_add_lock                 @ 91 NONAME
+;CRYPTO_cleanup_all_ex_data      @ 92 NONAME
+CRYPTO_ctr128_encrypt           @ 93 NONAME
+CRYPTO_free                     @ 94 NONAME
+CRYPTO_malloc                   @ 95 NONAME
+;CRYPTO_set_dynlock_create_callback  @ 97 NONAME
+;CRYPTO_set_dynlock_destroy_callback @ 98 NONAME
+;CRYPTO_set_dynlock_lock_callback    @ 99 NONAME
+;CRYPTO_set_id_callback          @ 100 NONAME
+;CRYPTO_set_locking_callback     @ 101 NONAME
+;CRYPTO_THREADID_set_callback    @ 102 NONAME
+;CRYPTO_THREADID_set_numeric     @ 103 NONAME
 
-d2i_DHparams					@ 110 NONAME
-d2i_ECPrivateKey				@ 111 NONAME
-d2i_PublicKey					@ 112 NONAME
-d2i_RSAPublicKey				@ 113 NONAME
-d2i_X509						@ 114 NONAME
+d2i_DHparams                    @ 110 NONAME
+d2i_ECPrivateKey                @ 111 NONAME
+d2i_PublicKey                   @ 112 NONAME
+d2i_RSAPublicKey                @ 113 NONAME
+d2i_X509                        @ 114 NONAME
 
-DH_check						@ 120 NONAME
-DH_compute_key					@ 121 NONAME
-DH_free							@ 122 NONAME
-DH_generate_key					@ 123 NONAME
-DH_generate_parameters			@ 124 NONAME
-DH_generate_parameters_ex		@ 125 NONAME
-DH_new							@ 126 NONAME
-DH_size							@ 127 NONAME
-DH_up_ref						@ 128 NONAME
+DH_check                        @ 120 NONAME
+DH_compute_key                  @ 121 NONAME
+DH_free                         @ 122 NONAME
+DH_generate_key                 @ 123 NONAME
+;DH_generate_parameters          @ 124 NONAME
+DH_generate_parameters_ex       @ 125 NONAME
+DH_new                          @ 126 NONAME
+DH_size                         @ 127 NONAME
+DH_up_ref                       @ 128 NONAME
 
-EC_GFp_mont_method				@ 130 NONAME
-EC_GFp_nist_method				@ 131 NONAME
-EC_GFp_simple_method			@ 132 NONAME
+EC_GFp_mont_method              @ 130 NONAME
+EC_GFp_nist_method              @ 131 NONAME
+EC_GFp_simple_method            @ 132 NONAME
 
-EC_GROUP_get_curve_GFp			@ 135 NONAME
-EC_GROUP_get_degree				@ 136 NONAME
-EC_GROUP_get_order				@ 137 NONAME
-EC_GROUP_method_of				@ 138 NONAME
+EC_GROUP_get_curve_GFp          @ 135 NONAME
+EC_GROUP_get_degree             @ 136 NONAME
+EC_GROUP_get_order              @ 137 NONAME
+EC_GROUP_method_of              @ 138 NONAME
 
-EC_KEY_check_key				@ 139 NONAME
-EC_KEY_copy						@ 140 NONAME
-EC_KEY_dup						@ 141 NONAME
-EC_KEY_free						@ 142 NONAME
-EC_KEY_generate_key				@ 143 NONAME
-EC_KEY_get0_group				@ 144 NONAME
-EC_KEY_get0_private_key			@ 145 NONAME
-EC_KEY_new						@ 146 NONAME
-EC_KEY_new_by_curve_name		@ 147 NONAME
-EC_KEY_set_conv_form			@ 148 NONAME
-EC_KEY_set_private_key			@ 149 NONAME
-EC_KEY_set_public_key			@ 150 NONAME
+EC_KEY_check_key                @ 139 NONAME
+EC_KEY_copy                     @ 140 NONAME
+EC_KEY_dup                      @ 141 NONAME
+EC_KEY_free                     @ 142 NONAME
+EC_KEY_generate_key             @ 143 NONAME
+EC_KEY_get0_group               @ 144 NONAME
+EC_KEY_get0_private_key         @ 145 NONAME
+EC_KEY_new                      @ 146 NONAME
+EC_KEY_new_by_curve_name        @ 147 NONAME
+EC_KEY_set_conv_form            @ 148 NONAME
+EC_KEY_set_private_key          @ 149 NONAME
+EC_KEY_set_public_key           @ 150 NONAME
 
-EC_POINT_free					@ 160 NONAME
-EC_POINT_is_at_infinity			@ 161 NONAME
-EC_POINT_mul					@ 162 NONAME
-EC_POINT_new					@ 163 NONAME
+EC_POINT_free                   @ 160 NONAME
+EC_POINT_is_at_infinity         @ 161 NONAME
+EC_POINT_mul                    @ 162 NONAME
+EC_POINT_new                    @ 163 NONAME
 EC_POINT_set_compressed_coordinates_GFp @ 164 NONAME
 
-ECDSA_do_sign					@ 170 NONAME
-ECDSA_sign						@ 171 NONAME
-ECDSA_size						@ 172 NONAME
-ECDSA_verify					@ 173 NONAME
+ECDSA_do_sign                   @ 170 NONAME
+ECDSA_sign                      @ 171 NONAME
+ECDSA_size                      @ 172 NONAME
+ECDSA_verify                    @ 173 NONAME
 
-ECDSA_SIG_free					@ 180 NONAME
-ECDSA_SIG_new					@ 181 NONAME
+ECDSA_SIG_free                  @ 180 NONAME
+ECDSA_SIG_new                   @ 181 NONAME
 
-ENGINE_by_id					@ 190 NONAME
-ENGINE_cleanup					@ 191 NONAME
-ENGINE_ctrl_cmd_string			@ 192 NONAME
-ENGINE_free						@ 193 NONAME
-ENGINE_get_cipher_engine		@ 194 NONAME
-ENGINE_get_default_DH			@ 195 NONAME
-ENGINE_get_default_ECDH			@ 196 NONAME
-ENGINE_get_default_ECDSA		@ 197 NONAME
-ENGINE_get_default_RAND			@ 198 NONAME
-ENGINE_get_default_RSA			@ 199 NONAME
-ENGINE_get_digest_engine		@ 200 NONAME
-ENGINE_get_id					@ 201 NONAME
-ENGINE_get_name					@ 202 NONAME
-ENGINE_load_builtin_engines		@ 203 NONAME
-ENGINE_register_all_complete	@ 204 NONAME
-ENGINE_set_default				@ 205 NONAME
+ENGINE_by_id                    @ 190 NONAME
+;ENGINE_cleanup                  @ 191 NONAME
+ENGINE_ctrl_cmd_string          @ 192 NONAME
+ENGINE_free                     @ 193 NONAME
+ENGINE_get_cipher_engine        @ 194 NONAME
+ENGINE_get_default_DH           @ 195 NONAME
+;ENGINE_get_default_ECDH         @ 196 NONAME
+;ENGINE_get_default_ECDSA        @ 197 NONAME
+ENGINE_get_default_RAND         @ 198 NONAME
+ENGINE_get_default_RSA          @ 199 NONAME
+ENGINE_get_digest_engine        @ 200 NONAME
+ENGINE_get_id                   @ 201 NONAME
+ENGINE_get_name                 @ 202 NONAME
+ENGINE_load_builtin_engines     @ 203 NONAME
+ENGINE_register_all_complete    @ 204 NONAME
+ENGINE_set_default              @ 205 NONAME
 
-ERR_error_string				@ 210 NONAME
-ERR_error_string_n				@ 211 NONAME
-ERR_free_strings				@ 212 NONAME
-ERR_func_error_string			@ 213 NONAME
-ERR_get_error					@ 214 NONAME
-ERR_lib_error_string			@ 215 NONAME
-ERR_load_crypto_strings			@ 216 NONAME
-ERR_peek_error					@ 217 NONAME
-ERR_reason_error_string			@ 218 NONAME
-ERR_remove_state				@ 219 NONAME
+ERR_error_string                @ 210 NONAME
+ERR_error_string_n              @ 211 NONAME
+;ERR_free_strings                @ 212 NONAME
+ERR_func_error_string           @ 213 NONAME
+ERR_get_error                   @ 214 NONAME
+ERR_lib_error_string            @ 215 NONAME
+;ERR_load_crypto_strings         @ 216 NONAME
+ERR_peek_error                  @ 217 NONAME
+ERR_reason_error_string         @ 218 NONAME
+ERR_remove_state                @ 219 NONAME
 
-EVP_aes_128_ctr					@ 230 NONAME
-EVP_aes_128_ecb					@ 231 NONAME
-EVP_aes_192_ecb					@ 232 NONAME
-EVP_aes_256_cbc					@ 233 NONAME
-EVP_aes_256_ecb 				@ 234 NONAME
-EVP_BytesToKey					@ 235 NONAME
-EVP_cleanup						@ 236 NONAME
-EVP_CIPHER_CTX_cleanup			@ 237 NONAME
-EVP_CIPHER_CTX_init				@ 238 NONAME
-EVP_DecryptFinal_ex				@ 239 NONAME
-EVP_DecryptUpdate				@ 240 NONAME
-EVP_DecryptInit_ex				@ 241 NONAME
-EVP_EncodeFinal					@ 242 NONAME
-EVP_EncodeInit					@ 243 NONAME
-EVP_EncodeUpdate				@ 244 NONAME
-EVP_EncryptFinal_ex				@ 245 NONAME
-EVP_EncryptInit					@ 246 NONAME
-EVP_EncryptInit_ex				@ 247 NONAME
-EVP_EncryptUpdate				@ 248 NONAME
-EVP_PKEY_assign					@ 249 NONAME
-EVP_PKEY_bits					@ 250 NONAME
-EVP_PKEY_cmp					@ 251 NONAME
-EVP_PKEY_free					@ 252 NONAME
-EVP_PKEY_copy_parameters		@ 253 NONAME
-EVP_PKEY_get1_RSA				@ 254 NONAME
-EVP_PKEY_new					@ 255 NONAME
-EVP_PKEY_set_type				@ 256 NONAME
-EVP_PKEY_type					@ 257 NONAME
-EVP_sha1						@ 258 NONAME
-EVP_sha256			 			@ 259 NONAME
-EVP_sha512						@ 260 NONAME
-
-HMAC							@ 270 NONAME
-
-i2d_DHparams					@ 280 NONAME
-i2d_ECPrivateKey				@ 281 NONAME
-i2d_PrivateKey					@ 282 NONAME
-i2d_PublicKey					@ 283 NONAME
-i2d_RSAPublicKey				@ 284 NONAME
-i2o_ECPublicKey					@ 285 NONAME
-i2d_X509						@ 286 NONAME
-
-MD5_Init						@ 290 NONAME
-MD5_Update						@ 291 NONAME
-MD5_Final						@ 292 NONAME
-
-o2i_ECPublicKey					@ 299 NONAME
-
-OBJ_obj2nid						@ 300 NONAME
-OBJ_txt2nid						@ 301 NONAME
-
-OPENSSL_add_all_algorithms_noconf @ 302 NONAME
-Empty_OPENSSL_cleanse			@ 303 NONAME
-
-PEM_read_bio_RSAPrivateKey		@ 304 NONAME
-PEM_read_bio_RSAPublicKey		@ 305 NONAME
-PEM_write_bio_RSAPrivateKey		@ 306 NONAME
-PEM_write_bio_RSAPublicKey		@ 307 NONAME
-
-PKCS5_PBKDF2_HMAC_SHA1			@ 308
-
-RAND_add						@ 310 NONAME
-RAND_bytes						@ 311 NONAME
-RAND_cleanup					@ 312 NONAME
-RAND_get_rand_method			@ 313 NONAME
-RAND_poll						@ 314 NONAME
-RAND_pseudo_bytes				@ 315 NONAME
-RAND_screen						@ 316 NONAME
-RAND_seed						@ 317 NONAME
-RAND_set_rand_method			@ 318 NONAME
-RAND_SSLeay						@ 319 NONAME
-
-RC4								@ 320 NONAME
-RC4_set_key						@ 321 NONAME
-RIPEMD160						@ 322 NONAME
-
-RSA_check_key					@ 329 NONAME
-RSA_free						@ 330 NONAME
-RSA_generate_key_ex				@ 331 NONAME
-RSA_new							@ 332 NONAME
-RSA_private_decrypt				@ 333 NONAME
-RSA_private_encrypt				@ 334 NONAME
-RSA_public_decrypt				@ 335 NONAME
-RSA_public_encrypt				@ 336 NONAME
-RSA_size						@ 337 NONAME
-RSAPrivateKey_dup				@ 338 NONAME
-RSAPublicKey_dup				@ 339 NONAME
-
-SHA1							@ 340 NONAME
-SHA1_Final						@ 341 NONAME
-SHA1_Init						@ 342 NONAME
-SHA1_Update						@ 343 NONAME
-SHA256							@ 344 NONAME
-SHA256_Final					@ 345 NONAME
-SHA256_Init						@ 346 NONAME
-SHA256_Update					@ 347 NONAME
-
-sk_dup							@ 350 NONAME
-sk_free							@ 351 NONAME
-sk_new_null						@ 352 NONAME
-sk_num							@ 353 NONAME
-sk_push							@ 354 NONAME
-sk_value						@ 355 NONAME
-
-SSL_accept						@ 400 NONAME
-SSL_CIPHER_get_name				@ 401 NONAME
-SSL_connect						@ 402 NONAME
-SSL_ctrl						@ 403 NONAME
-
-SSL_CTX_check_private_key		@ 410 NONAME
-SSL_CTX_ctrl					@ 411 NONAME
-SSL_CTX_free					@ 412 NONAME
-SSL_CTX_get_cert_store			@ 413 NONAME
-SSL_CTX_new						@ 414 NONAME
-SSL_CTX_set_cipher_list			@ 415 NONAME
-SSL_CTX_set_verify				@ 416 NONAME
-SSL_CTX_use_certificate			@ 417 NONAME
-
-;	@ 418 NONAME
-
-SSL_CTX_use_PrivateKey			@ 419 NONAME
-;		@ 420 NONAME
-
-SSL_do_handshake				@ 429 NONAME
-SSL_free						@ 430 NONAME
-SSL_get_current_cipher			@ 431 NONAME
-SSL_get_error					@ 432 NONAME
-SSL_get_ex_data 				@ 433 NONAME
-SSL_get_ex_new_index 			@ 434 NONAME
-SSL_get_peer_cert_chain			@ 435 NONAME
-SSL_get_peer_certificate		@ 436 NONAME
-SSL_get_rbio					@ 437 NONAME
-SSL_get_session					@ 438 NONAME
-SSL_get_shutdown				@ 439 NONAME
-SSL_get_wbio					@ 440 NONAME
-SSL_library_init				@ 441 NONAME
-SSL_load_error_strings			@ 442 NONAME
-SSL_new							@ 443 NONAME
-SSL_pending						@ 444 NONAME
-SSL_read						@ 445 NONAME
-SSL_renegotiate					@ 446 NONAME
-SSL_set_bio						@ 447 NONAME
-SSL_set_cipher_list				@ 448 NONAME
-SSL_set_ex_data					@ 449 NONAME
-SSL_set_info_callback			@ 450 NONAME
-SSL_set_session_secret_cb		@ 451 NONAME
-SSL_state_string_long			@ 452 NONAME
-SSL_set_verify					@ 453 NONAME
-SSL_shutdown					@ 454 NONAME
-SSL_write						@ 455 NONAME
-
-SSLeay							@ 470 NONAME
-SSLeay_version					@ 471 NONAME
-SSLv2_client_method				@ 472 NONAME
-SSLv2_method					@ 473 NONAME
-SSLv2_server_method				@ 474 NONAME
-SSLv23_method					@ 475 NONAME
-SSLv23_client_method			@ 476 NONAME
-SSLv23_server_method			@ 477 NONAME
-SSLv3_client_method				@ 478 NONAME
-SSLv3_method					@ 479 NONAME
-SSLv3_server_method				@ 480 NONAME
-
-TLSv1_client_method				@ 490 NONAME
-TLSv1_method					@ 491 NONAME
-TLSv1_server_method				@ 492 NONAME
-
-X509_cmp						@ 500 NONAME
-X509_cmp_time					@ 501 NONAME
-X509_dup						@ 502 NONAME
-X509_free						@ 503 NONAME
-X509_get_issuer_name			@ 504 NONAME
-X509_get_pubkey					@ 505 NONAME
-X509_get_serialNumber			@ 506 NONAME
-X509_get_subject_name			@ 507 NONAME
-
-X509_NAME_add_entry_by_NID		@ 510 NONAME
-X509_NAME_cmp					@ 511 NONAME
-X509_NAME_entry_count			@ 512 NONAME
-X509_NAME_ENTRY_get_data		@ 513 NONAME
-X509_NAME_ENTRY_get_object		@ 514 NONAME
-X509_NAME_free					@ 515 NONAME
-X509_NAME_get_entry				@ 516 NONAME
-X509_NAME_new					@ 517 NONAME
-
-X509_new						@ 520 NONAME
-X509_set_issuer_name			@ 521 NONAME
-X509_set_pubkey					@ 522 NONAME
-X509_set_subject_name			@ 523 NONAME
-X509_set_version				@ 524 NONAME
-X509_sign						@ 525 NONAME
-X509_STORE_add_cert				@ 526 NONAME
-X509_time_adj					@ 527 NONAME
-X509_verify						@ 528 NONAME
+EVP_aes_128_ctr                 @ 230 NONAME
+EVP_aes_128_ecb                 @ 231 NONAME
+EVP_aes_192_ecb                 @ 232 NONAME
+EVP_aes_256_cbc                 @ 233 NONAME
+EVP_aes_256_ecb                 @ 234 NONAME
+EVP_BytesToKey                  @ 235 NONAME
+;EVP_cleanup                     @ 236 NONAME
+;EVP_CIPHER_CTX_cleanup          @ 237 NONAME
+;EVP_CIPHER_CTX_init             @ 238 NONAME
+EVP_DecryptFinal_ex             @ 239 NONAME
+EVP_DecryptUpdate               @ 240 NONAME
+EVP_DecryptInit_ex              @ 241 NONAME
+EVP_EncodeFinal                 @ 242 NONAME
+EVP_EncodeInit                  @ 243 NONAME
+EVP_EncodeUpdate                @ 244 NONAME
+EVP_EncryptFinal_ex             @ 245 NONAME
+EVP_EncryptInit                 @ 246 NONAME
+EVP_EncryptInit_ex              @ 247 NONAME
+EVP_EncryptUpdate               @ 248 NONAME
+EVP_PKEY_assign                 @ 249 NONAME
+EVP_PKEY_bits                   @ 250 NONAME
+EVP_PKEY_cmp                    @ 251 NONAME
+EVP_PKEY_free                   @ 252 NONAME
+EVP_PKEY_copy_parameters        @ 253 NONAME
+EVP_PKEY_get1_RSA               @ 254 NONAME
+EVP_PKEY_new                    @ 255 NONAME
+EVP_PKEY_set_type               @ 256 NONAME
+EVP_PKEY_type                   @ 257 NONAME
+EVP_sha1                        @ 258 NONAME
+EVP_sha256                      @ 259 NONAME
+EVP_sha512                      @ 260 NONAME
+EVP_PKEY_get0_EC_KEY            @ 261 NONAME
+EVP_PKEY_up_ref                 @ 262 NONAME
+EVP_CIPHER_CTX_new              @ 263 NONAME
+EVP_CIPHER_CTX_free             @ 264 NONAME
+EVP_CIPHER_CTX_set_padding      @ 265 NONAME
 
 
-ACCESS_DESCRIPTION_it			@ 1000 NONAME DATA
-ASN1_ANY_it						@ 1001 NONAME DATA
-ASN1_BIT_STRING_it				@ 1002 NONAME DATA
-ASN1_BMPSTRING_it				@ 1003 NONAME DATA
-ASN1_BOOLEAN_it					@ 1004 NONAME DATA
-ASN1_ENUMERATED_it				@ 1005 NONAME DATA
-ASN1_FBOOLEAN_it				@ 1006 NONAME DATA
-ASN1_GENERALIZEDTIME_it			@ 1007 NONAME DATA
-ASN1_GENERALSTRING_it			@ 1008 NONAME DATA
-ASN1_IA5STRING_it				@ 1009 NONAME DATA
+HMAC                            @ 270 NONAME
 
-ASN1_INTEGER_it					@ 1020 NONAME DATA
-ASN1_NULL_it					@ 1021 NONAME DATA
-ASN1_OBJECT_it					@ 1022 NONAME DATA
-ASN1_OCTET_STRING_NDEF_it		@ 1023 NONAME DATA
-ASN1_OCTET_STRING_it			@ 1024 NONAME DATA
-ASN1_PRINTABLESTRING_it			@ 1025 NONAME DATA
-ASN1_PRINTABLE_it				@ 1026 NONAME DATA
-ASN1_SEQUENCE_ANY_it			@ 1027 NONAME DATA
-ASN1_SEQUENCE_it				@ 1028 NONAME DATA
-ASN1_SET_ANY_it					@ 1029 NONAME DATA
+i2d_DHparams                    @ 280 NONAME
+i2d_ECPrivateKey                @ 281 NONAME
+i2d_PrivateKey                  @ 282 NONAME
+i2d_PublicKey                   @ 283 NONAME
+i2d_RSAPublicKey                @ 284 NONAME
+i2o_ECPublicKey                 @ 285 NONAME
+i2d_X509                        @ 286 NONAME
 
-ASN1_T61STRING_it				@ 1040 NONAME DATA
-ASN1_TBOOLEAN_it				@ 1041 NONAME DATA
-ASN1_TIME_it					@ 1042 NONAME DATA
-ASN1_UNIVERSALSTRING_it			@ 1043 NONAME DATA
-ASN1_UTCTIME_it					@ 1044 NONAME DATA
-ASN1_UTF8STRING_it				@ 1045 NONAME DATA
-ASN1_VISIBLESTRING_it			@ 1046 NONAME DATA
-AUTHORITY_INFO_ACCESS_it		@ 1047 NONAME DATA
-AUTHORITY_KEYID_it				@ 1048 NONAME DATA
-BASIC_CONSTRAINTS_it			@ 1049 NONAME DATA
+MD5_Init                        @ 290 NONAME
+MD5_Update                      @ 291 NONAME
+MD5_Final                       @ 292 NONAME
 
-BIGNUM_it						@ 1060 NONAME DATA
-CAST_S_table0					@ 1061 NONAME DATA
-CAST_S_table1					@ 1062 NONAME DATA
-CAST_S_table2					@ 1063 NONAME DATA
-CAST_S_table3					@ 1064 NONAME DATA
-CAST_S_table4					@ 1065 NONAME DATA
-CAST_S_table5					@ 1066 NONAME DATA
-CAST_S_table6					@ 1067 NONAME DATA
-CAST_S_table7					@ 1068 NONAME DATA
-CBIGNUM_it						@ 1069 NONAME DATA
+o2i_ECPublicKey                 @ 299 NONAME
 
-CERTIFICATEPOLICIES_it			@ 1080 NONAME DATA
-CMS_Attributes_Sign_it			@ 1081 NONAME DATA
-CMS_Attributes_Verify_it		@ 1082 NONAME DATA
-CMS_AuthenticatedData_it		@ 1083 NONAME DATA
-CMS_CertificateChoices_it		@ 1084 NONAME DATA
-CMS_CompressedData_it			@ 1085 NONAME DATA
-CMS_ContentInfo_it				@ 1086 NONAME DATA
-CMS_DigestedData_it				@ 1087 NONAME DATA
-CMS_EncapsulatedContentInfo_it	@ 1088 NONAME DATA
-CMS_EncryptedContentInfo_it		@ 1089 NONAME DATA
+OBJ_obj2nid                     @ 300 NONAME
+OBJ_txt2nid                     @ 301 NONAME
 
-CMS_EncryptedData_it			@ 1100 NONAME DATA
-CMS_EnvelopedData_it			@ 1101 NONAME DATA
-CMS_IssuerAndSerialNumber_it	@ 1102 NONAME DATA
-CMS_KEKIdentifier_it			@ 1103 NONAME DATA
-CMS_KEKRecipientInfo_it			@ 1104 NONAME DATA
-CMS_KeyAgreeRecipientIdentifier_it	@ 1105 NONAME DATA
-CMS_KeyAgreeRecipientInfo_it	@ 1106 NONAME DATA
-CMS_KeyTransRecipientInfo_it	@ 1107 NONAME DATA
-CMS_OriginatorIdentifierOrKey_it	@ 1108 NONAME DATA
-CMS_OriginatorInfo_it			@ 1109 NONAME DATA
+OPENSSL_init_crypto             @ 302
 
-CMS_OriginatorPublicKey_it		@ 1120 NONAME DATA
-CMS_OtherCertificateFormat_it	@ 1121 NONAME DATA
-CMS_OtherKeyAttribute_it		@ 1122 NONAME DATA
-CMS_OtherRecipientInfo_it		@ 1123 NONAME DATA
-CMS_OtherRevocationInfoFormat_it	@ 1124 NONAME DATA
-CMS_PasswordRecipientInfo_it	@ 1125 NONAME DATA
-CMS_ReceiptRequest_it			@ 1126 NONAME DATA
-CMS_Receipt_it					@ 1127 NONAME DATA
-CMS_ReceiptsFrom_it				@ 1128 NONAME DATA
-CMS_RecipientEncryptedKey_it	@ 1129 NONAME DATA
 
-CMS_RecipientInfo_it			@ 1140 NONAME DATA
-CMS_RecipientKeyIdentifier_it	@ 1141 NONAME DATA
-CMS_RevocationInfoChoice_it		@ 1142 NONAME DATA
-CMS_SignedData_it				@ 1143 NONAME DATA
-CMS_SignerIdentifier_it			@ 1144 NONAME DATA
-CMS_SignerInfo_it				@ 1145 NONAME DATA
-CRL_DIST_POINTS_it				@ 1146 NONAME DATA
-DES_SPtrans						@ 1147 NONAME DATA
-DHparams_it						@ 1148 NONAME DATA
-DIRECTORYSTRING_it				@ 1149 NONAME DATA
+;OPENSSL_add_all_algorithms_noconf @ 302 NONAME
+Empty_OPENSSL_cleanse           @ 303 NONAME
 
-DISPLAYTEXT_it					@ 1150 NONAME DATA
-DIST_POINT_NAME_it				@ 1151 NONAME DATA
-DIST_POINT_it					@ 1152 NONAME DATA
-DSAPrivateKey_it				@ 1153 NONAME DATA
-DSAPublicKey_it					@ 1154 NONAME DATA
-DSA_SIG_it						@ 1155 NONAME DATA
-DSAparams_it					@ 1156 NONAME DATA
-ECDSA_SIG_it					@ 1157 NONAME DATA
-ECPARAMETERS_it					@ 1158 NONAME DATA
-ECPKPARAMETERS_it				@ 1159 NONAME DATA
+PEM_read_bio_RSAPrivateKey      @ 304 NONAME
+PEM_read_bio_RSAPublicKey       @ 305 NONAME
+PEM_write_bio_RSAPrivateKey     @ 306 NONAME
+PEM_write_bio_RSAPublicKey      @ 307 NONAME
 
-EC_PRIVATEKEY_it				@ 1180 NONAME DATA
-EDIPARTYNAME_it					@ 1181 NONAME DATA
-EXTENDED_KEY_USAGE_it			@ 1182 NONAME DATA
-GENERAL_NAMES_it				@ 1183 NONAME DATA
-GENERAL_NAME_it					@ 1184 NONAME DATA
-GENERAL_SUBTREE_it				@ 1185 NONAME DATA
-GOST_CIPHER_PARAMS_it			@ 1186 NONAME DATA
-GOST_CLIENT_KEY_EXCHANGE_PARAMS_it	@ 1187 NONAME DATA
-GOST_KEY_AGREEMENT_INFO_it			@ 1188 NONAME DATA
-GOST_KEY_INFO_it				@ 1189 NONAME DATA
-GOST_KEY_PARAMS_it				@ 1190 NONAME DATA
-GOST_KEY_TRANSPORT_it			@ 1191 NONAME DATA
-ISSUING_DIST_POINT_it			@ 1192 NONAME DATA
+PKCS5_PBKDF2_HMAC_SHA1          @ 308
 
-LONG_it							@ 1200 NONAME DATA
-NAME_CONSTRAINTS_it				@ 1201 NONAME DATA
-NETSCAPE_CERT_SEQUENCE_it		@ 1202 NONAME DATA
-NETSCAPE_SPKAC_it				@ 1203 NONAME DATA
-NETSCAPE_SPKI_it				@ 1204 NONAME DATA
-NOTICEREF_it					@ 1205 NONAME DATA
-OCSP_BASICRESP_it				@ 1206 NONAME DATA
-OCSP_CERTID_it					@ 1207 NONAME DATA
-OCSP_CERTSTATUS_it				@ 1208 NONAME DATA
-OCSP_CRLID_it					@ 1209 NONAME DATA
+RAND_add                        @ 310 NONAME
+RAND_bytes                      @ 311 NONAME
 
-OCSP_ONEREQ_it					@ 1220 NONAME DATA
-OCSP_REQINFO_it					@ 1221 NONAME DATA
-OCSP_REQUEST_it					@ 1222 NONAME DATA
-OCSP_RESPBYTES_it				@ 1223 NONAME DATA
-OCSP_RESPDATA_it				@ 1224 NONAME DATA
-OCSP_RESPID_it					@ 1225 NONAME DATA
-OCSP_RESPONSE_it				@ 1226 NONAME DATA
-OCSP_REVOKEDINFO_it				@ 1227 NONAME DATA
-OCSP_SERVICELOC_it				@ 1228 NONAME DATA
-OCSP_SIGNATURE_it				@ 1229 NONAME DATA
+RAND_get_rand_method            @ 313 NONAME
+RAND_poll                       @ 314 NONAME
+RAND_pseudo_bytes               @ 315 NONAME
+RAND_screen                     @ 316 NONAME
+RAND_seed                       @ 317 NONAME
+RAND_set_rand_method            @ 318 NONAME
+;RAND_SSLeay                     @ 319 NONAME
 
-OCSP_SINGLERESP_it				@ 1240 NONAME DATA
-OSSL_DES_version				@ 1241 NONAME DATA
-OSSL_libdes_version				@ 1242 NONAME DATA
-OTHERNAME_it					@ 1243 NONAME DATA
-PBE2PARAM_it					@ 1244 NONAME DATA
-PBEPARAM_it						@ 1245 NONAME DATA
-PBKDF2PARAM_it					@ 1246 NONAME DATA
-PKCS12_AUTHSAFES_it				@ 1247 NONAME DATA
-PKCS12_BAGS_it					@ 1248 NONAME DATA
-PKCS12_MAC_DATA_it				@ 1249 NONAME DATA
+RC4                             @ 320 NONAME
+RC4_set_key                     @ 321 NONAME
+RIPEMD160                       @ 322 NONAME
 
-PKCS12_SAFEBAGS_it				@ 1260 NONAME DATA
-PKCS12_SAFEBAG_it				@ 1261 NONAME DATA
-PKCS12_it						@ 1262 NONAME DATA
-PKCS7_ATTR_SIGN_it				@ 1263 NONAME DATA
-PKCS7_ATTR_VERIFY_it			@ 1264 NONAME DATA
-PKCS7_DIGEST_it					@ 1265 NONAME DATA
-PKCS7_ENCRYPT_it				@ 1266 NONAME DATA
-PKCS7_ENC_CONTENT_it			@ 1267 NONAME DATA
-PKCS7_ENVELOPE_it				@ 1268 NONAME DATA
-PKCS7_ISSUER_AND_SERIAL_it		@ 1269 NONAME DATA
-PKCS7_RECIP_INFO_it				@ 1270 NONAME DATA
-PKCS7_SIGNED_it					@ 1271 NONAME DATA
-PKCS7_SIGNER_INFO_it			@ 1272 NONAME DATA
-PKCS7_SIGN_ENVELOPE_it			@ 1273 NONAME DATA
-PKCS7_it						@ 1274 NONAME DATA
-PKCS8_PRIV_KEY_INFO_it			@ 1275 NONAME DATA
-PKEY_USAGE_PERIOD_it			@ 1276 NONAME DATA
-POLICYINFO_it					@ 1277 NONAME DATA
-POLICYQUALINFO_it				@ 1278 NONAME DATA
-POLICY_CONSTRAINTS_it			@ 1279 NONAME DATA
+RSA_check_key                   @ 329 NONAME
+RSA_free                        @ 330 NONAME
+RSA_generate_key_ex             @ 331 NONAME
+RSA_new                         @ 332 NONAME
+RSA_private_decrypt             @ 333 NONAME
+RSA_private_encrypt             @ 334 NONAME
+RSA_public_decrypt              @ 335 NONAME
+RSA_public_encrypt              @ 336 NONAME
+RSA_size                        @ 337 NONAME
+RSAPrivateKey_dup               @ 338 NONAME
+RSAPublicKey_dup                @ 339 NONAME
 
-POLICY_MAPPINGS_it				@ 1291 NONAME DATA
-POLICY_MAPPING_it				@ 1292 NONAME DATA
-PROXY_CERT_INFO_EXTENSION_it	@ 1293 NONAME DATA
-PROXY_POLICY_it					@ 1294 NONAME DATA
-RSAPrivateKey_it				@ 1295 NONAME DATA
-RSAPublicKey_it					@ 1296 NONAME DATA
-RSA_PSS_PARAMS_it				@ 1297 NONAME DATA
-SXNETID_it						@ 1298 NONAME DATA
-SXNET_it						@ 1299 NONAME DATA
+SHA1                            @ 340 NONAME
+SHA1_Final                      @ 341 NONAME
+SHA1_Init                       @ 342 NONAME
+SHA1_Update                     @ 343 NONAME
+SHA256                          @ 344 NONAME
+SHA256_Final                    @ 345 NONAME
+SHA256_Init                     @ 346 NONAME
+SHA256_Update                   @ 347 NONAME
 
-USERNOTICE_it					@ 1300 NONAME DATA
-X509_ALGORS_it					@ 1301 NONAME DATA
-X509_ALGOR_it					@ 1302 NONAME DATA
-X509_ATTRIBUTE_SET_it			@ 1303 NONAME DATA
-X509_ATTRIBUTE_it				@ 1304 NONAME DATA
-X509_CERT_AUX_it				@ 1305 NONAME DATA
-X509_CERT_PAIR_it				@ 1306 NONAME DATA
-X509_CINF_it					@ 1307 NONAME DATA
-X509_CRL_INFO_it				@ 1308 NONAME DATA
-X509_CRL_it						@ 1309 NONAME DATA
-X509_EXTENSIONS_it				@ 1310 NONAME DATA
-X509_EXTENSION_it				@ 1311 NONAME DATA
-X509_NAME_ENTRIES_it			@ 1312 NONAME DATA
-X509_NAME_ENTRY_it				@ 1313 NONAME DATA
-X509_NAME_INTERNAL_it			@ 1314 NONAME DATA
-X509_NAME_it					@ 1315 NONAME DATA
-X509_PUBKEY_it					@ 1316 NONAME DATA
-X509_REQ_INFO_it				@ 1317 NONAME DATA
-X509_REQ_it						@ 1318 NONAME DATA
-X509_REVOKED_it					@ 1319 NONAME DATA
-X509_SIG_it						@ 1320 NONAME DATA
-X509_VAL_it						@ 1321 NONAME DATA
-X509_it							@ 1322 NONAME DATA
-X9_62_CHARACTERISTIC_TWO_it		@ 1323 NONAME DATA
-X9_62_CURVE_it					@ 1324 NONAME DATA
-X9_62_FIELDID_it				@ 1325 NONAME DATA
-X9_62_PENTANOMIAL_it			@ 1326 NONAME DATA
-ZLONG_it						@ 1327 NONAME DATA
-_shadow_DES_check_key			@ 1328 NONAME DATA
-dsa_pub_internal_it				@ 1329 NONAME DATA
-ssl2_ciphers					@ 1330 NONAME DATA
-ssl3_ciphers					@ 1331 NONAME DATA
+;sk_dup                          @ 350 NONAME
+;sk_free                         @ 351 NONAME
+;sk_new_null                     @ 352 NONAME
+;sk_num                          @ 353 NONAME
+;sk_push                         @ 354 NONAME
+;sk_value                        @ 355 NONAME
+
+SSL_accept                      @ 400 NONAME
+SSL_CIPHER_get_name             @ 401 NONAME
+SSL_connect                     @ 402 NONAME
+SSL_ctrl                        @ 403 NONAME
+
+SSL_CTX_check_private_key       @ 410 NONAME
+SSL_CTX_ctrl                    @ 411 NONAME
+SSL_CTX_free                    @ 412 NONAME
+SSL_CTX_get_cert_store          @ 413 NONAME
+SSL_CTX_new                     @ 414 NONAME
+SSL_CTX_set_cipher_list         @ 415 NONAME
+SSL_CTX_set_verify              @ 416 NONAME
+SSL_CTX_use_certificate         @ 417 NONAME
+
+;   @ 418 NONAME
+
+SSL_CTX_use_PrivateKey          @ 419 NONAME
+;       @ 420 NONAME
+
+SSL_do_handshake                @ 429 NONAME
+SSL_free                        @ 430 NONAME
+SSL_get_current_cipher          @ 431 NONAME
+SSL_get_error                   @ 432 NONAME
+SSL_get_ex_data                 @ 433 NONAME
+;SSL_get_ex_new_index            @ 434 NONAME
+SSL_get_peer_cert_chain         @ 435 NONAME
+SSL_get_peer_certificate        @ 436 NONAME
+SSL_get_rbio                    @ 437 NONAME
+SSL_get_session                 @ 438 NONAME
+SSL_get_shutdown                @ 439 NONAME
+SSL_get_wbio                    @ 440 NONAME
+;SSL_library_init                @ 441 NONAME
+;SSL_load_error_strings          @ 442 NONAME
+SSL_new                         @ 443 NONAME
+SSL_pending                     @ 444 NONAME
+SSL_read                        @ 445 NONAME
+SSL_renegotiate                 @ 446 NONAME
+SSL_set_bio                     @ 447 NONAME
+SSL_set_cipher_list             @ 448 NONAME
+SSL_set_ex_data                 @ 449 NONAME
+SSL_set_info_callback           @ 450 NONAME
+SSL_set_session_secret_cb       @ 451 NONAME
+SSL_state_string_long           @ 452 NONAME
+SSL_set_verify                  @ 453 NONAME
+SSL_shutdown                    @ 454 NONAME
+SSL_write                       @ 455 NONAME
+
+;SSLeay                          @ 470 NONAME
+;SSLeay_version                  @ 471 NONAME
+;SSLv2_client_method             @ 472 NONAME
+;SSLv2_method                    @ 473 NONAME
+;SSLv2_server_method             @ 474 NONAME
+;SSLv23_method                   @ 475 NONAME
+;SSLv23_client_method            @ 476 NONAME
+;SSLv23_server_method            @ 477 NONAME
+;SSLv3_client_method             @ 478 NONAME
+;SSLv3_method                    @ 479 NONAME
+;SSLv3_server_method             @ 480 NONAME
+
+TLSv1_client_method             @ 490 NONAME
+TLSv1_method                    @ 491 NONAME
+TLSv1_server_method             @ 492 NONAME
+
+X509_cmp                        @ 500 NONAME
+X509_cmp_time                   @ 501 NONAME
+X509_dup                        @ 502 NONAME
+X509_free                       @ 503 NONAME
+X509_get_issuer_name            @ 504 NONAME
+X509_get_pubkey                 @ 505 NONAME
+X509_get_serialNumber           @ 506 NONAME
+X509_get_subject_name           @ 507 NONAME
+
+X509_NAME_add_entry_by_NID      @ 510 NONAME
+X509_NAME_cmp                   @ 511 NONAME
+X509_NAME_entry_count           @ 512 NONAME
+X509_NAME_ENTRY_get_data        @ 513 NONAME
+X509_NAME_ENTRY_get_object      @ 514 NONAME
+X509_NAME_free                  @ 515 NONAME
+X509_NAME_get_entry             @ 516 NONAME
+X509_NAME_new                   @ 517 NONAME
+
+X509_new                        @ 520 NONAME
+X509_set_issuer_name            @ 521 NONAME
+X509_set_pubkey                 @ 522 NONAME
+X509_set_subject_name           @ 523 NONAME
+X509_set_version                @ 524 NONAME
+X509_sign                       @ 525 NONAME
+X509_STORE_add_cert             @ 526 NONAME
+X509_time_adj                   @ 527 NONAME
+X509_verify                     @ 528 NONAME
+
+
+;ACCESS_DESCRIPTION_it           @ 1000 NONAME DATA
+;ASN1_ANY_it                     @ 1001 NONAME DATA
+;ASN1_BIT_STRING_it              @ 1002 NONAME DATA
+;ASN1_BMPSTRING_it               @ 1003 NONAME DATA
+;ASN1_BOOLEAN_it                 @ 1004 NONAME DATA
+;ASN1_ENUMERATED_it              @ 1005 NONAME DATA
+;ASN1_FBOOLEAN_it                @ 1006 NONAME DATA
+;ASN1_GENERALIZEDTIME_it         @ 1007 NONAME DATA
+;ASN1_GENERALSTRING_it           @ 1008 NONAME DATA
+;ASN1_IA5STRING_it               @ 1009 NONAME DATA
+
+;ASN1_INTEGER_it                 @ 1020 NONAME DATA
+;ASN1_NULL_it                    @ 1021 NONAME DATA
+;ASN1_OBJECT_it                  @ 1022 NONAME DATA
+;ASN1_OCTET_STRING_NDEF_it       @ 1023 NONAME DATA
+;ASN1_OCTET_STRING_it            @ 1024 NONAME DATA
+;ASN1_PRINTABLESTRING_it         @ 1025 NONAME DATA
+;ASN1_PRINTABLE_it               @ 1026 NONAME DATA
+;ASN1_SEQUENCE_ANY_it            @ 1027 NONAME DATA
+;ASN1_SEQUENCE_it                @ 1028 NONAME DATA
+;ASN1_SET_ANY_it                 @ 1029 NONAME DATA
+
+;ASN1_T61STRING_it               @ 1040 NONAME DATA
+;ASN1_TBOOLEAN_it                @ 1041 NONAME DATA
+;ASN1_TIME_it                    @ 1042 NONAME DATA
+;ASN1_UNIVERSALSTRING_it         @ 1043 NONAME DATA
+;ASN1_UTCTIME_it                 @ 1044 NONAME DATA
+;ASN1_UTF8STRING_it              @ 1045 NONAME DATA
+;ASN1_VISIBLESTRING_it           @ 1046 NONAME DATA
+;AUTHORITY_INFO_ACCESS_it        @ 1047 NONAME DATA
+;AUTHORITY_KEYID_it              @ 1048 NONAME DATA
+;BASIC_CONSTRAINTS_it            @ 1049 NONAME DATA
+
+BIGNUM_it                       @ 1060 NONAME DATA
+CAST_S_table0                   @ 1061 NONAME DATA
+CAST_S_table1                   @ 1062 NONAME DATA
+CAST_S_table2                   @ 1063 NONAME DATA
+CAST_S_table3                   @ 1064 NONAME DATA
+CAST_S_table4                   @ 1065 NONAME DATA
+CAST_S_table5                   @ 1066 NONAME DATA
+CAST_S_table6                   @ 1067 NONAME DATA
+CAST_S_table7                   @ 1068 NONAME DATA
+CBIGNUM_it                      @ 1069 NONAME DATA
+
+;CERTIFICATEPOLICIES_it          @ 1080 NONAME DATA
+;CMS_Attributes_Sign_it          @ 1081 NONAME DATA
+;CMS_Attributes_Verify_it        @ 1082 NONAME DATA
+;CMS_AuthenticatedData_it        @ 1083 NONAME DATA
+;CMS_CertificateChoices_it       @ 1084 NONAME DATA
+;CMS_CompressedData_it           @ 1085 NONAME DATA
+;CMS_ContentInfo_it              @ 1086 NONAME DATA
+;CMS_DigestedData_it             @ 1087 NONAME DATA
+;CMS_EncapsulatedContentInfo_it  @ 1088 NONAME DATA
+;CMS_EncryptedContentInfo_it     @ 1089 NONAME DATA
+
+;CMS_EncryptedData_it            @ 1100 NONAME DATA
+;CMS_EnvelopedData_it            @ 1101 NONAME DATA
+;CMS_IssuerAndSerialNumber_it    @ 1102 NONAME DATA
+;CMS_KEKIdentifier_it            @ 1103 NONAME DATA
+;CMS_KEKRecipientInfo_it         @ 1104 NONAME DATA
+;CMS_KeyAgreeRecipientIdentifier_it  @ 1105 NONAME DATA
+;CMS_KeyAgreeRecipientInfo_it    @ 1106 NONAME DATA
+;CMS_KeyTransRecipientInfo_it    @ 1107 NONAME DATA
+;CMS_OriginatorIdentifierOrKey_it    @ 1108 NONAME DATA
+;CMS_OriginatorInfo_it           @ 1109 NONAME DATA
+
+;CMS_OriginatorPublicKey_it      @ 1120 NONAME DATA
+;CMS_OtherCertificateFormat_it   @ 1121 NONAME DATA
+;CMS_OtherKeyAttribute_it        @ 1122 NONAME DATA
+;CMS_OtherRecipientInfo_it       @ 1123 NONAME DATA
+;CMS_OtherRevocationInfoFormat_it    @ 1124 NONAME DATA
+;CMS_PasswordRecipientInfo_it    @ 1125 NONAME DATA
+;CMS_ReceiptRequest_it           @ 1126 NONAME DATA
+;CMS_Receipt_it                  @ 1127 NONAME DATA
+;CMS_ReceiptsFrom_it             @ 1128 NONAME DATA
+CMS_RecipientEncryptedKey_it    @ 1129 NONAME DATA
+
+CMS_RecipientInfo_it            @ 1140 NONAME DATA
+CMS_RecipientKeyIdentifier_it   @ 1141 NONAME DATA
+CMS_RevocationInfoChoice_it     @ 1142 NONAME DATA
+CMS_SignedData_it               @ 1143 NONAME DATA
+;CMS_SignerIdentifier_it         @ 1144 NONAME DATA
+CMS_SignerInfo_it               @ 1145 NONAME DATA
+CRL_DIST_POINTS_it              @ 1146 NONAME DATA
+DES_SPtrans                     @ 1147 NONAME DATA
+DHparams_it                     @ 1148 NONAME DATA
+DIRECTORYSTRING_it              @ 1149 NONAME DATA
+
+DISPLAYTEXT_it                  @ 1150 NONAME DATA
+DIST_POINT_NAME_it              @ 1151 NONAME DATA
+DIST_POINT_it                   @ 1152 NONAME DATA
+;DSAPrivateKey_it                @ 1153 NONAME DATA
+;DSAPublicKey_it                 @ 1154 NONAME DATA
+;DSA_SIG_it                      @ 1155 NONAME DATA
+;DSAparams_it                    @ 1156 NONAME DATA
+;ECDSA_SIG_it                    @ 1157 NONAME DATA
+ECPARAMETERS_it                 @ 1158 NONAME DATA
+ECPKPARAMETERS_it               @ 1159 NONAME DATA
+
+;EC_PRIVATEKEY_it                @ 1180 NONAME DATA
+EDIPARTYNAME_it                 @ 1181 NONAME DATA
+EXTENDED_KEY_USAGE_it           @ 1182 NONAME DATA
+GENERAL_NAMES_it                @ 1183 NONAME DATA
+GENERAL_NAME_it                 @ 1184 NONAME DATA
+GENERAL_SUBTREE_it              @ 1185 NONAME DATA
+;GOST_CIPHER_PARAMS_it           @ 1186 NONAME DATA
+;GOST_CLIENT_KEY_EXCHANGE_PARAMS_it  @ 1187 NONAME DATA
+;GOST_KEY_AGREEMENT_INFO_it          @ 1188 NONAME DATA
+;GOST_KEY_INFO_it                @ 1189 NONAME DATA
+;GOST_KEY_PARAMS_it              @ 1190 NONAME DATA
+;GOST_KEY_TRANSPORT_it           @ 1191 NONAME DATA
+ISSUING_DIST_POINT_it           @ 1192 NONAME DATA
+
+LONG_it                         @ 1200 NONAME DATA
+NAME_CONSTRAINTS_it             @ 1201 NONAME DATA
+NETSCAPE_CERT_SEQUENCE_it       @ 1202 NONAME DATA
+NETSCAPE_SPKAC_it               @ 1203 NONAME DATA
+NETSCAPE_SPKI_it                @ 1204 NONAME DATA
+NOTICEREF_it                    @ 1205 NONAME DATA
+OCSP_BASICRESP_it               @ 1206 NONAME DATA
+OCSP_CERTID_it                  @ 1207 NONAME DATA
+OCSP_CERTSTATUS_it              @ 1208 NONAME DATA
+OCSP_CRLID_it                   @ 1209 NONAME DATA
+
+OCSP_ONEREQ_it                  @ 1220 NONAME DATA
+OCSP_REQINFO_it                 @ 1221 NONAME DATA
+OCSP_REQUEST_it                 @ 1222 NONAME DATA
+OCSP_RESPBYTES_it               @ 1223 NONAME DATA
+OCSP_RESPDATA_it                @ 1224 NONAME DATA
+OCSP_RESPID_it                  @ 1225 NONAME DATA
+OCSP_RESPONSE_it                @ 1226 NONAME DATA
+OCSP_REVOKEDINFO_it             @ 1227 NONAME DATA
+OCSP_SERVICELOC_it              @ 1228 NONAME DATA
+OCSP_SIGNATURE_it               @ 1229 NONAME DATA
+
+
+OCSP_SINGLERESP_it              @ 1240 NONAME DATA
+;OSSL_DES_version                @ 1241 NONAME DATA
+;OSSL_libdes_version             @ 1242 NONAME DATA
+OTHERNAME_it                    @ 1243 NONAME DATA
+PBE2PARAM_it                    @ 1244 NONAME DATA
+PBEPARAM_it                     @ 1245 NONAME DATA
+PBKDF2PARAM_it                  @ 1246 NONAME DATA
+PKCS12_AUTHSAFES_it             @ 1247 NONAME DATA
+PKCS12_BAGS_it                  @ 1248 NONAME DATA
+PKCS12_MAC_DATA_it              @ 1249 NONAME DATA
+
+
+PKCS12_SAFEBAGS_it              @ 1260 NONAME DATA
+PKCS12_SAFEBAG_it               @ 1261 NONAME DATA
+PKCS12_it                       @ 1262 NONAME DATA
+PKCS7_ATTR_SIGN_it              @ 1263 NONAME DATA
+PKCS7_ATTR_VERIFY_it            @ 1264 NONAME DATA
+PKCS7_DIGEST_it                 @ 1265 NONAME DATA
+PKCS7_ENCRYPT_it                @ 1266 NONAME DATA
+PKCS7_ENC_CONTENT_it            @ 1267 NONAME DATA
+PKCS7_ENVELOPE_it               @ 1268 NONAME DATA
+PKCS7_ISSUER_AND_SERIAL_it      @ 1269 NONAME DATA
+PKCS7_RECIP_INFO_it             @ 1270 NONAME DATA
+PKCS7_SIGNED_it                 @ 1271 NONAME DATA
+PKCS7_SIGNER_INFO_it            @ 1272 NONAME DATA
+PKCS7_SIGN_ENVELOPE_it          @ 1273 NONAME DATA
+PKCS7_it                        @ 1274 NONAME DATA
+PKCS8_PRIV_KEY_INFO_it          @ 1275 NONAME DATA
+PKEY_USAGE_PERIOD_it            @ 1276 NONAME DATA
+POLICYINFO_it                   @ 1277 NONAME DATA
+POLICYQUALINFO_it               @ 1278 NONAME DATA
+POLICY_CONSTRAINTS_it           @ 1279 NONAME DATA
+
+POLICY_MAPPINGS_it              @ 1291 NONAME DATA
+POLICY_MAPPING_it               @ 1292 NONAME DATA
+PROXY_CERT_INFO_EXTENSION_it    @ 1293 NONAME DATA
+PROXY_POLICY_it                 @ 1294 NONAME DATA
+RSAPrivateKey_it                @ 1295 NONAME DATA
+RSAPublicKey_it                 @ 1296 NONAME DATA
+RSA_PSS_PARAMS_it               @ 1297 NONAME DATA
+SXNETID_it                      @ 1298 NONAME DATA
+SXNET_it                        @ 1299 NONAME DATA
+
+USERNOTICE_it                   @ 1300 NONAME DATA
+X509_ALGORS_it                  @ 1301 NONAME DATA
+X509_ALGOR_it                   @ 1302 NONAME DATA
+;X509_ATTRIBUTE_SET_it           @ 1303 NONAME DATA
+;X509_ATTRIBUTE_it               @ 1304 NONAME DATA
+;X509_CERT_AUX_it                @ 1305 NONAME DATA
+;X509_CERT_PAIR_it               @ 1306 NONAME DATA
+;X509_CINF_it                    @ 1307 NONAME DATA
+;X509_CRL_INFO_it                @ 1308 NONAME DATA
+;X509_CRL_it                     @ 1309 NONAME DATA
+;X509_EXTENSIONS_it              @ 1310 NONAME DATA
+;X509_EXTENSION_it               @ 1311 NONAME DATA
+;X509_NAME_ENTRIES_it            @ 1312 NONAME DATA
+;X509_NAME_ENTRY_it              @ 1313 NONAME DATA
+;X509_NAME_INTERNAL_it           @ 1314 NONAME DATA
+X509_NAME_it                    @ 1315 NONAME DATA
+X509_PUBKEY_it                  @ 1316 NONAME DATA
+X509_REQ_INFO_it                @ 1317 NONAME DATA
+X509_REQ_it                     @ 1318 NONAME DATA
+X509_REVOKED_it                 @ 1319 NONAME DATA
+X509_SIG_it                     @ 1320 NONAME DATA
+X509_VAL_it                     @ 1321 NONAME DATA
+X509_it                         @ 1322 NONAME DATA
+;X9_62_CHARACTERISTIC_TWO_it     @ 1323 NONAME DATA
+;X9_62_CURVE_it                  @ 1324 NONAME DATA
+;X9_62_FIELDID_it                @ 1325 NONAME DATA
+;X9_62_PENTANOMIAL_it            @ 1326 NONAME DATA
+ZLONG_it                        @ 1327 NONAME DATA
+;_shadow_DES_check_key           @ 1328 NONAME DATA
+;dsa_pub_internal_it             @ 1329 NONAME DATA
+;ssl2_ciphers                    @ 1330 NONAME DATA
+;ssl3_ciphers                    @ 1331 NONAME DATA
 

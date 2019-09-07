@@ -1,7 +1,7 @@
 /*
  * Copyright 2010-2018 The OpenSSL Project Authors. All Rights Reserved.
  *
- * Licensed under the OpenSSL license (the "License").  You may not use
+ * Licensed under the Apache License 2.0 (the "License").  You may not use
  * this file except in compliance with the License.  You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://www.openssl.org/source/license.html
@@ -279,6 +279,7 @@ const EC_METHOD *EC_GFp_nistp224_method(void)
         ec_GFp_nist_field_mul,
         ec_GFp_nist_field_sqr,
         0 /* field_div */ ,
+        ec_GFp_simple_field_inv,
         0 /* field_encode */ ,
         0 /* field_decode */ ,
         0,                      /* field_set_to_one */
@@ -291,6 +292,9 @@ const EC_METHOD *EC_GFp_nistp224_method(void)
         0, /* keycopy */
         0, /* keyfinish */
         ecdh_simple_compute_key,
+        ecdsa_simple_sign_setup,
+        ecdsa_simple_sign_sig,
+        ecdsa_simple_verify_sig,
         0, /* field_inverse_mod_ord */
         0, /* blind_coordinates */
         0, /* ladder_pre */
@@ -675,7 +679,9 @@ static void felem_contract(felem out, const felem in)
  */
 static void felem_neg(felem out, const felem in)
 {
-    widefelem tmp = {0};
+    widefelem tmp;
+
+    memset(tmp, 0, sizeof(tmp));
     felem_diff_128_64(tmp, in);
     felem_reduce(out, tmp);
 }
@@ -1278,12 +1284,16 @@ int ec_GFp_nistp224_group_set_curve(EC_GROUP *group, const BIGNUM *p,
                                     BN_CTX *ctx)
 {
     int ret = 0;
-    BN_CTX *new_ctx = NULL;
     BIGNUM *curve_p, *curve_a, *curve_b;
+#ifndef FIPS_MODE
+    BN_CTX *new_ctx = NULL;
 
     if (ctx == NULL)
-        if ((ctx = new_ctx = BN_CTX_new()) == NULL)
-            return 0;
+        ctx = new_ctx = BN_CTX_new();
+#endif
+    if (ctx == NULL)
+        return 0;
+
     BN_CTX_start(ctx);
     curve_p = BN_CTX_get(ctx);
     curve_a = BN_CTX_get(ctx);
@@ -1302,7 +1312,9 @@ int ec_GFp_nistp224_group_set_curve(EC_GROUP *group, const BIGNUM *p,
     ret = ec_GFp_simple_group_set_curve(group, p, a, b, ctx);
  err:
     BN_CTX_end(ctx);
+#ifndef FIPS_MODE
     BN_CTX_free(new_ctx);
+#endif
     return ret;
 }
 
@@ -1585,16 +1597,23 @@ int ec_GFp_nistp224_precompute_mult(EC_GROUP *group, BN_CTX *ctx)
     int ret = 0;
     NISTP224_PRE_COMP *pre = NULL;
     int i, j;
-    BN_CTX *new_ctx = NULL;
     BIGNUM *x, *y;
     EC_POINT *generator = NULL;
     felem tmp_felems[32];
+#ifndef FIPS_MODE
+    BN_CTX *new_ctx = NULL;
+#endif
 
     /* throw away old precomputation */
     EC_pre_comp_free(group);
+
+#ifndef FIPS_MODE
     if (ctx == NULL)
-        if ((ctx = new_ctx = BN_CTX_new()) == NULL)
-            return 0;
+        ctx = new_ctx = BN_CTX_new();
+#endif
+    if (ctx == NULL)
+        return 0;
+
     BN_CTX_start(ctx);
     x = BN_CTX_get(ctx);
     y = BN_CTX_get(ctx);
@@ -1702,7 +1721,9 @@ int ec_GFp_nistp224_precompute_mult(EC_GROUP *group, BN_CTX *ctx)
  err:
     BN_CTX_end(ctx);
     EC_POINT_free(generator);
+#ifndef FIPS_MODE
     BN_CTX_free(new_ctx);
+#endif
     EC_nistp224_pre_comp_free(pre);
     return ret;
 }

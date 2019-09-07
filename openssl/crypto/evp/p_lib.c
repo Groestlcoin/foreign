@@ -1,7 +1,7 @@
 /*
  * Copyright 1995-2018 The OpenSSL Project Authors. All Rights Reserved.
  *
- * Licensed under the OpenSSL license (the "License").  You may not use
+ * Licensed under the Apache License 2.0 (the "License").  You may not use
  * this file except in compliance with the License.  You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://www.openssl.org/source/license.html
@@ -20,9 +20,12 @@
 #include <openssl/dh.h>
 #include <openssl/cmac.h>
 #include <openssl/engine.h>
+#include <openssl/params.h>
+#include <openssl/core_names.h>
 
 #include "internal/asn1_int.h"
 #include "internal/evp_int.h"
+#include "internal/provider.h"
 
 static void EVP_PKEY_free_it(EVP_PKEY *x);
 
@@ -42,7 +45,7 @@ int EVP_PKEY_security_bits(const EVP_PKEY *pkey)
     return pkey->ameth->pkey_security_bits(pkey);
 }
 
-int EVP_PKEY_size(EVP_PKEY *pkey)
+int EVP_PKEY_size(const EVP_PKEY *pkey)
 {
     if (pkey && pkey->ameth && pkey->ameth->pkey_size)
         return pkey->ameth->pkey_size(pkey);
@@ -318,8 +321,18 @@ EVP_PKEY *EVP_PKEY_new_CMAC_key(ENGINE *e, const unsigned char *priv,
                                 size_t len, const EVP_CIPHER *cipher)
 {
 #ifndef OPENSSL_NO_CMAC
+# ifndef OPENSSL_NO_ENGINE
+    const char *engine_id = e != NULL ? ENGINE_get_id(e) : NULL;
+# endif
+    const char *cipher_name = EVP_CIPHER_name(cipher);
+    const OSSL_PROVIDER *prov = EVP_CIPHER_provider(cipher);
+    OPENSSL_CTX *libctx =
+        prov == NULL ? NULL : ossl_provider_library_context(prov);
     EVP_PKEY *ret = EVP_PKEY_new();
-    CMAC_CTX *cmctx = CMAC_CTX_new();
+    EVP_MAC *cmac = EVP_MAC_fetch(libctx, OSSL_MAC_NAME_CMAC, NULL);
+    EVP_MAC_CTX *cmctx = cmac != NULL ? EVP_MAC_CTX_new(cmac) : NULL;
+    OSSL_PARAM params[4];
+    size_t paramsn = 0;
 
     if (ret == NULL
             || cmctx == NULL
@@ -328,7 +341,22 @@ EVP_PKEY *EVP_PKEY_new_CMAC_key(ENGINE *e, const unsigned char *priv,
         goto err;
     }
 
-    if (!CMAC_Init(cmctx, priv, len, cipher, e)) {
+# ifndef OPENSSL_NO_ENGINE
+    if (engine_id != NULL)
+        params[paramsn++] =
+            OSSL_PARAM_construct_utf8_string(OSSL_MAC_PARAM_ENGINE,
+                                             (char *)engine_id, 0);
+# endif
+
+    params[paramsn++] =
+        OSSL_PARAM_construct_utf8_string(OSSL_MAC_PARAM_CIPHER,
+                                         (char *)cipher_name, 0);
+    params[paramsn++] =
+        OSSL_PARAM_construct_octet_string(OSSL_MAC_PARAM_KEY,
+                                          (char *)priv, len);
+    params[paramsn] = OSSL_PARAM_construct_end();
+
+    if (!EVP_MAC_CTX_set_params(cmctx, params)) {
         EVPerr(EVP_F_EVP_PKEY_NEW_CMAC_KEY, EVP_R_KEY_SETUP_FAILED);
         goto err;
     }
@@ -338,7 +366,8 @@ EVP_PKEY *EVP_PKEY_new_CMAC_key(ENGINE *e, const unsigned char *priv,
 
  err:
     EVP_PKEY_free(ret);
-    CMAC_CTX_free(cmctx);
+    EVP_MAC_CTX_free(cmctx);
+    EVP_MAC_free(cmac);
     return NULL;
 #else
     EVPerr(EVP_F_EVP_PKEY_NEW_CMAC_KEY,
@@ -393,6 +422,11 @@ int EVP_PKEY_set1_engine(EVP_PKEY *pkey, ENGINE *e)
     ENGINE_finish(pkey->pmeth_engine);
     pkey->pmeth_engine = e;
     return 1;
+}
+
+ENGINE *EVP_PKEY_get0_engine(const EVP_PKEY *pkey)
+{
+    return pkey->engine;
 }
 #endif
 int EVP_PKEY_assign(EVP_PKEY *pkey, int type, void *key)
@@ -458,7 +492,7 @@ int EVP_PKEY_set1_RSA(EVP_PKEY *pkey, RSA *key)
     return ret;
 }
 
-RSA *EVP_PKEY_get0_RSA(EVP_PKEY *pkey)
+RSA *EVP_PKEY_get0_RSA(const EVP_PKEY *pkey)
 {
     if (pkey->type != EVP_PKEY_RSA) {
         EVPerr(EVP_F_EVP_PKEY_GET0_RSA, EVP_R_EXPECTING_AN_RSA_KEY);
@@ -485,7 +519,7 @@ int EVP_PKEY_set1_DSA(EVP_PKEY *pkey, DSA *key)
     return ret;
 }
 
-DSA *EVP_PKEY_get0_DSA(EVP_PKEY *pkey)
+DSA *EVP_PKEY_get0_DSA(const EVP_PKEY *pkey)
 {
     if (pkey->type != EVP_PKEY_DSA) {
         EVPerr(EVP_F_EVP_PKEY_GET0_DSA, EVP_R_EXPECTING_A_DSA_KEY);
@@ -513,7 +547,7 @@ int EVP_PKEY_set1_EC_KEY(EVP_PKEY *pkey, EC_KEY *key)
     return ret;
 }
 
-EC_KEY *EVP_PKEY_get0_EC_KEY(EVP_PKEY *pkey)
+EC_KEY *EVP_PKEY_get0_EC_KEY(const EVP_PKEY *pkey)
 {
     if (pkey->type != EVP_PKEY_EC) {
         EVPerr(EVP_F_EVP_PKEY_GET0_EC_KEY, EVP_R_EXPECTING_A_EC_KEY);
@@ -541,7 +575,7 @@ int EVP_PKEY_set1_DH(EVP_PKEY *pkey, DH *key)
     return ret;
 }
 
-DH *EVP_PKEY_get0_DH(EVP_PKEY *pkey)
+DH *EVP_PKEY_get0_DH(const EVP_PKEY *pkey)
 {
     if (pkey->type != EVP_PKEY_DH && pkey->type != EVP_PKEY_DHX) {
         EVPerr(EVP_F_EVP_PKEY_GET0_DH, EVP_R_EXPECTING_A_DH_KEY);
@@ -606,6 +640,9 @@ void EVP_PKEY_free(EVP_PKEY *x)
 static void EVP_PKEY_free_it(EVP_PKEY *x)
 {
     /* internal function; x is never NULL */
+
+    evp_keymgmt_clear_pkey_cache(x);
+
     if (x->ameth && x->ameth->pkey_free) {
         x->ameth->pkey_free(x);
         x->pkey.ptr = NULL;
@@ -663,6 +700,26 @@ static int evp_pkey_asn1_ctrl(EVP_PKEY *pkey, int op, int arg1, void *arg2)
 int EVP_PKEY_get_default_digest_nid(EVP_PKEY *pkey, int *pnid)
 {
     return evp_pkey_asn1_ctrl(pkey, ASN1_PKEY_CTRL_DEFAULT_MD_NID, 0, pnid);
+}
+
+int EVP_PKEY_supports_digest_nid(EVP_PKEY *pkey, int nid)
+{
+    int rv, default_nid;
+
+    rv = evp_pkey_asn1_ctrl(pkey, ASN1_PKEY_CTRL_SUPPORTS_MD_NID, nid, NULL);
+    if (rv == -2) {
+        /*
+         * If there is a mandatory default digest and this isn't it, then
+         * the answer is 'no'.
+         */
+        rv = EVP_PKEY_get_default_digest_nid(pkey, &default_nid);
+        if (rv == 2)
+            return (nid == default_nid);
+        /* zero is an error from EVP_PKEY_get_default_digest_nid() */
+        if (rv == 0)
+            return -1;
+    }
+    return rv;
 }
 
 int EVP_PKEY_set1_tls_encodedpoint(EVP_PKEY *pkey,

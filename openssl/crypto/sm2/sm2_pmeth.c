@@ -1,7 +1,7 @@
 /*
  * Copyright 2006-2018 The OpenSSL Project Authors. All Rights Reserved.
  *
- * Licensed under the OpenSSL license (the "License").  You may not use
+ * Licensed under the Apache License 2.0 (the "License").  You may not use
  * this file except in compliance with the License.  You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://www.openssl.org/source/license.html
@@ -54,7 +54,7 @@ static void pkey_sm2_cleanup(EVP_PKEY_CTX *ctx)
     }
 }
 
-static int pkey_sm2_copy(EVP_PKEY_CTX *dst, EVP_PKEY_CTX *src)
+static int pkey_sm2_copy(EVP_PKEY_CTX *dst, const EVP_PKEY_CTX *src)
 {
     SM2_PKEY_CTX *dctx, *sctx;
 
@@ -220,6 +220,10 @@ static int pkey_sm2_ctrl(EVP_PKEY_CTX *ctx, int type, int p1, void *p2)
         *(size_t *)p2 = smctx->id_len;
         return 1;
 
+    case EVP_PKEY_CTRL_DIGESTINIT:
+        /* nothing to be inited, this is to suppress the error... */
+        return 1;
+
     default:
         return -2;
     }
@@ -228,6 +232,10 @@ static int pkey_sm2_ctrl(EVP_PKEY_CTX *ctx, int type, int p1, void *p2)
 static int pkey_sm2_ctrl_str(EVP_PKEY_CTX *ctx,
                              const char *type, const char *value)
 {
+    uint8_t *hex_id;
+    long hex_len = 0;
+    int ret = 0;
+
     if (strcmp(type, "ec_paramgen_curve") == 0) {
         int nid = NID_undef;
 
@@ -248,6 +256,24 @@ static int pkey_sm2_ctrl_str(EVP_PKEY_CTX *ctx,
         else
             return -2;
         return EVP_PKEY_CTX_set_ec_param_enc(ctx, param_enc);
+    } else if (strcmp(type, "sm2_id") == 0) {
+        return pkey_sm2_ctrl(ctx, EVP_PKEY_CTRL_SET1_ID,
+                             (int)strlen(value), (void *)value);
+    } else if (strcmp(type, "sm2_hex_id") == 0) {
+        /*
+         * TODO(3.0): reconsider the name "sm2_hex_id", OR change
+         * OSSL_PARAM_construct_from_text() / OSSL_PARAM_allocate_from_text()
+         * to handle infix "_hex_"
+         */
+        hex_id = OPENSSL_hexstr2buf((const char *)value, &hex_len);
+        if (hex_id == NULL) {
+            SM2err(SM2_F_PKEY_SM2_CTRL_STR, ERR_R_PASSED_INVALID_ARGUMENT);
+            return 0;
+        }
+        ret = pkey_sm2_ctrl(ctx, EVP_PKEY_CTRL_SET1_ID, (int)hex_len,
+                            (void *)hex_id);
+        OPENSSL_free(hex_id);
+        return ret;
     }
 
     return -2;

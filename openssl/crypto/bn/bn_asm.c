@@ -1,7 +1,7 @@
 /*
  * Copyright 1995-2016 The OpenSSL Project Authors. All Rights Reserved.
  *
- * Licensed under the OpenSSL license (the "License").  You may not use
+ * Licensed under the Apache License 2.0 (the "License").  You may not use
  * this file except in compliance with the License.  You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://www.openssl.org/source/license.html
@@ -14,6 +14,7 @@
 
 #if defined(BN_LLONG) || defined(BN_UMULT_HIGH)
 
+#if !UCFG_BN_ASM		//!!!P
 BN_ULONG bn_mul_add_words(BN_ULONG *rp, const BN_ULONG *ap, int num,
                           BN_ULONG w)
 {
@@ -43,6 +44,7 @@ BN_ULONG bn_mul_add_words(BN_ULONG *rp, const BN_ULONG *ap, int num,
 
     return c1;
 }
+#endif //!!!P
 
 BN_ULONG bn_mul_words(BN_ULONG *rp, const BN_ULONG *ap, int num, BN_ULONG w)
 {
@@ -99,9 +101,7 @@ void bn_sqr_words(BN_ULONG *r, const BN_ULONG *a, int n)
 
 #else                           /* !(defined(BN_LLONG) ||
                                  * defined(BN_UMULT_HIGH)) */
-
-#if !UCFG_BN_ASM		//!!!P
-
+#ifndef bn_mul_add_words //!!!D
 BN_ULONG bn_mul_add_words(BN_ULONG *rp, const BN_ULONG *ap, int num,
                           BN_ULONG w)
 {
@@ -134,7 +134,7 @@ BN_ULONG bn_mul_add_words(BN_ULONG *rp, const BN_ULONG *ap, int num,
     }
     return c;
 }
-#endif // !UCFG_BN_ASM
+#endif //!!!P
 
 BN_ULONG bn_mul_words(BN_ULONG *rp, const BN_ULONG *ap, int num, BN_ULONG w)
 {

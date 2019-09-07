@@ -1,7 +1,7 @@
 /*
  * Copyright 1995-2018 The OpenSSL Project Authors. All Rights Reserved.
  *
- * Licensed under the OpenSSL license (the "License").  You may not use
+ * Licensed under the Apache License 2.0 (the "License").  You may not use
  * this file except in compliance with the License.  You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://www.openssl.org/source/license.html
@@ -19,10 +19,6 @@
 
 # include <openssl/crypto.h>
 # include <openssl/bioerr.h>
-
-# ifndef OPENSSL_NO_SCTP
-#  include <openssl/e_os2.h>
-# endif
 
 #ifdef  __cplusplus
 extern "C" {
@@ -145,6 +141,31 @@ extern "C" {
 
 # define BIO_CTRL_DGRAM_SET_PEEK_MODE      71
 
+/*
+ * internal BIO see include/internal/bio.h:
+ * # define BIO_CTRL_SET_KTLS_SEND                 72
+ * # define BIO_CTRL_SET_KTLS_SEND_CTRL_MSG        74
+ * # define BIO_CTRL_CLEAR_KTLS_CTRL_MSG           75
+ */
+
+# define BIO_CTRL_GET_KTLS_SEND                 73
+# define BIO_CTRL_GET_KTLS_RECV                 76
+
+# define BIO_CTRL_DGRAM_SCTP_WAIT_FOR_DRY       77
+# define BIO_CTRL_DGRAM_SCTP_MSG_WAITING        78
+
+# ifndef OPENSSL_NO_KTLS
+#  define BIO_get_ktls_send(b)         \
+     (BIO_method_type(b) == BIO_TYPE_SOCKET \
+      && BIO_ctrl(b, BIO_CTRL_GET_KTLS_SEND, 0, NULL))
+#  define BIO_get_ktls_recv(b)         \
+     (BIO_method_type(b) == BIO_TYPE_SOCKET \
+      && BIO_ctrl(b, BIO_CTRL_GET_KTLS_RECV, 0, NULL))
+# else
+#  define BIO_get_ktls_send(b)  (0)
+#  define BIO_get_ktls_recv(b)  (0)
+# endif
+
 /* modifiers */
 # define BIO_FP_READ             0x02
 # define BIO_FP_WRITE            0x04
@@ -156,12 +177,9 @@ extern "C" {
 # define BIO_FLAGS_IO_SPECIAL    0x04
 # define BIO_FLAGS_RWS (BIO_FLAGS_READ|BIO_FLAGS_WRITE|BIO_FLAGS_IO_SPECIAL)
 # define BIO_FLAGS_SHOULD_RETRY  0x08
-# ifndef BIO_FLAGS_UPLINK
-/*
- * "UPLINK" flag denotes file descriptors provided by application. It
- * defaults to 0, as most platforms don't require UPLINK interface.
- */
-#  define BIO_FLAGS_UPLINK        0
+# if !OPENSSL_API_3
+/* This #define was replaced by an internal constant and should not be used. */
+#  define BIO_FLAGS_UPLINK       0
 # endif
 
 # define BIO_FLAGS_BASE64_NO_NL  0x100
@@ -264,6 +282,9 @@ DEFINE_STACK_OF(BIO)
 typedef int asn1_ps_func (BIO *b, unsigned char **pbuf, int *plen,
                           void *parg);
 
+typedef void (*BIO_dgram_sctp_notification_handler_fn) (BIO *b,
+                                                        void *context,
+                                                        void *buf);
 # ifndef OPENSSL_NO_SCTP
 /* SCTP parameter structs */
 struct bio_dgram_sctp_sndinfo {
@@ -614,10 +635,8 @@ const BIO_METHOD *BIO_s_datagram_sctp(void);
 BIO *BIO_new_dgram_sctp(int fd, int close_flag);
 int BIO_dgram_is_sctp(BIO *bio);
 int BIO_dgram_sctp_notification_cb(BIO *b,
-                                   void (*handle_notifications) (BIO *bio,
-                                                                 void *context,
-                                                                 void *buf),
-                                   void *context);
+                BIO_dgram_sctp_notification_handler_fn handle_notifications,
+                void *context);
 int BIO_dgram_sctp_wait_for_dry(BIO *b);
 int BIO_dgram_sctp_msg_waiting(BIO *b);
 #  endif
@@ -631,16 +650,16 @@ int BIO_sock_non_fatal_error(int error);
 int BIO_fd_should_retry(int i);
 int BIO_fd_non_fatal_error(int error);
 int BIO_dump_cb(int (*cb) (const void *data, size_t len, void *u),
-                void *u, const char *s, int len);
+                void *u, const void *s, int len);
 int BIO_dump_indent_cb(int (*cb) (const void *data, size_t len, void *u),
-                       void *u, const char *s, int len, int indent);
-int BIO_dump(BIO *b, const char *bytes, int len);
-int BIO_dump_indent(BIO *b, const char *bytes, int len, int indent);
+                       void *u, const void *s, int len, int indent);
+int BIO_dump(BIO *b, const void *bytes, int len);
+int BIO_dump_indent(BIO *b, const void *bytes, int len, int indent);
 # ifndef OPENSSL_NO_STDIO
-int BIO_dump_fp(FILE *fp, const char *s, int len);
-int BIO_dump_indent_fp(FILE *fp, const char *s, int len, int indent);
+int BIO_dump_fp(FILE *fp, const void *s, int len);
+int BIO_dump_indent_fp(FILE *fp, const void *s, int len, int indent);
 # endif
-int BIO_hex_string(BIO *out, int indent, int width, unsigned char *data,
+int BIO_hex_string(BIO *out, int indent, int width, const void *data,
                    int datalen);
 
 # ifndef OPENSSL_NO_SOCK
@@ -681,7 +700,7 @@ int BIO_sock_error(int sock);
 int BIO_socket_ioctl(int fd, long type, void *arg);
 int BIO_socket_nbio(int fd, int mode);
 int BIO_sock_init(void);
-# if OPENSSL_API_COMPAT < 0x10100000L
+# if !OPENSSL_API_1_1_0
 #  define BIO_sock_cleanup() while(0) continue
 # endif
 int BIO_set_tcp_ndelay(int sock, int turn_on);

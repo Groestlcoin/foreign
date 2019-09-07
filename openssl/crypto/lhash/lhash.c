@@ -1,7 +1,7 @@
 /*
  * Copyright 1995-2018 The OpenSSL Project Authors. All Rights Reserved.
  *
- * Licensed under the OpenSSL license (the "License").  You may not use
+ * Licensed under the Apache License 2.0 (the "License").  You may not use
  * this file except in compliance with the License.  You can obtain a copy
  * in the file LICENSE in the source distribution or at
  * https://www.openssl.org/source/license.html
@@ -19,14 +19,14 @@
 
 /*
  * A hashing implementation that appears to be based on the linear hashing
- * alogrithm:
+ * algorithm:
  * https://en.wikipedia.org/wiki/Linear_hashing
  *
  * Litwin, Witold (1980), "Linear hashing: A new tool for file and table
  * addressing", Proc. 6th Conference on Very Large Databases: 212-223
- * http://hackthology.com/pdfs/Litwin-1980-Linear_Hashing.pdf
+ * https://hackthology.com/pdfs/Litwin-1980-Linear_Hashing.pdf
  *
- * From the wikipedia article "Linear hashing is used in the BDB Berkeley
+ * From the Wikipedia article "Linear hashing is used in the BDB Berkeley
  * database system, which in turn is used by many software systems such as
  * OpenLDAP, using a C implementation derived from the CACM article and first
  * published on the Usenet in 1988 by Esmond Pitt."
@@ -75,6 +75,16 @@ err:
 
 void OPENSSL_LH_free(OPENSSL_LHASH *lh)
 {
+    if (lh == NULL)
+        return;
+
+    OPENSSL_LH_flush(lh);
+    OPENSSL_free(lh->b);
+    OPENSSL_free(lh);
+}
+
+void OPENSSL_LH_flush(OPENSSL_LHASH *lh)
+{
     unsigned int i;
     OPENSSL_LH_NODE *n, *nn;
 
@@ -88,9 +98,8 @@ void OPENSSL_LH_free(OPENSSL_LHASH *lh)
             OPENSSL_free(n);
             n = nn;
         }
+        lh->b[i] = NULL;
     }
-    OPENSSL_free(lh->b);
-    OPENSSL_free(lh);
 }
 
 void *OPENSSL_LH_insert(OPENSSL_LHASH *lh, void *data)

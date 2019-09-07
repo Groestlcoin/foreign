@@ -33,7 +33,7 @@
 #	define UCFG_BN_ASM 1
 #	ifdef UCFG_LIBEXT
 //	 #define OPENSSL_NO_ASM
-#		define OPENSSL_BN_ASM_MONT
+//!!!T #		define OPENSSL_BN_ASM_MONT
 #		include <el/bignum.h>
 #	else
 	__BEGIN_DECLS
@@ -45,6 +45,8 @@
 #else
 #	define UCFG_BN_ASM 0
 #endif
+
+const char *gai_strerror(int code);
 
 #if UCFG_WCE
 #	define OPENSSL_SYS_WINCE 1
@@ -65,5 +67,7 @@
 #ifdef OPENSSL_NO_OBJECT
 #	error Objects required to export PrivateKeys
 #endif
+
+#define OPENSSL_NO_KTLS
 
 #include "opensslconf.h"
