@@ -17,17 +17,7 @@
 
 #pragma warning(disable: 4005 4057 4090 4130 4132 4133 4152 4232 4242 4244 4245 4295 4305 4306 4310 4311 4505 4701)
 
-#if defined(_M_X64)
-#	define OPENSSL_NO_ASM
-#	define OPENSSL_NO_HW_AEP
 
-#	define CONFIG_HEADER_BN_H
-#	define SIXTY_FOUR_BIT
-#endif
-
-#ifdef _M_IX86
-#	define THIRTY_TWO_BIT
-#endif
 
 #if defined(_MSC_VER) && (defined(_M_IX86) || defined(_M_X64)) && defined(UCFG_OPENSSL_ASM) && UCFG_OPENSSL_ASM
 #	define UCFG_BN_ASM 1

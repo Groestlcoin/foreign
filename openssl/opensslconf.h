@@ -9,6 +9,18 @@
 
 #include <openssl/opensslv.h>
 
+#if defined(_M_X64)
+#	define OPENSSL_NO_ASM
+#	define OPENSSL_NO_HW_AEP
+
+#	define CONFIG_HEADER_BN_H
+#	define SIXTY_FOUR_BIT
+#endif
+
+#ifdef _M_IX86
+#	define THIRTY_TWO_BIT
+#endif
+
 #ifndef OPENSSL_DOING_MAKEDEPEND
 
 #define OPENSSL_THREADS 1
@@ -60,11 +72,6 @@
 # define DEPRECATEDIN_1_0_0(f)
 #endif
 
-#if OPENSSL_API_COMPAT < 0x00908000L
-# define DEPRECATEDIN_0_9_8(f)   DECLARE_DEPRECATED(f)
-#else
-# define DEPRECATEDIN_0_9_8(f)
-#endif
 
 
 #ifndef OPENSSL_NO_EC_NISTP_64_GCC_128
@@ -157,17 +164,6 @@
 #endif
 
 
-#if defined(HEADER_BN_H) && !defined(CONFIG_HEADER_BN_H)
-#define CONFIG_HEADER_BN_H
-#undef BN_LLONG
-
-/* Should we define BN_DIV2W here? */
-
-/* Only one for the following should be defined */
-#undef SIXTY_FOUR_BIT_LONG
-#undef SIXTY_FOUR_BIT
-#define THIRTY_TWO_BIT
-#endif
 
 #if defined(HEADER_RC4_LOCL_H) && !defined(CONFIG_HEADER_RC4_LOCL_H)
 #define CONFIG_HEADER_RC4_LOCL_H
@@ -273,5 +269,6 @@ extern "C" {
 # ifdef  __cplusplus
 }
 # endif
+
 
 #endif                          /* HEADER_OPENSSLCONF_H */
