@@ -293,3 +293,15 @@ extern const unsigned char __GMP_DECLSPEC __clz_tab[128];
 #ifndef UDIV_PREINV_ALWAYS
 #define UDIV_PREINV_ALWAYS 0
 #endif
+
+#ifdef _MSC_VER//!!!P
+#define sub_333(sh, sm, sl, ah, am, al, bh, bm, bl)  \
+   do { \
+      UWtype _bw; \
+      (sl) = (al) - (bl); \
+	  _bw = (sl) > (al) ? 1 : 0; \
+	  (sm) = (am) - (bm) - _bw; \
+	  _bw = (sm) > (am) ? 1 : (sm) < (am) ? 0 : _bw; \
+	  (sh) = (ah) - (bh) - _bw; \
+   } while (0)
+#endif

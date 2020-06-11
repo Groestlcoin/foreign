@@ -1,5 +1,6 @@
 #include <mpir.h>
 
+#ifdef UCFG_LIBEXT
 using namespace Ext;
 
 static void *GmpMallocFun(size_t size) {
@@ -27,5 +28,6 @@ public:
 #endif
 
 
+#endif // UCFG_LIBEXT
 
 

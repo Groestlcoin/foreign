@@ -2,7 +2,7 @@
 /*-
  * See the file LICENSE for redistribution information.
  *
- * Copyright (c) 1997, 2012 Oracle and/or its affiliates.  All rights reserved.
+ * Copyright (c) 1997, 2013 Oracle and/or its affiliates.  All rights reserved.
  *
  * $Id$
  */
@@ -350,7 +350,7 @@ public:
 	{
 		return (const Db *)db->api_internal;
 	}
-	
+
 	u_int32_t get_create_flags() const
 	{
 		return construct_flags_;
@@ -441,7 +441,7 @@ public:
 	int close();
 	int send_msg(Dbt *msg, u_int32_t nmsg, u_int32_t flags);
 	int send_request(Dbt *request, u_int32_t nrequest, Dbt *response,
-	    db_timeout_t timeout, u_int32_t flags); 
+	    db_timeout_t timeout, u_int32_t flags);
 	int set_timeout(db_timeout_t timeout);
 
 	virtual DB_CHANNEL *get_DB_CHANNEL()
@@ -720,7 +720,8 @@ public:
 	virtual int txn_begin(DbTxn *pid, DbTxn **tid, u_int32_t flags);
 	virtual int txn_checkpoint(u_int32_t kbyte, u_int32_t min,
 			u_int32_t flags);
-	virtual int txn_recover(DbPreplist *preplist, u_int32_t count, u_int32_t *retp, u_int32_t flags);
+	virtual int txn_recover(DbPreplist *preplist, long count,
+			long *retp, u_int32_t flags);
 	virtual int txn_stat(DB_TXN_STAT **statp, u_int32_t flags);
 	virtual int txn_stat_print(u_int32_t flags);
 
@@ -895,10 +896,10 @@ public:
 	void set_indx(db_indx_t value)		{ indx = value; }
 
 	DB_HEAP_RID *get_DB_HEAP_RID()		{ return (DB_HEAP_RID *)this; }
-	const DB_HEAP_RID *get_const_DB_HEAP_RID() const 
+	const DB_HEAP_RID *get_const_DB_HEAP_RID() const
 					{ return (const DB_HEAP_RID *)this; }
 
-	static DbHeapRecordId* get_DbHeapRecordId(DB_HEAP_RID *rid) 
+	static DbHeapRecordId* get_DbHeapRecordId(DB_HEAP_RID *rid)
 					{ return (DbHeapRecordId *)rid; }
 	static const DbHeapRecordId* get_const_DbHeapRecordId(DB_HEAP_RID *rid)
 					{ return (const DbHeapRecordId *)rid; }
@@ -1102,7 +1103,7 @@ private:
 };
 
 //
-// A site in replication group 
+// A site in replication group
 //
 class _exported DbSite
 {
@@ -1191,9 +1192,9 @@ private:
 	// We use a TAILQ to store this object's kids of DbTxn objects, and
 	// each kid has a "parent_txn_" to point to this DbTxn object.
 	//
-	// If imp_ has a parent transaction which is not wrapped by DbTxn 
-	// class, parent_txn_ will be NULL since we don't need to maintain 
-	// this parent-kid relationship. This relationship only helps to 
+	// If imp_ has a parent transaction which is not wrapped by DbTxn
+	// class, parent_txn_ will be NULL since we don't need to maintain
+	// this parent-kid relationship. This relationship only helps to
 	// delete unresolved kids when the parent is resolved.
 	DbTxn *parent_txn_;
 

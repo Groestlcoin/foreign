@@ -1,4 +1,7 @@
-#include <el/libext.h>
+#ifdef _MSC_VER
+#	include <vc-inc.h>
+#endif
+
 #pragma warning(disable: 4101 4102 4146 4242 4244 4245 4293 4307 4310 4334 4505 4701 4723)
 
 #define WANT_TMP_ALLOCA 1

@@ -1,7 +1,7 @@
 /*-
  * See the file LICENSE for redistribution information.
  *
- * Copyright (c) 1997, 2012 Oracle and/or its affiliates.  All rights reserved.
+ * Copyright (c) 1997, 2013 Oracle and/or its affiliates.  All rights reserved.
  *
  * $Id$
  */
@@ -61,7 +61,7 @@ __os_unlink(env, path, overwrite_test)
 	 */
 	if (__os_is_winnt()) {
 		__os_unique_id(env, &id);
-		_sntprintf(buf, DB_MAXPATHLEN, _T("%Ts.del.%010u"), tpath, id);
+		_sntprintf(buf, DB_MAXPATHLEN, _T("%s.del.%010u"), tpath, id);
 		if (MoveFile(tpath, buf))
 			tpath = buf;
 		else {

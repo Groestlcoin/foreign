@@ -1721,7 +1721,7 @@ mpz_get_ui (mpz_srcptr __gmp_z) __GMP_NOTHROW
      "__GMP_ULONG_MAX < GMP_NUMB_MASK".  */
 #if GMP_NAIL_BITS == 0 || defined (_LONG_LONG_LIMB)
   /* limb==long and no nails, or limb==longlong, one limb is enough */
-  return (__gmp_n != 0 ? __gmp_l : 0);
+  return (__gmp_n != 0 ? (unsigned long)__gmp_l : 0);		//!!!P
 #else
   /* limb==long and nails, need two limbs when available */
   __gmp_n = __GMP_ABS (__gmp_n);
@@ -2146,8 +2146,8 @@ mpn_neg (mp_ptr __gmp_rp, mp_srcptr __gmp_up, mp_size_t __gmp_n)
   __gmp_cy = 0;
   do {
       __gmp_ul = *__gmp_up++;
-      *__gmp_rp++ = -__gmp_ul - __gmp_cy;
-      __gmp_cy |= __gmp_ul != 0;
+      *__gmp_rp++ = (mp_limb_t) - (mp_limb_signed_t)(__gmp_ul - __gmp_cy);		//!!!P
+	  __gmp_cy |= __gmp_ul != 0;
   } while (--__gmp_n != 0);
   return __gmp_cy;
 }

@@ -1,7 +1,10 @@
 #define WIN32
 #define _WINDOWS
 #define UCFG_WIN_HEADERS 1
-#include <el/libext.h>
+
+#ifdef _MSC_VER
+#	include <vc-inc.h>
+#endif
 
 #pragma warning (disable: 4101 4242 4244 4350 4458 4789)
 

@@ -75,6 +75,9 @@
     <Filter Include="Resources">
       <UniqueIdentifier>{166cc647-1b99-445e-969a-eb6dd9fc4d2d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\clib">
+      <UniqueIdentifier>{af545aef-5604-4dda-ad52-33899599cd98}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cxx\cxx_dbc.cpp">
@@ -841,6 +844,9 @@
     </ClCompile>
     <ClCompile Include="common\mkpath.c">
       <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="clib\strsep.c">
+      <Filter>Source Files\clib</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

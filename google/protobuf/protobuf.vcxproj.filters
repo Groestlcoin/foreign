@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5FC737F1-C7A5-4366-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b01-78EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\io">
+      <UniqueIdentifier>{9828d0b0-52ac-4956-9e57-fd7d8291efca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\stubs">
+      <UniqueIdentifier>{af09bc0b-a240-4138-8335-1139e6301a17}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="wire_format_lite.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="io\coded_stream.cc">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="stubs\common.cc">
+      <Filter>Source Files\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="wire_format.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="descriptor.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="io\zero_copy_stream_impl_lite.cc">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="unknown_field_set.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stubs\structurally_valid.cc">
+      <Filter>Source Files\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="io\zero_copy_stream.cc">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="generated_message_reflection.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="descriptor.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stubs\strutil.cc">
+      <Filter>Source Files\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="text_format.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="repeated_field.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="generated_message_util.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="io\tokenizer.cc">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="message.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="extension_set.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="message_lite.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stubs\stringprintf.cc">
+      <Filter>Source Files\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="extension_set_heavy.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="reflection_ops.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="io\zero_copy_stream_impl.cc">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\strtod.cc">
+      <Filter>Source Files\io</Filter>
+    </ClCompile>
+    <ClCompile Include="descriptor_database.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stubs\once.cc">
+      <Filter>Source Files\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamic_message.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stubs\substitute.cc">
+      <Filter>Source Files\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="stubs\atomicops_internals_x86_msvc.cc">
+      <Filter>Source Files\stubs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="protobuf-config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

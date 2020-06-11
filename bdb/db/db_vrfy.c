@@ -1,7 +1,7 @@
 /*-
  * See the file LICENSE for redistribution information.
  *
- * Copyright (c) 2000, 2012 Oracle and/or its affiliates.  All rights reserved.
+ * Copyright (c) 2000, 2013 Oracle and/or its affiliates.  All rights reserved.
  *
  * $Id$
  */
@@ -392,7 +392,7 @@ __db_verify(dbp, ip, name, subdb, handle, callback, lp, rp, flags)
 
 	flags = sflags;
 
-#ifdef HAVE_PARTITION
+#if defined(HAVE_PARTITION) && defined(HAVE_VERIFY) //!!!P
 	if (t_ret == 0 && dbp->p_internal != NULL)
 		t_ret = __part_verify(dbp, vdp, name, handle, callback, flags);
 #endif

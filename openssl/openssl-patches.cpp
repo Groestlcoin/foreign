@@ -1,12 +1,16 @@
 #define UCFG_DETECT_MISMATCH 0
 
+#define _WIN32_WINNT_WIN10_TH2	0x0A01		//!!!? not defined in SDK
+#define _WIN32_WINNT_WIN10_RS1	0x0A02		//!!!? not defined in SDK
+
 #include "openssl-config.h"
 
+extern "C" {
 #include <openssl/crypto/bn/bn_lcl.h>
 
 #undef bn_mul_mont
 
-extern "C" {
+
 	int bn_mul_mont(BN_ULONG *rp, const BN_ULONG *ap, const BN_ULONG *bp, const BN_ULONG *np,const BN_ULONG *n0, int num);
 
 	unsigned char cleanse_ctr = 0;
@@ -38,7 +42,7 @@ void C_bn_mul_mont(BN_ULONG *rp, const BN_ULONG *ap, const BN_ULONG *bp, const B
 			c2 = (sum2 + uint32_t(sum1)) >> 32;
 		}
 		uint64_t c = uint64_t(c1) + c2 + tp[num];
-		tp[num-1] = c;	
+		tp[num-1] = c;
 		tp[num] = c >> 32;
 	}
 
@@ -96,4 +100,3 @@ int My_bn_mul_mont(BN_ULONG *rp, const BN_ULONG *ap, const BN_ULONG *bp, const B
 
 //#pragma comment(lib, "ws2_32")
 //#pragma comment(lib, "advapi32")
-

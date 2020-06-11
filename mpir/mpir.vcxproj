@@ -43,56 +43,48 @@
   <Import Project="..\..\src\cfg\vs\vs-ver.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseOfMfc>Dynamic</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>false</CLRSupport>
     <WholeProgramOptimization>false</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseOfMfc>Static</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>false</CLRSupport>
     <WholeProgramOptimization>false</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseOfMfc>Static</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>false</CLRSupport>
     <WholeProgramOptimization>false</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseOfMfc>Dynamic</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>false</CLRSupport>
     <WholeProgramOptimization>false</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R_St|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseOfMfc>Static</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>false</CLRSupport>
     <WholeProgramOptimization>false</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D_St|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseOfMfc>Static</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>false</CLRSupport>
     <WholeProgramOptimization>false</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseOfMfc>Dynamic</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>false</CLRSupport>
     <WholeProgramOptimization>false</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseOfMfc>Dynamic</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
     <CLRSupport>false</CLRSupport>
     <WholeProgramOptimization>false</WholeProgramOptimization>
@@ -169,7 +161,6 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>.;../../src;$(OutDir)\inc;..;../..;mpn/x86w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -178,10 +169,10 @@
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
-      <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4042,4254 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>
       </AdditionalDependencies>
       <ModuleDefinitionFile>mpir.def</ModuleDefinitionFile>
@@ -214,18 +205,16 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>.;../../src;$(OutDir)\inc;..;../..;mpn/x86_64w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>mpir-config.h</ForcedIncludeFiles>
-      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
-      <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4042,4254 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>
       </AdditionalDependencies>
       <ModuleDefinitionFile>mpir.def</ModuleDefinitionFile>
@@ -250,7 +239,6 @@
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;../../src;$(OutDir)\inc;..;../..;mpn/x86w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -258,10 +246,10 @@
       <ForcedIncludeFiles>mpir-config.h</ForcedIncludeFiles>
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
-      <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4042,4254 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>
       </AdditionalDependencies>
       <ModuleDefinitionFile>mpir.def</ModuleDefinitionFile>
@@ -288,7 +276,6 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;../../src;..;../..;mpn/x86w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -296,7 +283,7 @@
       <ForcedIncludeFiles>mpir-config.h</ForcedIncludeFiles>
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
@@ -325,8 +312,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;../../src;..;../..;mpn/x86w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
@@ -334,7 +320,7 @@
       <ForcedIncludeFiles>mpir-config.h</ForcedIncludeFiles>
       <EnableEnhancedInstructionSet>NoExtensions</EnableEnhancedInstructionSet>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
@@ -365,17 +351,16 @@
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;../../src;$(OutDir)\inc;..;../..;mpn/x86_64w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>mpir-config.h</ForcedIncludeFiles>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
-      <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4042,4254 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>
       </AdditionalDependencies>
       <ModuleDefinitionFile>mpir.def</ModuleDefinitionFile>
@@ -401,14 +386,13 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;../../src;..;../..;mpn/x86_64w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>mpir-config.h</ForcedIncludeFiles>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
@@ -436,15 +420,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>.;../../src;..;../..;mpn/x86_64w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalOptions> /J</AdditionalOptions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mpir-config.h</PrecompiledHeaderFile>
       <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>mpir-config.h</ForcedIncludeFiles>
       <PreprocessorDefinitions>__GMP_WITHIN_GMP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ObjectFileName>$(IntDir)%(Directory)</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)</ObjectFileName>
     </ClCompile>
     <Link>
       <AdditionalOptions>/IGNORE:4254 %(AdditionalOptions)</AdditionalOptions>
@@ -557,7 +540,6 @@
     <ClCompile Include="mpn\generic\dc_bdiv_qr_n.c" />
     <ClCompile Include="mpn\generic\dc_bdiv_q_n.c" />
     <ClCompile Include="mpn\generic\dc_divappr_q.c" />
-    <ClCompile Include="mpn\generic\dc_divappr_q_n.c" />
     <ClCompile Include="mpn\generic\dc_div_q.c" />
     <ClCompile Include="mpn\generic\dc_div_qr.c" />
     <ClCompile Include="mpn\generic\dc_div_qr_n.c" />
@@ -577,14 +559,24 @@
     <ClCompile Include="mpn\generic\get_str.c" />
     <ClCompile Include="mpn\generic\hgcd.c" />
     <ClCompile Include="mpn\generic\hgcd2.c" />
+    <ClCompile Include="mpn\generic\hgcd2_jacobi.c" />
+    <ClCompile Include="mpn\generic\hgcd_appr.c" />
+    <ClCompile Include="mpn\generic\hgcd_jacobi.c" />
+    <ClCompile Include="mpn\generic\hgcd_matrix.c" />
+    <ClCompile Include="mpn\generic\hgcd_reduce.c" />
+    <ClCompile Include="mpn\generic\hgcd_step.c" />
     <ClCompile Include="mpn\generic\invert.c" />
     <ClCompile Include="mpn\generic\inv_divappr_q.c" />
     <ClCompile Include="mpn\generic\inv_divappr_q_n.c" />
     <ClCompile Include="mpn\generic\inv_div_q.c" />
     <ClCompile Include="mpn\generic\inv_div_qr.c" />
     <ClCompile Include="mpn\generic\inv_div_qr_n.c" />
+    <ClCompile Include="mpn\generic\jacobi.c" />
+    <ClCompile Include="mpn\generic\jacobi_2.c" />
+    <ClCompile Include="mpn\generic\jacobi_base.c" />
     <ClCompile Include="mpn\generic\lshift.c" />
     <ClCompile Include="mpn\generic\matrix22_mul.c" />
+    <ClCompile Include="mpn\generic\matrix22_mul1_inverse_vector.c" />
     <ClCompile Include="mpn\generic\modexact_1c_odd.c" />
     <ClCompile Include="mpn\generic\mod_1.c" />
     <ClCompile Include="mpn\generic\mod_1_1.c" />
@@ -595,6 +587,7 @@
     <ClCompile Include="mpn\generic\mulmid.c" />
     <ClCompile Include="mpn\generic\mulmid_basecase.c" />
     <ClCompile Include="mpn\generic\mulmid_n.c" />
+    <ClCompile Include="mpn\generic\mulmod_2expm1.c" />
     <ClCompile Include="mpn\generic\mulmod_2expp1_basecase.c" />
     <ClCompile Include="mpn\generic\mulmod_bexpp1.c" />
     <ClCompile Include="mpn\generic\mul_1.c">
@@ -673,6 +666,7 @@
     <ClCompile Include="mpz\aorsmul.c" />
     <ClCompile Include="mpz\aorsmul_i.c" />
     <ClCompile Include="mpz\clear.c" />
+    <ClCompile Include="mpz\clears.c" />
     <ClCompile Include="mpz\clrbit.c" />
     <ClCompile Include="mpz\cmp.c" />
     <ClCompile Include="mpz\cmpabs_ui.c" />
@@ -694,6 +688,7 @@
     <ClCompile Include="mpz\iset_si.c" />
     <ClCompile Include="mpz\iset_str.c" />
     <ClCompile Include="mpz\iset_ui.c" />
+    <ClCompile Include="mpz\jacobi.c" />
     <ClCompile Include="mpz\millerrabin.c" />
     <ClCompile Include="mpz\miller_rabin.c" />
     <ClCompile Include="mpz\mod.c" />
@@ -768,6 +763,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)\%(Filename).obj</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">$(IntDir)\%(Filename).obj</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)\%(Filename).obj</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)\%(Filename).obj</ObjectFile>
     </YASM>
     <YASM Include="mpn\x86w\mul_1.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -798,36 +797,60 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ObjectFile>
     </YASM>
     <YASM Include="mpn\x86_64w\sandybridge\add_n.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ObjectFile>
     </YASM>
     <YASM Include="mpn\x86_64w\sandybridge\mul_1.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ObjectFile>
     </YASM>
     <YASM Include="mpn\x86_64w\sandybridge\mul_basecase.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ObjectFile>
     </YASM>
     <YASM Include="mpn\x86_64w\sandybridge\redc_1.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ObjectFile>
     </YASM>
     <YASM Include="mpn\x86_64w\sandybridge\sqr_basecase.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFile>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)</ObjectFile>
     </YASM>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

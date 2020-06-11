@@ -61,20 +61,11 @@
     <Filter Include="crypto\x509">
       <UniqueIdentifier>{b3a11faf-1b28-46e3-92f5-11273ddec5d8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="crypto\ecdsa">
-      <UniqueIdentifier>{a6612be3-09f8-4e84-9d19-9f8587cee43d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="crypto\sha">
       <UniqueIdentifier>{1df1194a-756d-4f22-bb79-89ae0be3998b}</UniqueIdentifier>
     </Filter>
     <Filter Include="crypto\aes">
       <UniqueIdentifier>{677b2fbd-663f-4052-b772-49ccd405cd33}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="crypto\x509v3">
-      <UniqueIdentifier>{c6dc105b-4234-4e8e-9b1f-6515c82968c9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="crypto\ecdh">
-      <UniqueIdentifier>{8e16671b-782c-40c5-a7c8-d93ef6b63b05}</UniqueIdentifier>
     </Filter>
     <Filter Include="crypto\pkcs12">
       <UniqueIdentifier>{595f56d0-f160-4781-aa13-a8b21d46df1b}</UniqueIdentifier>
@@ -99,9 +90,6 @@
     </Filter>
     <Filter Include="crypto\comp">
       <UniqueIdentifier>{284a0a80-cc02-44af-85f4-c3ae7b314d46}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="crypto\jpake">
-      <UniqueIdentifier>{80d75fe1-d13b-46ee-bf7f-c75fc113cce1}</UniqueIdentifier>
     </Filter>
     <Filter Include="crypto\ts">
       <UniqueIdentifier>{bb3333e9-dc2a-4b70-a177-a9ab30cff2c9}</UniqueIdentifier>
@@ -162,6 +150,102 @@
     </Filter>
     <Filter Include="crypto\cmac">
       <UniqueIdentifier>{65147bbf-862a-4e0e-a51e-3ce9e3a2918a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{c10b92eb-aa4b-4b66-8978-92bf5cd5a369}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\srp">
+      <UniqueIdentifier>{db1d3f84-cb93-4132-912b-7470c778016d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\txt_db">
+      <UniqueIdentifier>{2fb78aae-cfe7-4888-bb05-174677dabada}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\ct">
+      <UniqueIdentifier>{bb6d10ac-2ed5-456d-a84b-3cc047688257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\kdf">
+      <UniqueIdentifier>{989da4d3-1b4d-4d45-a4e4-7cda3983fb53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\async">
+      <UniqueIdentifier>{6f9afb4a-5e20-409e-80de-017cbc7efe4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\async\arch">
+      <UniqueIdentifier>{41d43451-8fcf-41c5-ba75-0ae89fdba0bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\store">
+      <UniqueIdentifier>{d33176d3-353a-4d88-9b08-805b02e2dd16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\blake">
+      <UniqueIdentifier>{b8ad048b-7f0c-4176-be97-5efdb45b60d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\sm3">
+      <UniqueIdentifier>{bdf1dafc-4030-41cd-a70c-c8d6e8c69546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\aria">
+      <UniqueIdentifier>{58c8e2e9-1bb6-4539-8017-e5e4340c3910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\sm4">
+      <UniqueIdentifier>{7ea17495-998b-4de8-98e7-7db8c282cda0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\chacha">
+      <UniqueIdentifier>{556bbecd-9285-4a6a-9dca-9781e56ebf6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\poly1305">
+      <UniqueIdentifier>{2d5b866b-c70e-43a7-9a8f-16a5bc874707}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\sm2">
+      <UniqueIdentifier>{b463cb01-c588-40a3-8be8-07b05f92242e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\siphash">
+      <UniqueIdentifier>{4b94e465-7b3c-47f4-a5ac-cb85abdfd0fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\ec\curve448">
+      <UniqueIdentifier>{20ddb75c-041e-44ff-bf02-38150c11c2bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\ec\curve448\arch_32">
+      <UniqueIdentifier>{d5fa113f-8596-436b-99a8-bf60a1100351}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ssl\record">
+      <UniqueIdentifier>{bb9e9c6a-cd23-4797-8045-0bce33b51e03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ssl\statem">
+      <UniqueIdentifier>{be4400e7-62e8-4097-a7ab-26c0106f9b18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypto\property">
+      <UniqueIdentifier>{4a2e4a99-e3a1-4a7b-9bf2-0741cd1a06e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="providers">
+      <UniqueIdentifier>{bfbfaed5-7ff9-4b14-b128-0ccdf364e0f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="providers\common">
+      <UniqueIdentifier>{ba04470c-3ed9-415d-9de2-ca55e0c90caa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="providers\default">
+      <UniqueIdentifier>{aa9f39ab-7b86-4f08-b47f-9a5b7b8ce5b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="providers\common\exchange">
+      <UniqueIdentifier>{ed6793cd-995c-40a6-8898-0b8b48a55b17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="providers\default\ciphers">
+      <UniqueIdentifier>{05c86995-1e60-46c2-b520-da6008b849aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="providers\common\ciphers">
+      <UniqueIdentifier>{21a52d9f-6e77-48ef-9ef7-26715fdb4803}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="providers\common\digest">
+      <UniqueIdentifier>{5108759b-ef1f-486f-bf65-7f5dbea4b93a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="providers\common\keymgmt">
+      <UniqueIdentifier>{9a4bd114-ee77-4bc9-8c93-b80119d8579c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="providers\default\macs">
+      <UniqueIdentifier>{4732ab40-1ca3-45f5-9724-cded226ec0ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="providers\default\digests">
+      <UniqueIdentifier>{a56481b2-8aee-4619-9016-762109001631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="providers\common\macs">
+      <UniqueIdentifier>{dbd9d7aa-2e4c-449d-aa71-eef259ba4e2d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -234,12 +318,6 @@
     <ClCompile Include="crypto\engine\tb_dsa.c">
       <Filter>crypto\engine</Filter>
     </ClCompile>
-    <ClCompile Include="crypto\engine\tb_ecdh.c">
-      <Filter>crypto\engine</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\engine\tb_ecdsa.c">
-      <Filter>crypto\engine</Filter>
-    </ClCompile>
     <ClCompile Include="crypto\engine\tb_pkmeth.c">
       <Filter>crypto\engine</Filter>
     </ClCompile>
@@ -273,16 +351,10 @@
     <ClCompile Include="crypto\bio\bf_buff.c">
       <Filter>crypto\bio</Filter>
     </ClCompile>
-    <ClCompile Include="crypto\bio\bio_asn1.c">
-      <Filter>crypto\bio</Filter>
-    </ClCompile>
     <ClCompile Include="crypto\bio\bio_err.c">
       <Filter>crypto\bio</Filter>
     </ClCompile>
     <ClCompile Include="crypto\bio\bio_lib.c">
-      <Filter>crypto\bio</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\bio\bio_md.c">
       <Filter>crypto\bio</Filter>
     </ClCompile>
     <ClCompile Include="crypto\bio\bss_bio.c">
@@ -299,9 +371,6 @@
     </ClCompile>
     <ClCompile Include="crypto\bio\bss_sock.c">
       <Filter>crypto\bio</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\rand\md_rand.c">
-      <Filter>crypto\rand</Filter>
     </ClCompile>
     <ClCompile Include="crypto\rand\rand_err.c">
       <Filter>crypto\rand</Filter>
@@ -336,12 +405,6 @@
     <ClCompile Include="crypto\asn1\a_bitstr.c">
       <Filter>crypto\asn1</Filter>
     </ClCompile>
-    <ClCompile Include="crypto\asn1\a_bool.c">
-      <Filter>crypto\asn1</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\asn1\a_bytes.c">
-      <Filter>crypto\asn1</Filter>
-    </ClCompile>
     <ClCompile Include="crypto\asn1\a_d2i_fp.c">
       <Filter>crypto\asn1</Filter>
     </ClCompile>
@@ -349,9 +412,6 @@
       <Filter>crypto\asn1</Filter>
     </ClCompile>
     <ClCompile Include="crypto\asn1\a_dup.c">
-      <Filter>crypto\asn1</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\asn1\a_enum.c">
       <Filter>crypto\asn1</Filter>
     </ClCompile>
     <ClCompile Include="crypto\asn1\a_gentm.c">
@@ -373,9 +433,6 @@
       <Filter>crypto\asn1</Filter>
     </ClCompile>
     <ClCompile Include="crypto\asn1\a_print.c">
-      <Filter>crypto\asn1</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\asn1\a_set.c">
       <Filter>crypto\asn1</Filter>
     </ClCompile>
     <ClCompile Include="crypto\asn1\a_sign.c">
@@ -456,12 +513,6 @@
     <ClCompile Include="crypto\asn1\t_pkey.c">
       <Filter>crypto\asn1</Filter>
     </ClCompile>
-    <ClCompile Include="crypto\asn1\t_x509.c">
-      <Filter>crypto\asn1</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\asn1\t_x509a.c">
-      <Filter>crypto\asn1</Filter>
-    </ClCompile>
     <ClCompile Include="crypto\asn1\tasn_dec.c">
       <Filter>crypto\asn1</Filter>
     </ClCompile>
@@ -486,16 +537,7 @@
     <ClCompile Include="crypto\asn1\x_algor.c">
       <Filter>crypto\asn1</Filter>
     </ClCompile>
-    <ClCompile Include="crypto\asn1\x_attrib.c">
-      <Filter>crypto\asn1</Filter>
-    </ClCompile>
     <ClCompile Include="crypto\asn1\x_bignum.c">
-      <Filter>crypto\asn1</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\asn1\x_crl.c">
-      <Filter>crypto\asn1</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\asn1\x_exten.c">
       <Filter>crypto\asn1</Filter>
     </ClCompile>
     <ClCompile Include="crypto\asn1\x_info.c">
@@ -504,16 +546,7 @@
     <ClCompile Include="crypto\asn1\x_long.c">
       <Filter>crypto\asn1</Filter>
     </ClCompile>
-    <ClCompile Include="crypto\asn1\x_name.c">
-      <Filter>crypto\asn1</Filter>
-    </ClCompile>
     <ClCompile Include="crypto\asn1\x_pkey.c">
-      <Filter>crypto\asn1</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\asn1\x_pubkey.c">
-      <Filter>crypto\asn1</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\asn1\x_req.c">
       <Filter>crypto\asn1</Filter>
     </ClCompile>
     <ClCompile Include="crypto\asn1\x_sig.c">
@@ -523,12 +556,6 @@
       <Filter>crypto\asn1</Filter>
     </ClCompile>
     <ClCompile Include="crypto\asn1\x_val.c">
-      <Filter>crypto\asn1</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\asn1\x_x509.c">
-      <Filter>crypto\asn1</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\asn1\x_x509a.c">
       <Filter>crypto\asn1</Filter>
     </ClCompile>
     <ClCompile Include="crypto\bn\bn_add.c">
@@ -609,9 +636,6 @@
     <ClCompile Include="crypto\evp\bio_enc.c">
       <Filter>crypto\evp</Filter>
     </ClCompile>
-    <ClCompile Include="crypto\evp\c_all.c">
-      <Filter>crypto\evp</Filter>
-    </ClCompile>
     <ClCompile Include="crypto\evp\c_allc.c">
       <Filter>crypto\evp</Filter>
     </ClCompile>
@@ -672,15 +696,6 @@
     <ClCompile Include="crypto\evp\evp_pkey.c">
       <Filter>crypto\evp</Filter>
     </ClCompile>
-    <ClCompile Include="crypto\evp\m_dss.c">
-      <Filter>crypto\evp</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\evp\m_dss1.c">
-      <Filter>crypto\evp</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\evp\m_ecdsa.c">
-      <Filter>crypto\evp</Filter>
-    </ClCompile>
     <ClCompile Include="crypto\evp\m_md2.c">
       <Filter>crypto\evp</Filter>
     </ClCompile>
@@ -691,9 +706,6 @@
       <Filter>crypto\evp</Filter>
     </ClCompile>
     <ClCompile Include="crypto\evp\m_ripemd.c">
-      <Filter>crypto\evp</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\evp\m_sha.c">
       <Filter>crypto\evp</Filter>
     </ClCompile>
     <ClCompile Include="crypto\evp\m_sha1.c">
@@ -735,14 +747,8 @@
     <ClCompile Include="crypto\hmac\hm_ameth.c">
       <Filter>crypto\hmac</Filter>
     </ClCompile>
-    <ClCompile Include="crypto\hmac\hm_pmeth.c">
-      <Filter>crypto\hmac</Filter>
-    </ClCompile>
     <ClCompile Include="crypto\hmac\hmac.c">
       <Filter>crypto\hmac</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\ec\ec2_mult.c">
-      <Filter>crypto\ec</Filter>
     </ClCompile>
     <ClCompile Include="crypto\ec\ec2_smpl.c">
       <Filter>crypto\ec</Filter>
@@ -826,9 +832,6 @@
       <Filter>crypto\rsa</Filter>
     </ClCompile>
     <ClCompile Include="crypto\rsa\rsa_chk.c">
-      <Filter>crypto\rsa</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\rsa\rsa_eay.c">
       <Filter>crypto\rsa</Filter>
     </ClCompile>
     <ClCompile Include="crypto\rsa\rsa_err.c">
@@ -990,24 +993,6 @@
     <ClCompile Include="crypto\x509\x_all.c">
       <Filter>crypto\x509</Filter>
     </ClCompile>
-    <ClCompile Include="crypto\ecdsa\ecs_asn1.c">
-      <Filter>crypto\ecdsa</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\ecdsa\ecs_err.c">
-      <Filter>crypto\ecdsa</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\ecdsa\ecs_lib.c">
-      <Filter>crypto\ecdsa</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\ecdsa\ecs_ossl.c">
-      <Filter>crypto\ecdsa</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\ecdsa\ecs_sign.c">
-      <Filter>crypto\ecdsa</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\ecdsa\ecs_vrf.c">
-      <Filter>crypto\ecdsa</Filter>
-    </ClCompile>
     <ClCompile Include="crypto\sha\sha1_one.c">
       <Filter>crypto\sha</Filter>
     </ClCompile>
@@ -1018,9 +1003,6 @@
       <Filter>crypto\sha</Filter>
     </ClCompile>
     <ClCompile Include="crypto\sha\sha512.c">
-      <Filter>crypto\sha</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\sha\sha_dgst.c">
       <Filter>crypto\sha</Filter>
     </ClCompile>
     <ClCompile Include="crypto\aes\aes_cbc.c">
@@ -1040,120 +1022,6 @@
     </ClCompile>
     <ClCompile Include="crypto\aes\aes_wrap.c">
       <Filter>crypto\aes</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\pcy_cache.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\pcy_data.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\pcy_lib.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\pcy_map.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\pcy_node.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\pcy_tree.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_akey.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_akeya.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_alt.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_bcons.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_bitst.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_conf.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_cpols.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_crld.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_enum.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_extku.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_genn.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_ia5.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_info.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_int.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_lib.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_ncons.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_ocsp.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_pci.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_pcia.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_pcons.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_pku.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_pmaps.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_prn.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_purp.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_skey.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_sxnet.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3_utl.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\x509v3\v3err.c">
-      <Filter>crypto\x509v3</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\ecdh\ech_err.c">
-      <Filter>crypto\ecdh</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\ecdh\ech_key.c">
-      <Filter>crypto\ecdh</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\ecdh\ech_lib.c">
-      <Filter>crypto\ecdh</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\ecdh\ech_ossl.c">
-      <Filter>crypto\ecdh</Filter>
     </ClCompile>
     <ClCompile Include="crypto\pkcs12\p12_add.c">
       <Filter>crypto\pkcs12</Filter>
@@ -1204,9 +1072,6 @@
       <Filter>crypto\dso</Filter>
     </ClCompile>
     <ClCompile Include="crypto\dso\dso_lib.c">
-      <Filter>crypto\dso</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\dso\dso_null.c">
       <Filter>crypto\dso</Filter>
     </ClCompile>
     <ClCompile Include="crypto\dso\dso_openssl.c">
@@ -1262,9 +1127,6 @@
     </ClCompile>
     <ClCompile Include="crypto\comp\comp_lib.c">
       <Filter>crypto\comp</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\jpake\jpake_err.c">
-      <Filter>crypto\jpake</Filter>
     </ClCompile>
     <ClCompile Include="crypto\ts\ts_err.c">
       <Filter>crypto\ts</Filter>
@@ -1389,61 +1251,10 @@
     <ClCompile Include="crypto\modes\ofb128.c">
       <Filter>crypto\modes</Filter>
     </ClCompile>
-    <ClCompile Include="ssl\s23_clnt.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s23_lib.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s23_meth.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s23_pkt.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s23_srvr.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s2_clnt.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s2_enc.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s2_lib.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s2_meth.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s2_pkt.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s2_srvr.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s3_both.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s3_clnt.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
     <ClCompile Include="ssl\s3_enc.c">
       <Filter>ssl</Filter>
     </ClCompile>
     <ClCompile Include="ssl\s3_lib.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s3_meth.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s3_pkt.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\s3_srvr.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\ssl_algs.c">
       <Filter>ssl</Filter>
     </ClCompile>
     <ClCompile Include="ssl\ssl_asn1.c">
@@ -1455,10 +1266,10 @@
     <ClCompile Include="ssl\ssl_ciph.c">
       <Filter>ssl</Filter>
     </ClCompile>
-    <ClCompile Include="ssl\ssl_err.c">
+    <ClCompile Include="ssl\ssl_conf.c">
       <Filter>ssl</Filter>
     </ClCompile>
-    <ClCompile Include="ssl\ssl_err2.c">
+    <ClCompile Include="ssl\ssl_err.c">
       <Filter>ssl</Filter>
     </ClCompile>
     <ClCompile Include="ssl\ssl_lib.c">
@@ -1470,49 +1281,16 @@
     <ClCompile Include="ssl\ssl_sess.c">
       <Filter>ssl</Filter>
     </ClCompile>
-    <ClCompile Include="ssl\t1_clnt.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
     <ClCompile Include="ssl\t1_enc.c">
       <Filter>ssl</Filter>
     </ClCompile>
     <ClCompile Include="ssl\t1_lib.c">
       <Filter>ssl</Filter>
     </ClCompile>
-    <ClCompile Include="ssl\t1_meth.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="ssl\t1_srvr.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
-    <ClCompile Include="engines\e_4758cca.c">
-      <Filter>engines</Filter>
-    </ClCompile>
-    <ClCompile Include="engines\e_aep.c">
-      <Filter>engines</Filter>
-    </ClCompile>
-    <ClCompile Include="engines\e_atalla.c">
-      <Filter>engines</Filter>
-    </ClCompile>
     <ClCompile Include="engines\e_capi.c">
       <Filter>engines</Filter>
     </ClCompile>
-    <ClCompile Include="engines\e_chil.c">
-      <Filter>engines</Filter>
-    </ClCompile>
-    <ClCompile Include="engines\e_cswift.c">
-      <Filter>engines</Filter>
-    </ClCompile>
-    <ClCompile Include="engines\e_nuron.c">
-      <Filter>engines</Filter>
-    </ClCompile>
     <ClCompile Include="engines\e_padlock.c">
-      <Filter>engines</Filter>
-    </ClCompile>
-    <ClCompile Include="engines\e_sureware.c">
-      <Filter>engines</Filter>
-    </ClCompile>
-    <ClCompile Include="engines\e_ubsec.c">
       <Filter>engines</Filter>
     </ClCompile>
     <ClCompile Include="engines\ccgost\e_gost_err.c">
@@ -1573,9 +1351,6 @@
     <ClCompile Include="crypto\seed\seed_cbc.c">
       <Filter>crypto\seed</Filter>
     </ClCompile>
-    <ClCompile Include="ssl\t1_reneg.c">
-      <Filter>ssl</Filter>
-    </ClCompile>
     <ClCompile Include="crypto\evp\m_mdc2.c">
       <Filter>crypto\evp</Filter>
     </ClCompile>
@@ -1602,9 +1377,6 @@
     </ClCompile>
     <ClCompile Include="crypto\asn1\i2d_pu.c">
       <Filter>crypto\asn1</Filter>
-    </ClCompile>
-    <ClCompile Include="crypto\aes\aes_ctr.c">
-      <Filter>crypto\aes</Filter>
     </ClCompile>
     <ClCompile Include="crypto\modes\ctr128.c">
       <Filter>crypto\modes</Filter>
@@ -1646,14 +1418,872 @@
     <ClCompile Include="crypto\o_init.c">
       <Filter>crypto</Filter>
     </ClCompile>
-    <ClCompile Include="crypto\cmac\cm_pmeth.c">
-      <Filter>crypto\cmac</Filter>
-    </ClCompile>
     <ClCompile Include="crypto\evp\e_rc4_hmac_md5.c">
       <Filter>crypto\evp</Filter>
     </ClCompile>
     <ClCompile Include="crypto\evp\e_aes_cbc_hmac_sha1.c">
       <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\conf\conf_sap.c">
+      <Filter>crypto\conf</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\conf\conf_mall.c">
+      <Filter>crypto\conf</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\asn1\asn_moid.c">
+      <Filter>crypto\asn1</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\engine\eng_cnf.c">
+      <Filter>crypto\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\evp_cnf.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\pkcs12\p12_kiss.c">
+      <Filter>crypto\pkcs12</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\pkcs12\p12_attr.c">
+      <Filter>crypto\pkcs12</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\pkcs12\p12_mutl.c">
+      <Filter>crypto\pkcs12</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\x509_txt.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\s3_cbc.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\x509cset.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\e_aes_cbc_hmac_sha256.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\tls_srp.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\d1_srtp.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\srp\srp_lib.c">
+      <Filter>crypto\srp</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\d1_lib.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ocsp\ocsp_ht.c">
+      <Filter>crypto\ocsp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\srp\srp_vfy.c">
+      <Filter>crypto\srp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\dh\dh_rfc5114.c">
+      <Filter>crypto\dh</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\txt_db\txt_db.c">
+      <Filter>crypto\txt_db</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\cms\cms_pwri.c">
+      <Filter>crypto\cms</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\dh\dh_kdf.c">
+      <Filter>crypto\dh</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\cms\cms_kari.c">
+      <Filter>crypto\cms</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\modes\wrap128.c">
+      <Filter>crypto\modes</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\m_sha3.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\init.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\threads_win.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\bn\bn_dh.c">
+      <Filter>crypto\bn</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\rsa\rsa_mp.c">
+      <Filter>crypto\rsa</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\x_name.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\x_pubkey.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ocsp\v3_ocsp.c">
+      <Filter>crypto\ocsp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\o_str.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\ecdh_ossl.c">
+      <Filter>crypto\ec</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ct\ct_b64.c">
+      <Filter>crypto\ct</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ct\ct_err.c">
+      <Filter>crypto\ct</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ct\ct_log.c">
+      <Filter>crypto\ct</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ct\ct_oct.c">
+      <Filter>crypto\ct</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ct\ct_policy.c">
+      <Filter>crypto\ct</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ct\ct_prn.c">
+      <Filter>crypto\ct</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ct\ct_sct.c">
+      <Filter>crypto\ct</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ct\ct_sct_ctx.c">
+      <Filter>crypto\ct</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ct\ct_vfy.c">
+      <Filter>crypto\ct</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ct\ct_x509v3.c">
+      <Filter>crypto\ct</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\rand\drbg_lib.c">
+      <Filter>crypto\rand</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\bio\b_sock.c">
+      <Filter>crypto\bio</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\x_x509.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\asn1\bio_asn1.c">
+      <Filter>crypto\asn1</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\x_crl.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\bio\bio_meth.c">
+      <Filter>crypto\bio</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\ecx_meth.c">
+      <Filter>crypto\ec</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\modes\ocb128.c">
+      <Filter>crypto\modes</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\sha\keccak1600.c">
+      <Filter>crypto\sha</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ctype.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\kdf\kdf_err.c">
+      <Filter>crypto\kdf</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\dsa\dsa_meth.c">
+      <Filter>crypto\dsa</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\engine\eng_devcrypto.c">
+      <Filter>crypto\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\mem_sec.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\async\async.c">
+      <Filter>crypto\async</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\async\arch\async_win.c">
+      <Filter>crypto\async\arch</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\engine\eng_openssl.c">
+      <Filter>crypto\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\store\store_init.c">
+      <Filter>crypto\store</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\rand\drbg_ctr.c">
+      <Filter>crypto\rand</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\bio\b_addr.c">
+      <Filter>crypto\bio</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\e_aria.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\e_sm4.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\e_chacha20_poly1305.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\m_md5_sha1.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\blake\blake2b.c">
+      <Filter>crypto\blake</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\blake\blake2s.c">
+      <Filter>crypto\blake</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\blake\m_blake2b.c">
+      <Filter>crypto\blake</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\blake\m_blake2s.c">
+      <Filter>crypto\blake</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\rsa\rsa_meth.c">
+      <Filter>crypto\rsa</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\x_exten.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\engine\eng_rdrand.c">
+      <Filter>crypto\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\sm3\m_sm3.c">
+      <Filter>crypto\sm3</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\sm3\sm3.c">
+      <Filter>crypto\sm3</Filter>
+    </ClCompile>
+    <ClCompile Include="engines\e_afalg.c">
+      <Filter>engines</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\uid.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\async\async_wait.c">
+      <Filter>crypto\async</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\engine\tb_eckey.c">
+      <Filter>crypto\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\rsa\rsa_ossl.c">
+      <Filter>crypto\rsa</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\cmeth_lib.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\bio\b_sock2.c">
+      <Filter>crypto\bio</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\aria\aria.c">
+      <Filter>crypto\aria</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\sm4\sm4.c">
+      <Filter>crypto\sm4</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\curve25519.c">
+      <Filter>crypto\ec</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\x_attrib.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\bio_md.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\bn\bn_intern.c">
+      <Filter>crypto\bn</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\ec_kmeth.c">
+      <Filter>crypto\ec</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\t_x509.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\async\async_err.c">
+      <Filter>crypto\async</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\store\store_err.c">
+      <Filter>crypto\store</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\store\store_register.c">
+      <Filter>crypto\store</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\chacha\chacha_enc.c">
+      <Filter>crypto\chacha</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\poly1305\poly1305.c">
+      <Filter>crypto\poly1305</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\poly1305\poly1305_ameth.c">
+      <Filter>crypto\poly1305</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\poly1305\poly1305_base2_44.c">
+      <Filter>crypto\poly1305</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\poly1305\poly1305_ieee754.c">
+      <Filter>crypto\poly1305</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\asn1\p5_scrypt.c">
+      <Filter>crypto\asn1</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\sm2\sm2_crypt.c">
+      <Filter>crypto\sm2</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\sm2\sm2_err.c">
+      <Filter>crypto\sm2</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\sm2\sm2_pmeth.c">
+      <Filter>crypto\sm2</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\sm2\sm2_sign.c">
+      <Filter>crypto\sm2</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\kdf\scrypt.c">
+      <Filter>crypto\kdf</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\kdf\tls1_prf.c">
+      <Filter>crypto\kdf</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\kdf\hkdf.c">
+      <Filter>crypto\kdf</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\siphash\siphash.c">
+      <Filter>crypto\siphash</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\siphash\siphash_ameth.c">
+      <Filter>crypto\siphash</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\asn1\asn_mstbl.c">
+      <Filter>crypto\asn1</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\conf\conf_ssl.c">
+      <Filter>crypto\conf</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\o_fopen.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\store\loader_file.c">
+      <Filter>crypto\store</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\ecdsa_ossl.c">
+      <Filter>crypto\ec</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\asn1\x_int64.c">
+      <Filter>crypto\asn1</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\x_x509a.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\pbe_scrypt.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\dh\dh_rfc7919.c">
+      <Filter>crypto\dh</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\ecdh_kdf.c">
+      <Filter>crypto\ec</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\m_null.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\pkcs12\p12_sbag.c">
+      <Filter>crypto\pkcs12</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\x_req.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\ec_check.c">
+      <Filter>crypto\ec</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ui\ui_null.c">
+      <Filter>crypto\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\ecdsa_vrf.c">
+      <Filter>crypto\ec</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\ecdsa_sign.c">
+      <Filter>crypto\ec</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\store\store_lib.c">
+      <Filter>crypto\store</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\curve448\eddsa.c">
+      <Filter>crypto\ec\curve448</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\curve448\curve448.c">
+      <Filter>crypto\ec\curve448</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\curve448\scalar.c">
+      <Filter>crypto\ec\curve448</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\curve448\f_generic.c">
+      <Filter>crypto\ec\curve448</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\curve448\curve448_tables.c">
+      <Filter>crypto\ec\curve448</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\ec\curve448\f_impl.c">
+      <Filter>crypto\ec\curve448\arch_32</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\methods.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\ssl_init.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\bn\bn_srp.c">
+      <Filter>crypto\bn</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\record\rec_layer_s3.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\bn\bn_const.c">
+      <Filter>crypto\bn</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\tls13_enc.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\statem.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\statem_srvr.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\record\rec_layer_d1.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\record\ssl3_buffer.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\statem_lib.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\pqueue.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\statem_clnt.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\record\ssl3_record.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\extensions.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\record\dtls1_bitmap.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\extensions_clnt.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\statem_dtls.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\extensions_cust.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\statem\extensions_srvr.c">
+      <Filter>ssl\statem</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\ssl_mcnf.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\s3_msg.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\record\ssl3_record_tls13.c">
+      <Filter>ssl\record</Filter>
+    </ClCompile>
+    <ClCompile Include="ssl\d1_msg.c">
+      <Filter>ssl</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\bn\rsaz_exp.c">
+      <Filter>crypto\bn</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_addr.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_admis.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_akey.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_akeya.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_alt.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_asid.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_bcons.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_bitst.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_conf.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_cpols.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_crld.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_enum.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_extku.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_genn.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_ia5.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_info.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_int.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_lib.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_ncons.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_pci.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_pcia.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_pcons.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_pku.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_pmaps.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_prn.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_purp.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_skey.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_sxnet.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_tlsf.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3_utl.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\v3err.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\err\err_blocks.c">
+      <Filter>crypto\err</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\pcy_tree.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\params.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\trace.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\kdf_lib.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\initthread.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\mac_meth.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\bn\bn_conv.c">
+      <Filter>crypto\bn</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\pcy_cache.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\modes\siv128.c">
+      <Filter>crypto\modes</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\packet.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\param_build.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\asn1_dsa.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\provider_core.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\md5\md5_sha1.c">
+      <Filter>crypto\md5</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\mac_lib.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\exchange.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\evp_fetch.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\getenv.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\sha\sha3.c">
+      <Filter>crypto\sha</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\pcy_data.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\provider_conf.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\property.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\keymgmt_meth.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\evp_utils.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\pcy_lib.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\rand\drbg_hmac.c">
+      <Filter>crypto\rand</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\c_allkdf.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\pcy_node.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\context.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\core_algorithm.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\property\property_parse.c">
+      <Filter>crypto\property</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\core_fetch.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\pkey_mac.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\property\defn_cache.c">
+      <Filter>crypto\property</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\sparse_array.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\kdf\sshkdf.c">
+      <Filter>crypto\kdf</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\keymgmt_lib.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\x509\pcy_map.c">
+      <Filter>crypto\x509</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\rand\drbg_hash.c">
+      <Filter>crypto\rand</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\core_namemap.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\kdf\kdf_util.c">
+      <Filter>crypto\kdf</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\params_from_text.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\kdf\x942kdf.c">
+      <Filter>crypto\kdf</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\property\property_string.c">
+      <Filter>crypto\property</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\provlib.c">
+      <Filter>providers\common</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\kdf\sskdf.c">
+      <Filter>crypto\kdf</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\provider_predefined.c">
+      <Filter>crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\defltprov.c">
+      <Filter>providers\default</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\exchange\dh_exch.c">
+      <Filter>providers\common\exchange</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\ciphers\cipher_aria.c">
+      <Filter>providers\default\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\cipher_aes.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\evp\pkey_kdf.c">
+      <Filter>crypto\evp</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\digest\sha3_prov.c">
+      <Filter>providers\common\digest</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\keymgmt\dh_kmgmt.c">
+      <Filter>providers\common\keymgmt</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\ciphers\cipher_tdes_wrap.c">
+      <Filter>providers\default\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\ciphers\cipher_aria_gcm.c">
+      <Filter>providers\default\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\digest\sha2_prov.c">
+      <Filter>providers\common\digest</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\cipher_common.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\ciphers\cipher_aria_hw.c">
+      <Filter>providers\default\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\ciphers\cipher_desx_hw.c">
+      <Filter>providers\default\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\cipher_aes_gcm.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\cipher_gcm.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\cipher_aes_hw.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\cipher_aes_gcm_hw.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\block.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\ciphers\cipher_tdes_wrap_hw.c">
+      <Filter>providers\default\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\macs\blake2s_mac.c">
+      <Filter>providers\default\macs</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\digests\md5_prov.c">
+      <Filter>providers\default\digests</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\cipher_aes_ccm.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\macs\kmac_prov.c">
+      <Filter>providers\common\macs</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\digests\sm3_prov.c">
+      <Filter>providers\default\digests</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\macs\poly1305_prov.c">
+      <Filter>providers\default\macs</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\macs\gmac_prov.c">
+      <Filter>providers\common\macs</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\macs\cmac_prov.c">
+      <Filter>providers\common\macs</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\macs\hmac_prov.c">
+      <Filter>providers\common\macs</Filter>
+    </ClCompile>
+    <ClCompile Include="crypto\kdf\pbkdf2.c">
+      <Filter>crypto\kdf</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\cipher_ccm.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\cipher_common_hw.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\digest\digest_common.c">
+      <Filter>providers\common\digest</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\cipher_tdes.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\ciphers\cipher_tdes_default.c">
+      <Filter>providers\default\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\digests\blake2s_prov.c">
+      <Filter>providers\default\digests</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\ciphers\cipher_aria_ccm.c">
+      <Filter>providers\default\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\ciphers\cipher_desx.c">
+      <Filter>providers\default\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\digests\md5_sha1_prov.c">
+      <Filter>providers\default\digests</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\cipher_tdes_hw.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\ciphers\cipher_aria_gcm_hw.c">
+      <Filter>providers\default\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\cipher_gcm_hw.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\ciphers\cipher_tdes_default_hw.c">
+      <Filter>providers\default\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\digests\blake2_prov.c">
+      <Filter>providers\default\digests</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\digests\blake2b_prov.c">
+      <Filter>providers\default\digests</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\cipher_aes_ccm_hw.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\common\ciphers\cipher_ccm_hw.c">
+      <Filter>providers\common\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\ciphers\cipher_aria_ccm_hw.c">
+      <Filter>providers\default\ciphers</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\macs\siphash_prov.c">
+      <Filter>providers\default\macs</Filter>
+    </ClCompile>
+    <ClCompile Include="providers\default\macs\blake2b_mac.c">
+      <Filter>providers\default\macs</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1662,6 +2292,273 @@
   <ItemGroup>
     <ClInclude Include="openssl-config.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="aes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="asn1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="asn1_mac.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="asn1t.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="blowfish.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cmac.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="comp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="conf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="conf_api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cryptlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="des.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="des_old.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dsa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dso.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dtls1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="e_os.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="e_os2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ecdh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ecdsa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="engine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="err.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="evp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="file_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hmac.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="idea.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jpake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kssl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lhash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="md2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="md4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="md5_locl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="md32_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mdc2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modes_lcl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="obj_mac.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="objects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ocsp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="opensslconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="opensslv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ossl_typ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pem2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pkcs7.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pkcs12.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pqueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rc2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rc4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rc4_locl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ripemd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rsa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="safestack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="seed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sha.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="srp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="srtp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ssl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ssl2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ssl3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ssl23.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="symhacks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tls1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_compat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="whrlpool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x509.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x509_vfy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x509v3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\srp\srp_grps.h">
+      <Filter>crypto\srp</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\srp\srp_lcl.h">
+      <Filter>crypto\srp</Filter>
+    </ClInclude>
+    <ClInclude Include="txt_db.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\async\arch\async_win.h">
+      <Filter>crypto\async\arch</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\blake\blake2_impl.h">
+      <Filter>crypto\blake</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\blake\blake2_locl.h">
+      <Filter>crypto\blake</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\sm3\sm3_locl.h">
+      <Filter>crypto\sm3</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\poly1305\poly1305_local.h">
+      <Filter>crypto\poly1305</Filter>
+    </ClInclude>
+    <ClInclude Include="crypto\siphash\siphash_local.h">
+      <Filter>crypto\siphash</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="openssl.rc">
